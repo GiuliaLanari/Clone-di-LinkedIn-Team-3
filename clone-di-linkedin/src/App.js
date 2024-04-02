@@ -13,9 +13,9 @@ function App() {
         </Row>
       </Container>
       <Container>
-        <Row className="justify-content-between">
-          <div id="topMain"></div>
-          <div id="side"></div>
+        <Row className="justify-content-between g-0">
+          <Col xs={9} id="topMain"></Col>
+          <Col xs={3} className=" p-2" id="side"></Col>
         </Row>
         <Row>
           <Col xs={12} id="footer"></Col>
