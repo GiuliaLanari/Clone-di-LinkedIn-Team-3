@@ -10,7 +10,7 @@ const Activity = function () {
           <div className="act">
             <h3 className="mb-0">Attività</h3>
             <div className="d-flex align-items-center">
-              <p className="mb-0 ms-2">0 follower</p>
+              <p className="mb-0">0 follower</p>
             </div>
           </div>
           <div className="d-flex gap-3 align-items-baseline">
