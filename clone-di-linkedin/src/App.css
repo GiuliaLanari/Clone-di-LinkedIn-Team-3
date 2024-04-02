@@ -1,3 +1,7 @@
+/*------------NAVBAR-----------------*/
+/* #navbar {
+  height: 20vh;
+}
 .navbar-top {
   margin-inline: 25px;
   color: #666666;
@@ -21,7 +25,8 @@
 }
 .premium {
   color: darkgoldenrod;
-}
+} */
+/* NAVBAR */
 
 .aFooter {
   text-decoration: none;
@@ -44,10 +49,7 @@
   border: 2px solid black;
 }
 /* CSS APP STUTTURA*/
-#navbar {
-  background-color: aqua;
-  height: 20vh;
-}
+
 
 #topMain {
   background-color: red;

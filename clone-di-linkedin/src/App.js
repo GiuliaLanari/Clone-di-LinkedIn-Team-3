@@ -4,13 +4,15 @@ import Footer from "./components/Footer";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-
+import MyNavbar from "./components/MyNavbar"
 function App() {
   return (
     <>
       <Container fluid>
         <Row>
-          <Col id="navbar"></Col>
+          <Col id="navbar">
+            <MyNavbar />
+          </Col>
         </Row>
       </Container>
       <Container>
