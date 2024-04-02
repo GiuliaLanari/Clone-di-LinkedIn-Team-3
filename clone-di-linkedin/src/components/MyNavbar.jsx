@@ -20,7 +20,14 @@ const MyNavbar = () => {
                     </form>                  
                 </div>
                 <div className="d-flex justify-content-end align-items-center">
+                    {/*Logo Home */}
 
+                    {/* Network */}
+                    {/* Jobs */}
+                    {/* Messaging */}
+                    {/* Notifications */} 
+                    {/* Profile */}
+                    {/* For Business */}
                 </div>
 
                 <a href="#login">Prova Premium per 0 euro</a>
