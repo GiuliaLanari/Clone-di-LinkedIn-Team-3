@@ -9,9 +9,7 @@
   height: 20vh;
 }
 /*------------NAVBAR-----------------*/
-#navbar {
-  height: 20vh;
-}
+
 .navbar-top {
   margin-inline: 25px;
   color: #666666;
@@ -22,6 +20,14 @@
 .navbar-top:hover{
   color: black;
   fill: rgb(31, 17, 17);
+  cursor: pointer;
+}
+
+.linkedin logo {
+  cursor: pointer;
+}
+
+.user:hover {
   cursor: pointer;
 }
 
