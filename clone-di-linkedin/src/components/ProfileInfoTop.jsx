@@ -2,12 +2,25 @@ import EditProfileForm from "./EditProfileForm";
 import Carousel from "react-bootstrap/Carousel";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import { getUser } from "../redux/actions";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const ProfileInfoTop = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getUser(userData));
+  }, []);
+  const userData = useSelector((state) => state.user);
+  console.log(userData);
+
   return (
-    <div id="profile-container">
-      <div id="banner">
-        <button className="profile-picture"></button>
+    <div id="profile-container" className="rounded-3 bg-white">
+      <div id="banner" className="rounded-top-3">
+        <button className="profile-picture">
+          <img src={userData.image} className="img-fluid" style={{ width: "170px", borderRadius: "50%" }} alt="" />
+        </button>
         <div className=" d-flex justify-content-end">
           <button className="m-3 add-banner border-0 rounded-circle">
             <img src="icons/camera.svg" alt="" />
@@ -20,10 +33,12 @@ const ProfileInfoTop = () => {
         </div>
         <div className="px-4">
           <div>
-            <h5>Nome Cognome</h5>
-            <p>Titolo</p>
-            <span className="fw-light">Città, Regione, Nazione</span> &#183;
-            <span className="text-primary fw-bold"> Informazioni di contatto</span>
+            <h5>
+              {userData.name} {userData.surname}
+            </h5>
+            <p></p>
+            <span className="fw-light">{userData.area}</span> &#183;
+            <span className="text-primary fw-bold">Informazioni di contatto</span>
             <div>
               <button className="border-0 rounded-pill bg-primary text-white fw-bold me-2 px-3 py-1">
                 Disponibile per
