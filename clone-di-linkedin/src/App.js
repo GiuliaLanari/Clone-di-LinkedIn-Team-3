@@ -6,8 +6,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
 import Footer from "./components/Footer";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+
 import Container from "react-bootstrap/Container";
 import MyNavbar from "./components/MyNavbar"
 function App() {
@@ -15,7 +14,9 @@ function App() {
     <>
       <Container fluid>
         <Row>
-          <Col id="navba"></Col>
+          <Col id="navba">
+            <MyNavbar />
+          </Col>
         </Row>
       </Container>
       <Container>

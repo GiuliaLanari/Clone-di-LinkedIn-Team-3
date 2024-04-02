@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-
+import Link from "react-bootstrap/Link";
 
 const MyNavbar = () => {
     
@@ -45,7 +45,7 @@ const MyNavbar = () => {
                     <Col className="d-flex flex-column  text-center g-0 border-bottom border-dark mt-2">
                         <span>
                             <Link className="text-decoration-none">
-                                
+
                             </Link>
                         </span>
                     </Col>
