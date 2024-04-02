@@ -10,18 +10,18 @@ function App() {
     <>
       <Container fluid>
         <Row>
-          <Col id="navbar"></Col>
+          <Col id="navba"></Col>
         </Row>
       </Container>
       <Container>
         <Row className="justify-content-between g-0">
-          <Col xs={9} id="topMain"></Col>
-          <Col xs={3} className=" p-2" id="side">
+          <Col xs={9} id="topMai"></Col>
+          <Col xs={3} className=" p-2">
             <SideBar />
           </Col>
         </Row>
         <Row>
-          <Col xs={12} id="footer"></Col>
+          <Col xs={12} id="foote"></Col>
         </Row>
       </Container>
     </>
