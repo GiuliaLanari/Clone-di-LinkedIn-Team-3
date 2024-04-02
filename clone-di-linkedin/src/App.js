@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import ProfileInfoTop from "./components/ProfileInfoTop";
 import Footer from "./components/Footer";
+import ProfileInfoBottom from "./components/ProfileInfoBottom";
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
         <Row className="justify-content-between g-0">
           <Col xs={9}>
             <ProfileInfoTop />
+            <ProfileInfoBottom />
           </Col>
-          <Col xs={3} className=" p-2"></Col>
+          <Col xs={3} className=" p-2" id="side"></Col>
         </Row>
         <Row>
           <Col xs={12}>
