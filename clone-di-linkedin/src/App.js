@@ -29,24 +29,6 @@ function App() {
           <Col xs={12} id="foote"></Col>
         </Row>
       </Container>
-      <Container fluid>
-        <Row>
-          <Col id="navbar">
-            <MyNavbar />
-          </Col>
-        </Row>
-      </Container>
-      <Container>
-        <Row className="justify-content-between g-0">
-          <Col xs={9} id="topMain"></Col>
-          <Col xs={3} className=" p-2" id="side"></Col>
-        </Row>
-        <Row>
-          <Col xs={12}>
-            <Footer />
-          </Col>
-        </Row>
-      </Container>
     </>
   );
 }
