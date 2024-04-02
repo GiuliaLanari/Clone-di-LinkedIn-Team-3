@@ -7,13 +7,16 @@ import Row from "react-bootstrap/Row";
 import ProfileInfoTop from "./components/ProfileInfoTop";
 import Footer from "./components/Footer";
 import ProfileInfoBottom from "./components/ProfileInfoBottom";
+import MyNavbar from "./components/MyNavbar";
 
 function App() {
   return (
     <>
       <Container fluid>
         <Row>
-          <Col></Col>
+          <Col>
+            <MyNavbar />
+          </Col>
         </Row>
       </Container>
       <Container>

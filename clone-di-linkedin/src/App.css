@@ -1,4 +1,48 @@
-/*///////////// FOOTER /////////////*/
+#topMain {
+  background-color: red;
+  height: 20vh;
+}
+
+#side {
+  background-color: blueviolet;
+  height: 20vh;
+}
+/*------------NAVBAR-----------------*/
+
+.navbar-top {
+  margin-inline: 25px;
+  color: #666666;
+  font-size: small;
+  margin-bottom: 0;
+}
+
+.navbar-top:hover {
+  color: black;
+  fill: rgb(31, 17, 17);
+  cursor: pointer;
+}
+
+.linkedin logo {
+  cursor: pointer;
+}
+
+.user:hover {
+  cursor: pointer;
+}
+
+.resized-avatar {
+  width: 30px;
+  height: 30px;
+}
+
+.bord:hover {
+  border-bottom: solid 2px black;
+}
+.premium {
+  color: darkgoldenrod;
+}
+/* NAVBAR */
+
 .aFooter {
   text-decoration: none;
   color: gray;
