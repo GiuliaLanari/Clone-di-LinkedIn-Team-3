@@ -4,24 +4,35 @@ import SideBar from "./components/SideBar";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import ProfileInfoTop from "./components/ProfileInfoTop";
+import Footer from "./components/Footer";
+import ProfileInfoBottom from "./components/ProfileInfoBottom";
+import MyNavbar from "./components/MyNavbar";
 
 function App() {
   return (
     <>
       <Container fluid>
         <Row>
-          <Col id="navba"></Col>
+          <Col>
+            <MyNavbar />
+          </Col>
         </Row>
       </Container>
       <Container>
         <Row className="justify-content-between g-0">
-          <Col xs={9} id="topMai"></Col>
-          <Col xs={3} className=" p-2">
+          <Col xs={9}>
+            <ProfileInfoTop />
+            <ProfileInfoBottom />
+          </Col>
+          <Col xs={3} className="p-2">
             <SideBar />
           </Col>
         </Row>
         <Row>
-          <Col xs={12} id="foote"></Col>
+          <Col xs={12}>
+            <Footer />
+          </Col>
         </Row>
       </Container>
     </>

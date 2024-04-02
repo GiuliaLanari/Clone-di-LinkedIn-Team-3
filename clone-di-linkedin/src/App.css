@@ -1,19 +1,306 @@
-#navbar {
-  background-color: aqua;
-  height: 20vh;
+/*------------NAVBAR-----------------*/
+.navbar-top {
+  margin-inline: 25px;
+  color: #666666;
+  font-size: small;
+  margin-bottom: 0;
 }
 
-#topMain {
-  background-color: red;
-  height: 20vh;
+.navbar-top:hover {
+  color: black;
+  fill: rgb(31, 17, 17);
+  cursor: pointer;
 }
 
-#side {
-  background-color: blueviolet;
-  height: 20vh;
+.linkedin logo {
+  cursor: pointer;
 }
 
-#footer {
-  background-color: chartreuse;
-  height: 20vh;
+.user:hover {
+  cursor: pointer;
+}
+
+.resized-avatar {
+  width: 30px;
+  height: 30px;
+}
+
+.bord:hover {
+  border-bottom: solid 2px black;
+}
+.premium {
+  color: darkgoldenrod;
+}
+/* NAVBAR */
+
+.aFooter {
+  text-decoration: none;
+  color: gray;
+}
+
+.fs-footer {
+  font-size: 12px;
+}
+body {
+  background-color: #f4f2ee;
+}
+
+#analisis {
+  background-color: white;
+  margin-block: 0.5rem;
+  padding: 0;
+}
+
+.analis-col {
+  padding: 25px;
+  padding-bottom: 10px;
+}
+
+.aFooter:hover {
+  text-decoration: underline;
+  color: #2674c6;
+}
+.fs-footerQ {
+  font-size: 13;
+}
+
+.selectLingua:hover {
+  border: 2px solid black;
+}
+
+/*////////////// CAROUSEL ARROWS //////////////*/
+.carousel-indicators {
+  background-color: rgba(0, 0, 0, 0.185);
+  margin-bottom: 0rem;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+.carousel-control-next-icon {
+  background-color: black;
+  border-radius: 100%;
+  padding: 1rem;
+}
+
+.carousel-control-prev-icon {
+  background-color: black;
+  border-radius: 100%;
+  padding: 1rem;
+}
+
+.carousel-control-next {
+  width: 6%;
+  opacity: -0.4;
+}
+
+.carousel-control-prev {
+  width: 6%;
+  opacity: -0.4;
+}
+
+/*//////////// PROFILE INFO TOP ////////////*/
+#profile-container {
+  border: 2px solid#F2F0EC;
+}
+#banner {
+  background-image: url(https://media.licdn.com/dms/image/C4E16AQGqth-Lp2SCiw/profile-displaybackgroundimage-shrink_350_1400/0/1653811488706?e=1717632000&v=beta&t=qiMHXk2z2g8b2d0owRThcvLAuXpDbJqzs85MgcN1OL8);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180px;
+  position: relative;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  background-image: url(https://p16-va.lemon8cdn.com/tos-maliva-v-ac5634-us/o0JC1uRDDluDu0q0AAAtgHfo1QBFWWElQEfIPc~tplv-tej9nj120t-origin.webp);
+  background-size: contain;
+  border: transparent;
+  position: absolute;
+  top: 55px;
+  bottom: 0;
+  left: 23px;
+  right: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.add-banner {
+  height: 35px;
+  width: 35px;
+}
+
+/* PROFILE INFO BOTTOM */
+.line-div {
+  background-color: #e8e8e8;
+  height: 8px;
+  width: 100%;
+}
+
+.not-line-div {
+  background-color: #56687a;
+  width: 60%;
+  height: 8px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.cons-list {
+  width: 366px;
+  background-color: #f6f8fc;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.cons-pad {
+  padding: 0.9rem;
+  padding-right: 2.2rem;
+  position: relative;
+}
+
+.cons-pad p {
+  font-size: 0.85rem;
+}
+
+.x-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 0.4rem;
+}
+
+.desc-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.btn-clicked {
+  background-color: #dad9d9bd !important;
+  border: 2px solid black;
+}
+
+.dec-btn {
+  background-color: transparent;
+  border: 1px solid #393a3a;
+  padding-inline: 1rem;
+  padding-block: 0.3rem;
+  font-weight: 600;
+}
+
+.dec-btn:hover {
+  background-color: #dad9d9bd;
+  border: 2px solid black;
+}
+h3 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+.analisis-desc p {
+  font-size: 0.85rem;
+}
+
+.analisis-desc h6 {
+  font-size: 0.95rem;
+}
+
+.carousel-ul {
+  padding: 0;
+  position: relative;
+}
+
+.carousel-overflow {
+  overflow: hidden;
+}
+/* 
+.carousel-ul {
+  transform: translateX(-366px);
+  transition: transform 0.25s ease 0s;
+} */
+
+.my-carousel {
+  overflow: hidden;
+  padding-inline: 1.5rem;
+  padding-block: 1.2rem;
+}
+
+.btn-border {
+  border: 0;
+  border-top: 1px solid #dbdbdb;
+  background-color: transparent;
+}
+
+.btn-border:hover {
+  background-color: #dad9d9bd;
+  border-top: 1px solid #dbdbdb;
+}
+
+.my-badge {
+  background-color: #c8c8c8 !important;
+  color: black;
+}
+
+.btn-crea {
+  border: 1px solid #0a66c2;
+  background-color: transparent;
+  color: #0a66c2;
+}
+
+.btn-crea:hover {
+  background-color: #70b5f933;
+  border: 2px solid #0a66c2;
+  color: #0a66c2;
+}
+
+.act p {
+  color: #0a66c2;
+}
+
+.training-col {
+  padding: 25px;
+  padding-bottom: 25px;
+}
+
+.add-pen-btn {
+  background-color: transparent;
+  border: 0;
+}
+
+.add-pen-btn:hover {
+  background-color: #ebebeb;
+}
+
+.btn-interests {
+  background-color: transparent;
+  border: 0;
+}
+
+.btn-interests:hover {
+  background-color: #f1f1f1;
+}
+
+.interests-col {
+  padding: 25px;
+  padding-bottom: 0px;
+}
+
+.interests-col-2 {
+  padding: 25px;
+  padding-top: 0px;
 }
