@@ -1,3 +1,24 @@
+.aFooter {
+  text-decoration: none;
+  color: gray;
+}
+
+.fs-footer {
+  font-size: 12px;
+}
+
+.aFooter:hover {
+  text-decoration: underline;
+  color: #2674c6;
+}
+.fs-footerQ {
+  font-size: 13;
+}
+
+.selectLingua:hover {
+  border: 2px solid black;
+}
+/* CSS APP STUTTURA*/
 #navbar {
   background-color: aqua;
   height: 20vh;
@@ -5,7 +26,7 @@
 
 #topMain {
   background-color: red;
-  height: 20vh;
+  height: 100vh;
 }
 
 #side {

@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import ProfileInfoTop from "./components/ProfileInfoTop";
-import EditProfileForm from "./components/EditProfileForm";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -22,7 +22,9 @@ function App() {
           <Col xs={3} className=" p-2" id="side"></Col>
         </Row>
         <Row>
-          <Col xs={12} id="footer"></Col>
+          <Col xs={12}>
+            <Footer />
+          </Col>
         </Row>
       </Container>
     </>
