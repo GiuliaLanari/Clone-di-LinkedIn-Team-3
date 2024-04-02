@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import SideBar from "./components/SideBar";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -21,7 +22,9 @@ function App() {
             <ProfileInfoTop />
             <ProfileInfoBottom />
           </Col>
-          <Col xs={3} className=" p-2" id="side"></Col>
+          <Col xs={3} className="p-2">
+            <SideBar />
+          </Col>
         </Row>
         <Row>
           <Col xs={12}>
