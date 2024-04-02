@@ -25,8 +25,6 @@ function App() {
           <Col xs={12} id="footer"></Col>
         </Row>
       </Container>
-
-      <EditProfileForm />
     </>
   );
 }

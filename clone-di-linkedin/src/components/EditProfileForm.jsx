@@ -23,7 +23,6 @@ function EditProfileForm() {
         <Modal.Body>
           <Form>
             <Form.Text className="text-muted">* Indica che è obbligatorio</Form.Text>
-
             <Form.Group className="mb-3">
               <Form.Label>Nome*</Form.Label>
               <Form.Control type="text" placeholder="Parametro dinamico" required />
