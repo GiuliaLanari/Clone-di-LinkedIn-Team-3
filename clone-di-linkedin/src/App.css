@@ -1,3 +1,4 @@
+/*///////////// FOOTER /////////////*/
 .aFooter {
   text-decoration: none;
   color: gray;
@@ -17,21 +18,6 @@
 
 .selectLingua:hover {
   border: 2px solid black;
-}
-/* CSS APP STUTTURA*/
-#navbar {
-  background-color: aqua;
-  height: 20vh;
-}
-
-#topMain {
-  background-color: red;
-  height: 100vh;
-}
-
-#side {
-  background-color: blueviolet;
-  height: 20vh;
 }
 
 /*////////////// CAROUSEL ARROWS //////////////*/
@@ -63,11 +49,6 @@
   width: 6%;
   opacity: -0.4;
 }
-
-/* #footer {
-  background-color: chartreuse;
-  height: 20vh;
-} */
 
 /*//////////// PROFILE INFO TOP ////////////*/
 #profile-container {

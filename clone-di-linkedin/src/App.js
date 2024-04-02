@@ -11,15 +11,15 @@ function App() {
     <>
       <Container fluid>
         <Row>
-          <Col id="navbar"></Col>
+          <Col></Col>
         </Row>
       </Container>
       <Container>
         <Row className="justify-content-between g-0">
-          <Col xs={9} id="topMain">
+          <Col xs={9}>
             <ProfileInfoTop />
           </Col>
-          <Col xs={3} className=" p-2" id="side"></Col>
+          <Col xs={3} className=" p-2"></Col>
         </Row>
         <Row>
           <Col xs={12}>
