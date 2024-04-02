@@ -11,11 +11,11 @@ function EditProfileForm() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+      <Button className="m-3 border-0 bg-transparent" onClick={handleShow}>
+        <img src="icons/pen.svg" alt="" />
       </Button>
 
-      <Modal show={show} onHide={handleClose} className="modal-dialog-scrollable">
+      <Modal show={show} onHide={handleClose} className="modal-dialog-scrollable ">
         <Modal.Header closeButton>
           <Modal.Title>Modifica presentazione</Modal.Title>
         </Modal.Header>

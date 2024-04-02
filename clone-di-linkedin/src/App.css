@@ -13,10 +13,39 @@
   height: 20vh;
 }
 
-#footer {
+.carousel-indicators {
+  background-color: rgba(0, 0, 0, 0.185);
+  margin-bottom: 0rem;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+.carousel-control-next-icon {
+  background-color: black;
+  border-radius: 100%;
+  padding: 1rem;
+}
+
+.carousel-control-prev-icon {
+  background-color: black;
+  border-radius: 100%;
+  padding: 1rem;
+}
+
+.carousel-control-next {
+  width: 6%;
+  opacity: -0.4;
+}
+
+.carousel-control-prev {
+  width: 6%;
+  opacity: -0.4;
+}
+
+/* #footer {
   background-color: chartreuse;
   height: 20vh;
-}
+} */
 
 /*//////////// PROFILE INFO TOP ////////////*/
 #profile-container {

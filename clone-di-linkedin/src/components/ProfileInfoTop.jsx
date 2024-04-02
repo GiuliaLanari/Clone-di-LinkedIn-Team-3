@@ -1,12 +1,9 @@
-// import { useState } from "react";
-
+import EditProfileForm from "./EditProfileForm";
 import Carousel from "react-bootstrap/Carousel";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
 const ProfileInfoTop = () => {
-  //   const [show, setShow] = useState(false);
-
   return (
     <div id="profile-container">
       <div id="banner">
@@ -17,11 +14,9 @@ const ProfileInfoTop = () => {
           </button>
         </div>
       </div>
-      <div id="profile-info">
+      <div>
         <div className="d-flex justify-content-end">
-          <button className="m-3 border-0 bg-transparent">
-            <img src="icons/pen.svg" alt="" />
-          </button>
+          <EditProfileForm />
         </div>
         <div className="px-4">
           <div>
