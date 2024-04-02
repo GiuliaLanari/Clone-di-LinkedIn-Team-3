@@ -1,13 +1,13 @@
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
+// import Container from "react-bootstrap/Container";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Navbar from "react-bootstrap/Navbar";
 
 const Footer = function () {
   return (
-    <Container Container className="text-secondary">
-      <Row>
+    <>
+      <Row className="text-secondary mt-5">
         <Col xs={12} md={6}>
           <Row>
             <Col xs={12} md={4}></Col>
@@ -135,11 +135,11 @@ const Footer = function () {
         </Col>
       </Row>
       <Row>
-        <Col>
-          <p className="fs-footer">LinkedIn Corporation &copy; 2024</p>
+        <Col xs={12}>
+          <p className="fs-footer text-secondary ">LinkedIn Corporation &copy; 2024</p>
         </Col>
       </Row>
-    </Container>
+    </>
   );
 };
 

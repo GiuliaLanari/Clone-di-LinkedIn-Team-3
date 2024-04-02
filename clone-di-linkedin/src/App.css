@@ -18,3 +18,18 @@
 .selectLingua:hover {
   border: 2px solid black;
 }
+/* CSS APP STUTTURA*/
+#navbar {
+  background-color: aqua;
+  height: 20vh;
+}
+
+#topMain {
+  background-color: red;
+  height: 100vh;
+}
+
+#side {
+  background-color: blueviolet;
+  height: 100vh;
+}

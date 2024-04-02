@@ -19,7 +19,7 @@ function App() {
           <Col xs={3} className=" p-2" id="side"></Col>
         </Row>
         <Row>
-          <Col xs={12} id="footer">
+          <Col xs={12}>
             <Footer />
           </Col>
         </Row>
