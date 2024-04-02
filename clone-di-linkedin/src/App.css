@@ -17,3 +17,36 @@
   background-color: chartreuse;
   height: 20vh;
 }
+
+/*//////////// PROFILE INFO TOP ////////////*/
+#profile-container {
+  border: 2px solid#F2F0EC;
+}
+#banner {
+  background-image: url(https://media.licdn.com/dms/image/C4E16AQGqth-Lp2SCiw/profile-displaybackgroundimage-shrink_350_1400/0/1653811488706?e=1717632000&v=beta&t=qiMHXk2z2g8b2d0owRThcvLAuXpDbJqzs85MgcN1OL8);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180px;
+  position: relative;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  background-image: url(https://p16-va.lemon8cdn.com/tos-maliva-v-ac5634-us/o0JC1uRDDluDu0q0AAAtgHfo1QBFWWElQEfIPc~tplv-tej9nj120t-origin.webp);
+  background-size: contain;
+  border: transparent;
+  position: absolute;
+  top: 55px;
+  bottom: 0;
+  left: 23px;
+  right: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.add-banner {
+  height: 35px;
+  width: 35px;
+}
