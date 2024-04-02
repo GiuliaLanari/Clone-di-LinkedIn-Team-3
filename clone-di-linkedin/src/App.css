@@ -1,3 +1,23 @@
+#navbar {
+  background-color: aqua;
+  height: 20vh;
+}
+
+#topMain {
+  background-color: red;
+  height: 20vh;
+}
+
+#side {
+  background-color: blueviolet;
+  height: 20vh;
+}
+
+#footer {
+  background-color: chartreuse;
+  height: 20vh;
+}
+
 /*------------NAVBAR-----------------*/
 /* #navbar {
   height: 20vh;
