@@ -129,7 +129,7 @@ const Footer = function () {
               </Row>
             </Col>
             <Col xs={12} md={6}>
-              <Col xs={12}>
+              <Col xs={7} md={12}>
                 <p className="fs-footer ">Seleziona lingua</p>
                 <Navbar className="border me-5 ms-1 p-1 rounded border-black fs-footer">
                   <NavDropdown id="nav-dropdown-light-example" title="Italiano (italiano)" menuVariant="light">
