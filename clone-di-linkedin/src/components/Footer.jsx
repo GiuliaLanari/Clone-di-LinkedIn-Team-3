@@ -50,11 +50,21 @@ const Footer = function () {
                     menuVariant="light"
                     className="aFooter fs-footer"
                   >
-                    <NavDropdown.Item href="#action/3.1">Informazioni sulla privacy </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Contratto di licenza</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Termini e condizioni delle pagine</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.4">Informativa sui cookie</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.5">Informativa sul copyright</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.1" className="fs-footer">
+                      Informazioni sulla privacy{" "}
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2" className="fs-footer">
+                      Contratto di licenza
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3" className="fs-footer">
+                      Termini e condizioni delle pagine
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.4" className="fs-footer">
+                      Informativa sui cookie
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.5" className="fs-footer">
+                      Informativa sul copyright
+                    </NavDropdown.Item>
                   </NavDropdown>
                 </div>
               </Col>
@@ -123,10 +133,18 @@ const Footer = function () {
                 <p className="fs-footer ">Seleziona lingua</p>
                 <Navbar className="border me-5 ms-1 p-1 rounded border-black fs-footer">
                   <NavDropdown id="nav-dropdown-light-example" title="Italiano (italiano)" menuVariant="light">
-                    <NavDropdown.Item href="#action/3.1">English (English) </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Bahasa Indonesia</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Dansk (Dansk)</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.4">Português (Português)</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.1" className="fs-footer">
+                      English (English){" "}
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2" className="fs-footer">
+                      Bahasa Indonesia
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3" className="fs-footer">
+                      Dansk (Dansk)
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.4" className="fs-footer">
+                      Português (Português)
+                    </NavDropdown.Item>
                   </NavDropdown>
                 </Navbar>
               </Col>
