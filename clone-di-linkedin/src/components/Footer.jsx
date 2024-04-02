@@ -107,21 +107,21 @@ const Footer = function () {
               <Row>
                 <Col xs={12}>
                   <a href="Domande" className="aFooter fs-footerQ ">
-                    <img src={"icons/svgexport-80.svg"} alt="icon" className="me-1" />
+                    <img src={"icons/questionmark.svg"} alt="icon" className="me-1" />
                     Domande?
                   </a>
                   <p className="fs-footer">Visita il nostro Centro assistenza.</p>
                 </Col>
                 <Col xs={12}>
                   <a href="#Gestisci" className="aFooter fs-footerQ">
-                    <img src={"icons/svgexport-81.svg"} alt="icon" className="me-1" />
+                    <img src={"icons/settings.svg"} alt="icon" className="me-1" />
                     Gestisci il tuo accaunt e la tua privacy
                   </a>
                   <p className="fs-footer">Vai alle impostazioni</p>
                 </Col>
                 <Col xs={12}>
                   <a href="Trasparenza" className="aFooter fs-footerQ">
-                    <img src={"icons/svgexport-82.svg"} alt="icon" className="me-1" />
+                    <img src={"icons/security.svg"} alt="icon" className="me-1" />
                     Trasparenza sui contenuti consigliati
                   </a>
                   <p className="fs-footer">Scopri di più sui contenuti consigliati.</p>

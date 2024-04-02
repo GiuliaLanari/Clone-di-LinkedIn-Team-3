@@ -1,14 +1,4 @@
-#topMain {
-  background-color: red;
-  height: 20vh;
-}
-
-#side {
-  background-color: blueviolet;
-  height: 20vh;
-}
 /*------------NAVBAR-----------------*/
-
 .navbar-top {
   margin-inline: 25px;
   color: #666666;
@@ -55,16 +45,6 @@ body {
   background-color: #f4f2ee;
 }
 
-#navbar {
-  background-color: aqua;
-  height: 20vh;
-}
-
-#topMain {
-  background-color: white;
-  margin-block: 0.25rem;
-  padding: 25px;
-}
 #analisis {
   background-color: white;
   margin-block: 0.5rem;
