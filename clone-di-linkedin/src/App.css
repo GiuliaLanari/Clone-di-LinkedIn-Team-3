@@ -1,7 +1,3 @@
-#navbar {
-  background-color: aqua;
-  height: 20vh;
-}
 
 #topMain {
   background-color: red;
@@ -12,14 +8,8 @@
   background-color: blueviolet;
   height: 20vh;
 }
-
-#footer {
-  background-color: chartreuse;
-  height: 20vh;
-}
-
 /*------------NAVBAR-----------------*/
-/* #navbar {
+#navbar {
   height: 20vh;
 }
 .navbar-top {
@@ -45,7 +35,7 @@
 }
 .premium {
   color: darkgoldenrod;
-} */
+} 
 /* NAVBAR */
 
 .aFooter {
