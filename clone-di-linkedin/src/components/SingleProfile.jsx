@@ -1,8 +1,14 @@
 import ListGroup from "react-bootstrap/ListGroup";
 import { FaUserCircle } from "react-icons/fa";
 import Button from "react-bootstrap/Button";
+import { useDispatch, useSelector } from "react-redux";
+import { getUser } from "../redux/actions";
 
 const SingleProfile = function ({ profile }) {
+  const dispatch = useDispatch();
+  const user = useSelector((state) => {
+    return state.user;
+  });
   return (
     <ListGroup.Item>
       <div className="d-flex gap-2">
@@ -13,7 +19,16 @@ const SingleProfile = function ({ profile }) {
             <img width="20px" className="ms-2" src="icons/svgexport-41.svg" alt="" />
           </div>
           <div className="text-secondary">{profile.title}</div>
-          <Button variant="outline-secondary" size="sm" className="d-flex align-items-center gap-1 mt-1 rounded-4">
+          <Button
+            onClick={() => {
+              // da cambiare
+              dispatch(getUser(user));
+              // da cambiare
+            }}
+            variant="outline-secondary"
+            size="sm"
+            className="d-flex align-items-center gap-1 mt-1 rounded-4"
+          >
             <img src="icons/svgexport-23.svg" alt="" />
             <span>Collegati</span>
           </Button>
