@@ -3,7 +3,6 @@ import SingleProfile from "./SingleProfile";
 
 const Fetch = function () {
   const randomNum = Math.floor(Math.random() * 250);
-  console.log(randomNum);
   const [profiles, setProfiles] = useState(null);
 
   const profilesFetch = function () {
