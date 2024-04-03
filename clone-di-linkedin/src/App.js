@@ -3,6 +3,13 @@ import "./App.css";
 import Footer from "./components/Footer";
 import MyNavbar from "./components/MyNavbar";
 import Messagistica from "./components/Messagistica";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import ProfileInfoTop from "react-bootstrap/ProfileInfoTop";
+import ProfileInfoBottom from "react-bootstrap/ProfileInfoBottom";
+import SideBar from "./components/SideBar";
+
 
 function App() {
   return (

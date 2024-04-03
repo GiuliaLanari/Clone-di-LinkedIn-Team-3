@@ -6,7 +6,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import NavbarBrand from "react-bootstrap/NavbarBrand";
 import { Button, DropdownToggle, Modal } from "react-bootstrap";
 import { useState } from 'react';
-import Fetch from "./Fetch";
+import {Link} from "react-router-dom"
 import ListGroup from 'react-bootstrap/ListGroup';
 import Badge from 'react-bootstrap/Badge';
 
@@ -101,9 +101,8 @@ const MyNavbar = () => {
                                 <Dropdown.Menu>
                                     <ListGroup className="mb-2">
                                         <ListGroup.Item className="border-bottom-0">
-                                            <h6 className="m-0 mt-2">Altri profili simili</h6>
+                                            <Link className="" to={"profile/profile1"}>Profile1</Link>
                                         </ListGroup.Item>
-                                        <Fetch />
                                     </ListGroup>
                                 </Dropdown.Menu>
                             </Dropdown>
@@ -194,73 +193,73 @@ const MyNavbar = () => {
                                     </p>
                                     </div>
 
-                    <div className="mb-4 div-pointer div-width text-center mx-4">
-                      <div className="d-flex justify-content-center border py-2 div-hover-shadow">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="30"
-                          height="30"
-                          fill="#0a66c2"
-                          className="bi bi-bullseye"
-                          viewBox="0 0 16 16"
-                        >
-                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                          <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10m0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12" />
-                          <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8" />
-                          <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-                        </svg>
-                      </div>
-                      <p className="modalp text-secondary">Pubblicizza</p>
+                                    <div className="mb-4 div-pointer div-width text-center mx-4">
+                                    <div className="d-flex justify-content-center border py-2 div-hover-shadow">
+                                        <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="30"
+                                        height="30"
+                                        fill="#0a66c2"
+                                        className="bi bi-bullseye"
+                                        viewBox="0 0 16 16"
+                                        >
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                        <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10m0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12" />
+                                        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8" />
+                                        <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                                        </svg>
+                                    </div>
+                                    <p className="modalp text-secondary">Pubblicizza</p>
+                                    </div>
+                                    <div className="div-pointer div-width text-center mb-3 mx-4">
+                                    <div className="d-flex justify-content-center border py-2 div-hover-shadow">
+                                        <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="30"
+                                        height="30"
+                                        fill="#0a66c2"
+                                        className="bi bi-compass"
+                                        viewBox="0 0 16 16"
+                                        >
+                                        <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                                        </svg>
+                                    </div>
+                                    <p className="modalp text-secondary">Trova nuovi clienti</p>
+                                    </div>
+                                    <div className="div-pointer div-width text-center mx-4">
+                                    <div className="d-flex justify-content-center border py-2 div-hover-shadow">
+                                        <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="30"
+                                        height="30"
+                                        fill="#0a66c2"
+                                        className="bi bi-people"
+                                        viewBox="0 0 16 16"
+                                        >
+                                        <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
+                                        </svg>
+                                    </div>
+                                    <p className="modalp text-secondary">Gruppi</p>
+                                    </div>
+                                    <div className="div-pointer div-width text-center mx-4">
+                                    <div className="d-flex justify-content-center border py-2 div-hover-shadow">
+                                        <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="30"
+                                        height="30"
+                                        fill="#0a66c2"
+                                        className="bi bi-check2"
+                                        viewBox="0 0 16 16"
+                                        >
+                                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                                        </svg>
+                                    </div>
+                                    <p className="modalp text-secondary">Marketplace dei servizi</p>
+                                    </div>
                     </div>
-                    <div className="div-pointer div-width text-center mb-3 mx-4">
-                      <div className="d-flex justify-content-center border py-2 div-hover-shadow">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="30"
-                          height="30"
-                          fill="#0a66c2"
-                          className="bi bi-compass"
-                          viewBox="0 0 16 16"
-                        >
-                          <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
-                          <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
-                        </svg>
-                      </div>
-                      <p className="modalp text-secondary">Trova nuovi clienti</p>
                     </div>
-                    <div className="div-pointer div-width text-center mx-4">
-                      <div className="d-flex justify-content-center border py-2 div-hover-shadow">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="30"
-                          height="30"
-                          fill="#0a66c2"
-                          className="bi bi-people"
-                          viewBox="0 0 16 16"
-                        >
-                          <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
-                        </svg>
-                      </div>
-                      <p className="modalp text-secondary">Gruppi</p>
-                    </div>
-                    <div className="div-pointer div-width text-center mx-4">
-                      <div className="d-flex justify-content-center border py-2 div-hover-shadow">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="30"
-                          height="30"
-                          fill="#0a66c2"
-                          className="bi bi-check2"
-                          viewBox="0 0 16 16"
-                        >
-                          <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
-                        </svg>
-                      </div>
-                      <p className="modalp text-secondary">Marketplace dei servizi</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="border rounded-4 bg bg-white">
+                        <div className="border rounded-4 bg bg-white">
                   <div className="mt-2">
                     <h6 className="ms-4 py-2">Scopri altro per il business</h6>
                     <hr />
@@ -305,11 +304,11 @@ const MyNavbar = () => {
                       <path d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
                     </svg>
                   </div>
-                </div>
-              </Modal.Body>
-            </Modal>
-          </div>
-          <div className="d-flex flex-column align-items-center">
+                        </div>
+                    </Modal.Body>
+                </Modal>
+            </div>
+            <div className="d-flex flex-column align-items-center">
             <a href="#login" className="premium">
               Prova Premium per <br />0 EUR
             </a>
