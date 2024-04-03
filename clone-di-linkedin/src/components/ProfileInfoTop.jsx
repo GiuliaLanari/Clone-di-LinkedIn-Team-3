@@ -50,7 +50,7 @@ const ProfileInfoTop = () => {
             </div>
           </div>
 
-          <Carousel className="my-3" slide={false}>
+          <Carousel className="my-3" interval={null} slide={false}>
             <Carousel.Item>
               <Row className="justify-content-evenly">
                 <Col className="border border-secondary col-5">
