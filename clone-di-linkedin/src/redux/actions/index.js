@@ -54,9 +54,9 @@ export const experiencesList = () => {
   };
 };
 
-export const experiencesListDelete = (i) => {
+export const experiencesListDelete = (id, i) => {
   return (dispatch, getState) => {
-    fetch(`https://striveschool-api.herokuapp.com/api/profile/:userId/experiences/${id}`, {
+    fetch("https://striveschool-api.herokuapp.com/api/profile/:userId/experiences/" + { id }, {
       headers: {
         method: "DELETE",
         Authorization:
@@ -70,9 +70,7 @@ export const experiencesListDelete = (i) => {
           throw new Error("Errore nel reperimento dei dati richiesti");
         }
       })
-      .then((deleteExperience) => {
-        console.log(deleteExperience);
-
+      .then((i) => {
         dispatch({
           type: DELETE_EXPERIENCES,
           payload: i,

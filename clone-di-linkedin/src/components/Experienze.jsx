@@ -13,7 +13,10 @@ const Experienze = function () {
   //   const deleteFuction = () => {
   //     dispatch(experiencesListDelete(id));
   //   };
-
+  //   const deleteFuction = async (e) => {
+  //     e.preventDefault();
+  //     dispatch(experiencesListDelete(id , i));
+  //   };
   useEffect(() => {
     dispatch(experiencesList(experiences));
     // deleteFuction();
