@@ -7,6 +7,7 @@ import Activity from "./Activity";
 import Training from "./Training";
 import Interests from "./Interests";
 import Experienze from "./Experienze";
+import About from "./About";
 
 const ProfileInfoBottom = function () {
   return (
@@ -123,6 +124,11 @@ const ProfileInfoBottom = function () {
       <Col xs={12} id="analisis" className="rounded-3">
         <section>
           <Activity />
+        </section>
+      </Col>
+      <Col xs={12} id="analisis" className="rounded-3">
+        <section>
+          <About />
         </section>
       </Col>
       <Col xs={12} id="analisis" className="rounded-3">
