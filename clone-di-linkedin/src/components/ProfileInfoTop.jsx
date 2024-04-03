@@ -20,7 +20,7 @@ const ProfileInfoTop = () => {
     <div id="profile-container" className="rounded-3 bg-white">
       <div id="banner" className="rounded-top-3">
         <button className="profile-picture">
-          <img src={userData.image} className="img-fluid" style={{ width: "170px", borderRadius: "50%" }} alt="" />
+          <img src={userData.image} id="profile-picture" alt="" />
         </button>
         <div className=" d-flex justify-content-end">
           <button className="m-3 add-banner border-0 rounded-circle">

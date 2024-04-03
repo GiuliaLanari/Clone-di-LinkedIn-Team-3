@@ -16,7 +16,7 @@ function EditEsperienzaForm() {
 
       <Modal show={show} onHide={handleClose} className="modal-dialog-scrollable ">
         <Modal.Header closeButton>
-          <Modal.Title>Aggiungi Esperienza</Modal.Title>
+          <Modal.Title>Modifica Esperienza</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
