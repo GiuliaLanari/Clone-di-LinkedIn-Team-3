@@ -1,6 +1,5 @@
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-
 import Button from "react-bootstrap/Button";
 import Analisis from "./Analisis";
 import Risorse from "./Risorse";
@@ -13,21 +12,37 @@ import { useEffect, useState } from "react";
 
 const ProfileInfoBottom = function () {
   const [slide, setSlide] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(25);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const resizeWidth = function () {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", resizeWidth);
+
+    return () => window.removeEventListener("resize", resizeWidth);
+  }, []);
 
   const next = () => {
-    setSlide((prevValue) => prevValue - windowWidth);
+    if (windowWidth <= 768) {
+      setSlide((prevValue) => prevValue - 104);
+    } else if (windowWidth <= 992) {
+      setSlide((prevValue) => prevValue - 73);
+    } else {
+      setSlide((prevValue) => prevValue - 25);
+    }
   };
 
   const prev = () => {
-    setSlide((prevValue) => prevValue + windowWidth);
-  };
-
-  useEffect(() => {
-    if (window.innerWidth <= 768) {
-      setWindowWidth(100 / 80);
+    if (windowWidth <= 768) {
+      setSlide((prevValue) => prevValue + 104);
+    } else if (windowWidth <= 992) {
+      setSlide((prevValue) => prevValue + 73);
+    } else {
+      setSlide((prevValue) => prevValue + 25);
     }
-  }, []);
+  };
 
   return (
     <>
@@ -59,7 +74,7 @@ const ProfileInfoBottom = function () {
 
             <section>
               <div>
-                <div interval={null} className="my-3 my-carousel">
+                <div interval={null} className=" my-carousel">
                   <div className="overflow-hidden carousel-overflow">
                     <Button onClick={prev} disabled={slide === 0} className="prev-btn btn-dark rounded-circle">
                       <img src="icons/prev-btn.svg" alt="" />
@@ -126,7 +141,11 @@ const ProfileInfoBottom = function () {
                         </div>
                       </Col>
                     </Row>
-                    <Button onClick={next} disabled={slide === -50} className="next-btn btn-dark rounded-circle">
+                    <Button
+                      onClick={next}
+                      disabled={slide === -50 || slide === -146 || slide === -208}
+                      className="next-btn btn-dark rounded-circle"
+                    >
                       <img src="icons/next-btn.svg" alt="" />
                     </Button>
                   </div>
