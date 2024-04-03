@@ -6,7 +6,7 @@
   margin-bottom: 0;
 }
 
-.navbar-top:hover {
+:hover {
   color: black;
   fill: rgb(31, 17, 17);
   cursor: pointer;
@@ -28,9 +28,15 @@
 .bord:hover {
   border-bottom: solid 2px black;
 }
+
+.netNav {
+  border-left: solid 1px #666666;
+}
+
 .premium {
   color: darkgoldenrod;
 }
+
 /* NAVBAR */
 
 .aFooter {
