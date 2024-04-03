@@ -51,7 +51,7 @@ const Experienze = function () {
                           dispatch(experiencesListDelete(esperienza._id, userId));
                         }}
                       >
-                        <RiDeleteBin5Fill className="d-block" />
+                        <RiDeleteBin5Fill />
                       </Button>
                     </Col>
                     <Col xs={1} className="ms-3">

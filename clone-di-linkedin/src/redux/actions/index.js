@@ -2,6 +2,7 @@ export const GET_USER = "GET_USER";
 export const GET_EXPERIENCES = "GET_EXPERIENCES";
 export const DELETE_EXPERIENCES = "DELETE_EXPERIENCES";
 export const UPDATE_USER = "UPDATE_USER";
+// export const POST_EXPERIENCES = "POST_EXPERIENCES";
 
 export const getUser = () => {
   return (dispatch, getState) => {
@@ -79,25 +80,19 @@ export const experiencesListDelete = (expId, userId) => {
   };
 };
 
-// export const updateUser = () => {
-//   const personalData = {
-//     name: "",
-//     surname: "",
-//     email: "",
-//     username: "",
-//     title: "",
-//     bio: "",
-//     area: "",
-//     image: "",
-//   };
+// export const modificaForm = (userId) => {
 //   return (dispatch, getState) => {
-//     fetch("https://striveschool-api.herokuapp.com/api/profile/me", {
-//       method: "PUT",
+//     fetch("https://striveschool-api.herokuapp.com/api/profile/" + userId + "/experiences", {
+//       method: "POST",
+//       body: JSON.stringify({
+//         role: "",
+//         company: "",
+//         startDate: "",
+//         image: "",
+//       }),
 //       headers: {
 //         Authorization:
 //           "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjBiYmUzOWEyODFkODAwMTlhM2VjNDkiLCJpYXQiOjE3MTIwNDU2MjUsImV4cCI6MTcxMzI1NTIyNX0.c_0ZpFzaWJeG9_uKPTBJGPyvUgqbD-fgP8aAdinJh1o",
-//         "Content-Type": "application/json",
-//         body: JSON.stringify(personalData),
 //       },
 //     })
 //       .then((response) => {
@@ -107,11 +102,13 @@ export const experiencesListDelete = (expId, userId) => {
 //           throw new Error("Errore nel reperimento dei dati richiesti");
 //         }
 //       })
-//       .then((user) => {
-//         console.log(user);
-//         console.log(getState(), "getstate");
-//         dispatch({ type: UPDATE_USER, payload: user });
+//       .then((form) => {
+//         dispatch({
+//           type: POST_EXPERIENCES,
+//           payload: userId,
+//         });
 //       })
+
 //       .catch((error) => console.log(error));
 //   };
 // };
