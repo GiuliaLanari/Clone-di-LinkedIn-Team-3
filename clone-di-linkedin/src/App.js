@@ -12,13 +12,7 @@ import MyNavbar from "./components/MyNavbar";
 function App() {
   return (
     <>
-      <Container fluid>
-        <Row>
-          <Col>
-            <MyNavbar />
-          </Col>
-        </Row>
-      </Container>
+      <MyNavbar />
       <Container>
         <Row className="justify-content-between g-0">
           <Col xs={9}>
