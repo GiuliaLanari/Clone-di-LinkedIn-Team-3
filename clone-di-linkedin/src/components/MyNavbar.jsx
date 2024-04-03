@@ -307,7 +307,7 @@ const MyNavbar = () => {
             </div>
             <div className="d-flex flex-column align-items-center">
             <a href="#login" className="premium">
-              Prova Premium per <br />0 EUR
+                Prova Premium per <br />0 EUR
             </a>
           </div>
         </div>
