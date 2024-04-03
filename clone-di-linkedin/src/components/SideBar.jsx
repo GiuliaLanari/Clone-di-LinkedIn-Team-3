@@ -1,7 +1,9 @@
 import ListGroup from "react-bootstrap/ListGroup";
 import Fetch from "./Fetch";
+import { useSelector } from "react-redux";
 
 const SideBar = function () {
+  const user = useSelector((state) => state.user);
   return (
     <>
       <ListGroup className="rounded-3">
@@ -21,7 +23,7 @@ const SideBar = function () {
               <img width="24px" src="icons/svgexport-10.svg" alt="edit" />
             </div>
           </div>
-          <span className="text-secondary">www.linkedin.com/in/simone-criscenti-b49272237</span>
+          <span className="text-secondary">www.linkedin.com/in/{user.username}</span>
         </ListGroup.Item>
       </ListGroup>
       <img
