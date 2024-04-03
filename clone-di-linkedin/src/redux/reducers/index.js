@@ -20,13 +20,13 @@ const userReducer = function (state = initialState, action) {
     case DELETE_EXPERIENCES:
       return {
         ...state,
-        experiences: state.experiences.filter((esperienza, i) => i !== action.payload),
+        experiences: state.experiences.filter((esperienza) => esperienza._id !== action.payload),
       };
-    case UPDATE_USER:
-      return {
-        ...state,
-        user: action.payload,
-      };
+    // case UPDATE_USER:
+    //   return {
+    //     ...state,
+    //     user: action.payload,
+    //   };
     default:
       return state;
   }

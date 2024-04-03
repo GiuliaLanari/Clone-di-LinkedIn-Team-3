@@ -23,7 +23,7 @@ const Experienze = function () {
   }, []);
   //   const experiencesData = useSelector((state)=> )
   const experiences = useSelector((state) => state.experiences);
-
+  const userId = useSelector((state) => state.user._id);
   return (
     <Row className="g-0">
       <Col className="analis-col">
@@ -56,7 +56,7 @@ const Experienze = function () {
                       <Button
                         variant="danger"
                         onClick={() => {
-                          dispatch(experiencesListDelete(i));
+                          dispatch(experiencesListDelete(esperienza._id, userId));
                         }}
                       >
                         <RiDeleteBin5Fill className="d-block" />
