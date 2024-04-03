@@ -328,9 +328,11 @@ h5 {
 }
 
 .add-pen-btn:hover {
-  background-color: #ebebeb;
+  background-color: #ebebebb1;
 }
-
+/* .add-pen-btn:focus {
+  background-color: #dfdfdf;
+} */
 .btn-interests {
   background-color: transparent;
   border: 0;
@@ -354,3 +356,10 @@ h5 {
   padding: 25px;
   padding-top: 0px;
 }
+
+/*//////////// BREAKPOINTS ////////////*/
+/* @media (min-width: 768px) {
+  #main-container {
+    margin-inline: 10%;
+  }
+} */

@@ -17,7 +17,7 @@ const Activity = function () {
             <div>
               <Button className="rounded-pill btn-crea fw-bold">Crea un post</Button>
             </div>
-            <Button className="add-pen-btn">
+            <Button className="add-pen-btn rounded-circle py-1 px-2">
               <img src="icons/pen.svg" alt="" />
             </Button>
           </div>
