@@ -98,7 +98,13 @@ body {
   opacity: -0.4;
 }
 
-/*//////////// PROFILE INFO TOP ////////////*/
+.carousel-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*/ /////////// PROFILE INFO TOP ////////////*/
 #profile-container {
   border: 2px solid#F2F0EC;
 }
