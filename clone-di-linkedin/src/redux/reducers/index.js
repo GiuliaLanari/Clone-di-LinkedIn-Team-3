@@ -1,8 +1,9 @@
-import { GET_USER, GET_EXPERIENCES, DELETE_EXPERIENCES, UPDATE_USER } from "../actions";
+import { GET_USER, GET_EXPERIENCES, DELETE_EXPERIENCES } from "../actions";
 
 const initialState = {
   user: {},
   experiences: [],
+  // formEsperiences: {},
 };
 
 const userReducer = function (state = initialState, action) {
@@ -22,10 +23,11 @@ const userReducer = function (state = initialState, action) {
         ...state,
         experiences: state.experiences.filter((esperienza) => esperienza._id !== action.payload),
       };
-    // case UPDATE_USER:
+
+    // case POST_EXPERIENCES:
     //   return {
     //     ...state,
-    //     user: action.payload,
+    //     experiences: state.experiences.concat(action.payload),
     //   };
     default:
       return state;
