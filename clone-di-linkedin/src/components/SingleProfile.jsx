@@ -11,8 +11,8 @@ const SingleProfile = function ({ profile }) {
   });
   return (
     <ListGroup.Item>
-      <div className="d-flex gap-2">
-        <FaUserCircle size={35} />
+      <div className="d-flex align-items-start gap-2">
+        <img src={profile.image} className="rounded-circle object-fit-cover" alt="profile" width="35px" height="35px" />
         <div>
           <div className="d-flex">
             <h6 className="m-0">{profile.name}</h6>

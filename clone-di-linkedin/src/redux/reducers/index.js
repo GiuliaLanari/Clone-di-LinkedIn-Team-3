@@ -22,11 +22,11 @@ const userReducer = function (state = initialState, action) {
         ...state,
         experiences: state.experiences.filter((esperienza, i) => i !== action.payload),
       };
-    case UPDATE_USER:
-      return {
-        ...state,
-        user: action.payload,
-      };
+    // case UPDATE_USER:
+    //   return {
+    //     ...state,
+    //     user: action.payload,
+    //   };
     default:
       return state;
   }

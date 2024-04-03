@@ -16,19 +16,38 @@ function EditProfileForm() {
   useEffect(() => {
     dispatch(getUser(userData));
   }, []);
-
   const userData = useSelector((state) => state.user);
-  console.log(userData);
-  const user = useSelector((state) => state.user);
-  const [name, setName] = useState("");
-  const [surname, setSurname] = useState("");
-  const [bio, setBio] = useState("");
-  const [area, setArea] = useState("");
-  const [job, setJob] = useState("");
-  const [image, setImage] = useState("");
-  const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
-
+  const [user, setUser] = useState({
+    name: "",
+    surname: "",
+    bio: "",
+    area: "",
+    title: "",
+    image: "",
+  });
+  const editForm = function () {
+    fetch("https://striveschool-api.herokuapp.com/api/profile/", {
+      method: "PUT",
+      body: JSON.stringify(user),
+      headers: {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjBiYmUzOWEyODFkODAwMTlhM2VjNDkiLCJpYXQiOjE3MTIwNDU2MjUsImV4cCI6MTcxMzI1NTIyNX0.c_0ZpFzaWJeG9_uKPTBJGPyvUgqbD-fgP8aAdinJh1o",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Errore nel reperimento dei dati richiesti");
+        }
+      })
+      .then((data) => {
+        console.log(data);
+        dispatch(getUser(userData));
+      })
+      .catch((error) => console.log(error));
+  };
   return (
     <>
       <Button className="m-3 border-0 bg-transparent" onClick={handleShow}>
@@ -41,36 +60,50 @@ function EditProfileForm() {
         </Modal.Header>
 
         <Modal.Body>
-          <Form onSubmit={console.log("Form inviato!")}>
+          <Form onSubmit={editForm}>
             <Form.Text className="text-muted">* Indica che è obbligatorio</Form.Text>
             <Form.Group className="mb-3">
               <Form.Label>Nome*</Form.Label>
-              <Form.Control type="text" value={userData?.name || ""} required></Form.Control>
+              <Form.Control
+                type="text"
+                value={user?.name || ""}
+                onChange={(e) =>
+                  setUser((state) => ({
+                    ...state,
+                    name: e.target.value,
+                  }))
+                }
+                required
+              ></Form.Control>
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Cognome*</Form.Label>
-              <Form.Control type="text" value={userData?.surname || ""} required />
               <Form.Control
                 type="text"
-                placeholder="Nome"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={user?.surname || ""}
+                onChange={(e) =>
+                  setUser((state) => ({
+                    ...state,
+                    surname: e.target.value,
+                  }))
+                }
                 required
               />
             </Form.Group>
+
             <Form.Group className="mb-3">
-              <Form.Label>Cognome*</Form.Label>
+              <Form.Label>Lavoro*</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Parametro dinamico"
-                value={surname}
-                onChange={(e) => setSurname(e.target.value)}
+                value={user?.title || ""}
+                onChange={(e) =>
+                  setUser((state) => ({
+                    ...state,
+                    title: e.target.value,
+                  }))
+                }
                 required
               />
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label>Nome Aggiuntivo</Form.Label>
-              <Form.Control type="text" />
             </Form.Group>
             <Form.Text className="text-muted">Pronuncia del nome</Form.Text>
             <p>
@@ -89,12 +122,16 @@ function EditProfileForm() {
             </p>
             <Form.Group className="mb-3">
               <Form.Label>Sommario*</Form.Label>
-              <Form.Control type="text" value={userData?.bio || ""} required />
               <Form.Control
                 type="text"
                 placeholder="Parametro dinamico"
-                value={bio}
-                onChange={(e) => setBio(e.target.value)}
+                value={user?.bio || ""}
+                onChange={(e) =>
+                  setUser((state) => ({
+                    ...state,
+                    bio: e.target.value,
+                  }))
+                }
                 required
               />
             </Form.Group>
@@ -108,22 +145,32 @@ function EditProfileForm() {
             <h4>Località</h4>
             <Form.Group className="mb-3">
               <Form.Label>Paese/Area geografica*</Form.Label>
-              <Form.Control type="text" value={userData?.area || ""} required />
               <Form.Control
                 type="text"
                 placeholder="Parametro dinamico"
-                value={area}
-                onChange={(e) => setArea(e.target.value)}
+                value={user?.area}
+                onChange={(e) =>
+                  setUser((state) => ({
+                    ...state,
+                    area: e.target.value,
+                  }))
+                }
                 required
               />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>CAP</Form.Label>
-              <Form.Control type="text" />
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label>Città*</Form.Label>
-              <Form.Control type="text" value={userData?.area || ""} required />
+              <Form.Label>Immagine del profilo*</Form.Label>
+              <Form.Control
+                type="text"
+                value={user?.image}
+                onChange={(e) =>
+                  setUser((state) => ({
+                    ...state,
+                    image: e.target.value,
+                  }))
+                }
+                required
+              />
             </Form.Group>
 
             <Modal.Footer>
