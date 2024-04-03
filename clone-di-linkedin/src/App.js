@@ -1,14 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import SideBar from "./components/SideBar";
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import ProfileInfoTop from "./components/ProfileInfoTop";
 import Footer from "./components/Footer";
-import ProfileInfoBottom from "./components/ProfileInfoBottom";
 import MyNavbar from "./components/MyNavbar";
 import Messagistica from "./components/Messagistica";
+
 function App() {
   return (
     <>

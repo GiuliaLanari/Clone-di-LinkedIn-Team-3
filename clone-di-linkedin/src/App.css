@@ -104,7 +104,13 @@ body {
   opacity: -0.4;
 }
 
-/*//////////// PROFILE INFO TOP ////////////*/
+.carousel-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*/ /////////// PROFILE INFO TOP ////////////*/
 #profile-container {
   border: 2px solid#F2F0EC;
 }
@@ -159,11 +165,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.cons-list {
-  width: 366px;
-  background-color: #f6f8fc;
-}
-
 ul {
   list-style: none;
   padding: 0;
@@ -174,6 +175,8 @@ ul {
   padding: 0.9rem;
   padding-right: 2.2rem;
   position: relative;
+  background-color: #f6f8fc;
+  width: 385px;
 }
 
 .cons-pad p {
@@ -211,6 +214,7 @@ ul {
   background-color: #dad9d9bd;
   border: 2px solid black;
 }
+
 h3 {
   font-size: 1.3rem;
 }
@@ -227,24 +231,38 @@ h5 {
   font-size: 0.95rem;
 }
 
-.carousel-ul {
-  padding: 0;
+.carousel-overflow {
+  overflow: hidden;
+  padding-inline: 2rem;
+  padding-block: 1.2rem;
   position: relative;
 }
 
-.carousel-overflow {
-  overflow: hidden;
-}
-/* 
-.carousel-ul {
-  transform: translateX(-366px);
-  transition: transform 0.25s ease 0s;
-} */
-
 .my-carousel {
-  overflow: hidden;
-  padding-inline: 1.5rem;
-  padding-block: 1.2rem;
+  position: relative;
+  overflow: visible;
+}
+
+.prev-btn {
+  position: absolute;
+  top: 45%;
+  width: 40px;
+  height: 40px;
+  left: 0px;
+  z-index: 2;
+  background-color: transparent;
+  background-color: #393a3a;
+}
+
+.next-btn {
+  position: absolute;
+  top: 45%;
+  width: 40px;
+  height: 40px;
+  right: 0px;
+  z-index: 2;
+  background-color: transparent;
+  background-color: #393a3a;
 }
 
 .btn-border {
@@ -296,6 +314,11 @@ h5 {
 .btn-interests {
   background-color: transparent;
   border: 0;
+}
+
+.btn-underline {
+  border-bottom: 1px solid green;
+  color: green;
 }
 
 .btn-interests:hover {
