@@ -10,28 +10,15 @@ import ProfileInfoTop from "./components/ProfileInfoTop";
 import ProfileInfoBottom from "./components/ProfileInfoBottom"; 
 import SideBar from "./components/SideBar";
 
+import ProfilePage from "./components/ProfilePage";
 
 function App() {
   return (
     <>
       <MyNavbar />
-      <Container>
-        <Row className="justify-content-between g-0">
-          <Col xs={9}>
-            <ProfileInfoTop />
-            <ProfileInfoBottom />
-          </Col>
-          <Col xs={3} className="p-2">
-            <SideBar />
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={12}>
-            <Footer />
-          </Col>
-        </Row>
-        <Messagistica/>
-      </Container>
+      <ProfilePage />
+      <Footer />
+      <Messagistica />
     </>
   );
 }
