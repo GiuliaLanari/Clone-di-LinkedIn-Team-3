@@ -43,7 +43,6 @@ function EditProfileForm() {
         }
       })
       .then((data) => {
-        console.log(data);
         dispatch(getUser(userData));
       })
       .catch((error) => console.log(error));

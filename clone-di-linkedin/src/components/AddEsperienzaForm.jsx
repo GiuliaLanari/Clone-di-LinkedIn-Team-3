@@ -2,11 +2,22 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
+// import { useSelector } from "react-redux";
 
 function ExperienzeForm() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  // const addExperienze = useSelector((state) => state.experiences);
+  // const userId = useSelector((state) => state.user._id);
+  // const [form, setForm] = useState({
+  //   role: "",
+  //   company: "",
+  //   startDate: "",
+  //   image: "",
+  // });
+  // const dispatch = useDispatch();
 
   return (
     <>
@@ -20,27 +31,67 @@ function ExperienzeForm() {
         </Modal.Header>
 
         <Modal.Body>
-          <Form onSubmit={console.log("Form inviato!")}>
+          <Form onSubmit={""}>
             <Form.Group className="mb-3">
               <Form.Label>Azienda:</Form.Label>
-              <Form.Control type="text" required></Form.Control>
+              <Form.Control
+                type="text"
+                required
+                // value={form ? addExperienze.company : ""}
+                // onChange={(e) =>
+                //   setForm((state) => ({
+                //     ...state,
+                //     companny: e.target.value,
+                //   }))
+                // }
+              ></Form.Control>
             </Form.Group>
 
             <Form.Group className="mb-3">
               <Form.Label>Ruolo ricoperto:</Form.Label>
-              <Form.Control type="text" required></Form.Control>
+              <Form.Control
+                type="text"
+                required
+                // value={form ? addExperienze.role : ""}
+                // onChange={(e) =>
+                //   setForm((state) => ({
+                //     ...state,
+                //     role: e.target.value,
+                //   }))
+                // }
+              ></Form.Control>
             </Form.Group>
 
             <Form.Group className="mb-3">
               <Form.Label>Inserisci immagine:</Form.Label>
-              <Form.Control type="url" required />
+              <Form.Control
+                type="url"
+                required
+                // value={form ? addExperienze.image : ""}
+                // onChange={(e) =>
+                //   setForm((state) => ({
+                //     ...state,
+                //     image: e.target.value,
+                //   }))
+                // }
+              />
             </Form.Group>
 
             <Form.Group className="mb-3">
               <label for="start" className="me-3">
                 Start date:
               </label>
-              <input type="date" name="trip-start" />
+              <input
+                type="date"
+                name="trip-start"
+                // value={form ? addExperienze.startDate : ""}
+                // onChange={(e) =>
+                //   setForm((state) => ({
+                //     ...state,
+                //     startDate: e.target.value,
+                //   }))
+                // }
+              />
             </Form.Group>
 
             <Modal.Footer className="d-flex">

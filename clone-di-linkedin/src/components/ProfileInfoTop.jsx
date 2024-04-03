@@ -45,7 +45,6 @@ const ProfileInfoTop = () => {
     dispatch(getUser(userData));
   }, []);
   const userData = useSelector((state) => state.user);
-  console.log(userData);
 
   return (
     <div id="profile-container" className="rounded-3 bg-white">
