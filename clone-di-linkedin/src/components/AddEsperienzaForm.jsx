@@ -2,13 +2,15 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
-// import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { newExperienze } from "../redux/actions";
 
 function ExperienzeForm() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  // const experiences = useSelector((state) => state.experiences);
+  const userId = useSelector((state) => state.user._id);
   // const addExperienze = useSelector((state) => state.experiences);
   // const userId = useSelector((state) => state.user._id);
   // const [form, setForm] = useState({
@@ -17,7 +19,17 @@ function ExperienzeForm() {
   //   startDate: "",
   //   image: "",
   // });
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  ///////COME FACCIO A SETTARE IL VALORE DELLO STATO GLOBALE///
+  ///QUI SOTTO///
+  // const handleChange = (e) => {
+  //   setQuery(e.target.value);
+  // };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    dispatch(newExperienze(userId));
+  };
 
   return (
     <>
@@ -31,13 +43,13 @@ function ExperienzeForm() {
         </Modal.Header>
 
         <Modal.Body>
-          <Form onSubmit={""}>
+          <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3">
               <Form.Label>Azienda:</Form.Label>
               <Form.Control
                 type="text"
                 required
-                // value={form ? addExperienze.company : ""}
+                // value={ userId? : ""}
                 // onChange={(e) =>
                 //   setForm((state) => ({
                 //     ...state,
@@ -95,7 +107,13 @@ function ExperienzeForm() {
             </Form.Group>
 
             <Modal.Footer className="d-flex">
-              <Button variant="primary" type="submit" onClick={handleClose}>
+              <Button
+                variant="primary"
+                type="submit"
+                onClick={() => {
+                  dispatch(newExperienze(userId));
+                }}
+              >
                 Salva
               </Button>
             </Modal.Footer>

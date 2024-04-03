@@ -20,6 +20,7 @@ const Experienze = function () {
 
   const experiences = useSelector((state) => state.experiences);
   const userId = useSelector((state) => state.user._id);
+
   return (
     <Row className="g-0">
       <Col className="analis-col">
@@ -30,9 +31,9 @@ const Experienze = function () {
           <div
             className="d-flex gap-3 align-items-baseline "
             variant="white"
-            // onClick={() => {
-            //   dispatch(experiencesListDelete(userId));
-            // }}
+            onClick={() => {
+              dispatch(newExperienze(userId));
+            }}
           >
             <AddEsperienzaForm />
           </div>
