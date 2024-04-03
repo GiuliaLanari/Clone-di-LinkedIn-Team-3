@@ -159,6 +159,13 @@ ul {
   margin-bottom: 0;
 }
 
+.cons-pad-top {
+  padding: 0.9rem;
+  padding-right: 2.2rem;
+  position: relative;
+
+  width: 385px;
+}
 .cons-pad {
   padding: 0.9rem;
   padding-right: 2.2rem;
@@ -167,6 +174,9 @@ ul {
   width: 385px;
 }
 
+.cons-pad-top p {
+  font-size: 0.9rem;
+}
 .cons-pad p {
   font-size: 0.85rem;
 }
@@ -233,7 +243,7 @@ h5 {
 
 .prev-btn {
   position: absolute;
-  top: 45%;
+  top: 42%;
   width: 40px;
   height: 40px;
   left: 0px;
@@ -244,13 +254,17 @@ h5 {
 
 .next-btn {
   position: absolute;
-  top: 45%;
+  top: 42%;
   width: 40px;
   height: 40px;
   right: 0px;
   z-index: 2;
   background-color: transparent;
   background-color: #393a3a;
+}
+.prev-btn-top,
+.next-btn-top {
+  top: 36%;
 }
 
 .btn-border {
