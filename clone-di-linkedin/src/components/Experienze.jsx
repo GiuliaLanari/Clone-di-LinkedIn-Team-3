@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { experiencesList } from "../redux/actions";
 import { experiencesListDelete } from "../redux/actions";
 import { RiDeleteBin5Fill } from "react-icons/ri";
+import AddEsperienzaForm from "./AddEsperienzaForm";
+import EditEsperienzaForm from "./EditEsperienzaForm";
 
 const Experienze = function () {
   const dispatch = useDispatch();
@@ -24,9 +26,7 @@ const Experienze = function () {
             <h3 className="mb-0">Esperienza</h3>
           </div>
           <div className="d-flex gap-3 align-items-baseline">
-            <Button className="add-pen-btn">
-              <img src="icons/plus.svg" alt="" />
-            </Button>
+            <AddEsperienzaForm />
           </div>
         </div>
 
@@ -55,9 +55,7 @@ const Experienze = function () {
                       </Button>
                     </Col>
                     <Col xs={1} className="ms-3">
-                      <Button className="add-pen-btn">
-                        <img src="icons/pen.svg" alt="" />
-                      </Button>
+                      <EditEsperienzaForm />
                     </Col>
                   </Row>
                 </Col>
