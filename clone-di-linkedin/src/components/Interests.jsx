@@ -4,10 +4,14 @@ import Button from "react-bootstrap/Button";
 import { useState } from "react";
 
 const Interests = function () {
-  const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState(null);
 
-  const handleClick = () => {
-    setClicked(!clicked);
+  const handleClick = (btnId) => {
+    if (clicked === btnId) {
+      setClicked(null);
+    } else {
+      setClicked(btnId);
+    }
   };
 
   return (
@@ -18,8 +22,23 @@ const Interests = function () {
             <h3 className="mb-0">Interessi</h3>
           </div>
           <div className="d-flex gap-3 align-items-baseline">
-            <Button className="btn-interests text-black rounded-0 py-3 px-1">Aziende</Button>
-            <Button className="btn-interests text-black rounded-0 py-3 px-1">Scuole o università</Button>
+            <button
+              onClick={() => handleClick("aziende")}
+              className={
+                "btn-interests rounded-0 py-3 px-1 " + (clicked === "aziende" ? "btn-underline" : "text-black")
+              }
+            >
+              Aziende
+            </button>
+            <button
+              onClick={() => handleClick("scuole o università")}
+              className={
+                "btn-interests rounded-0 py-3 px-1 " +
+                (clicked === "scuole o università" ? "btn-underline" : "text-black")
+              }
+            >
+              Scuole o università
+            </button>
           </div>
         </div>
         <hr className="mt-0" />
@@ -39,7 +58,7 @@ const Interests = function () {
                 <h6 className="mb-0 fw-bold">EPICODE</h6>
                 <p className="mb-2">14.341 follower</p>
 
-                <Button className="rounded-pill dec-btn text-secondary" onClick={handleClick}>
+                <Button className="rounded-pill dec-btn text-secondary btn-dark" onClick={handleClick}>
                   <img src="icons/check.svg" alt="" className="me-1" />
                   Già segui
                 </Button>
