@@ -80,7 +80,11 @@ const ProfileInfoBottom = function () {
               <div>
                 <div interval={null} className=" my-carousel">
                   <div className="overflow-hidden carousel-overflow">
-                    <Button onClick={prev} disabled={slide === 0} className="prev-btn btn-dark rounded-circle">
+                    <Button
+                      onClick={prev}
+                      disabled={slide === 0}
+                      className={`prev-btn btn-dark rounded-circle  ${slide !== 0 ? "d-block" : "d-none"}`}
+                    >
                       <div className="btn-small">
                         <img src="icons/prev-btn.svg" alt="" />
                       </div>
@@ -150,7 +154,7 @@ const ProfileInfoBottom = function () {
                     <Button
                       onClick={next}
                       disabled={slide === -50 || slide === -146 || slide === -27 || slide === -208}
-                      className="next-btn btn-dark rounded-circle"
+                      className={`next-btn btn-dark rounded-circle ${slide !== -50 ? "d-block" : "d-none"}`}
                     >
                       <div className="btn-small">
                         <img src="icons/next-btn.svg" alt="" />

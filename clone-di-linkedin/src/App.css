@@ -205,8 +205,9 @@ ul {
 
 .btn-small img {
   position: absolute;
-  top: -7px;
-  right: -6px;
+  top: -9px;
+  right: -4px;
+  left: -2px;
 }
 
 .x-button {
@@ -276,8 +277,10 @@ h5 {
   height: 32px;
   left: 0px;
   z-index: 2;
-  background-color: transparent;
-  background-color: #393a3a;
+  background-color: #00000099;
+}
+.prev-btn:hover {
+  background-color: #000000e6;
 }
 
 .next-btn {
@@ -287,8 +290,10 @@ h5 {
   height: 32px;
   right: 0px;
   z-index: 2;
-  background-color: transparent;
-  background-color: #393a3a;
+  background-color: #00000099;
+}
+.next-btn:hover {
+  background-color: #000000e6;
 }
 .prev-btn-top,
 .next-btn-top {

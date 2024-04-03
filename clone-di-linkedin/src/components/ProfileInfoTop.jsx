@@ -178,7 +178,7 @@ const ProfileInfoTop = () => {
                   <Button
                     onClick={prev}
                     disabled={slide === 0}
-                    className="prev-btn prev-btn-top btn-dark rounded-circle"
+                    className={`prev-btn prev-btn-top btn-dark rounded-circle ${slide !== 0 ? "d-block" : "d-none"}`}
                   >
                     <div className="btn-small">
                       <img src="icons/prev-btn.svg" alt="" />
@@ -280,7 +280,7 @@ const ProfileInfoTop = () => {
                   <Button
                     onClick={next}
                     disabled={slide === -150 || slide === -316 || slide === -116 || slide === -416}
-                    className="next-btn next-btn-top btn-dark rounded-circle"
+                    className={`next-btn next-btn-top btn-dark rounded-circle ${slide !== -150 ? "d-block" : "d-none"}`}
                   >
                     <div className="btn-small">
                       <img src="icons/next-btn.svg" alt="" />
