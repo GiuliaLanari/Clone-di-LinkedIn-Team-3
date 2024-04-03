@@ -19,6 +19,16 @@ function EditProfileForm() {
 
   const userData = useSelector((state) => state.user);
   console.log(userData);
+  const user = useSelector((state) => state.user);
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
+  const [bio, setBio] = useState("");
+  const [area, setArea] = useState("");
+  const [job, setJob] = useState("");
+  const [image, setImage] = useState("");
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+
   return (
     <>
       <Button className="m-3 border-0 bg-transparent" onClick={handleShow}>
@@ -31,7 +41,7 @@ function EditProfileForm() {
         </Modal.Header>
 
         <Modal.Body>
-          <Form>
+          <Form onSubmit={console.log("Form inviato!")}>
             <Form.Text className="text-muted">* Indica che è obbligatorio</Form.Text>
             <Form.Group className="mb-3">
               <Form.Label>Nome*</Form.Label>
@@ -40,6 +50,23 @@ function EditProfileForm() {
             <Form.Group className="mb-3">
               <Form.Label>Cognome*</Form.Label>
               <Form.Control type="text" value={userData?.surname || ""} required />
+              <Form.Control
+                type="text"
+                placeholder="Nome"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>Cognome*</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Parametro dinamico"
+                value={surname}
+                onChange={(e) => setSurname(e.target.value)}
+                required
+              />
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Nome Aggiuntivo</Form.Label>
@@ -63,6 +90,13 @@ function EditProfileForm() {
             <Form.Group className="mb-3">
               <Form.Label>Sommario*</Form.Label>
               <Form.Control type="text" value={userData?.bio || ""} required />
+              <Form.Control
+                type="text"
+                placeholder="Parametro dinamico"
+                value={bio}
+                onChange={(e) => setBio(e.target.value)}
+                required
+              />
             </Form.Group>
             <Form.Group className="mb-3">
               <h4>Posizione attuale</h4>
@@ -75,6 +109,13 @@ function EditProfileForm() {
             <Form.Group className="mb-3">
               <Form.Label>Paese/Area geografica*</Form.Label>
               <Form.Control type="text" value={userData?.area || ""} required />
+              <Form.Control
+                type="text"
+                placeholder="Parametro dinamico"
+                value={area}
+                onChange={(e) => setArea(e.target.value)}
+                required
+              />
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>CAP</Form.Label>

@@ -1,9 +1,10 @@
+import { useEffect } from "react";
 import EditProfileForm from "./EditProfileForm";
 import Carousel from "react-bootstrap/Carousel";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import Button from "react-bootstrap/Button";
 import { getUser } from "../redux/actions";
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const ProfileInfoTop = () => {
@@ -42,13 +43,13 @@ const ProfileInfoTop = () => {
               <a href="/">Informazioni di contatto</a>{" "}
             </span>
             <div>
-              <button className="border-0 rounded-pill bg-primary text-white fw-bold me-2 px-3 py-1">
-                Disponibile per
-              </button>
-              <button className="border border-primary border-2 rounded-pill text-primary fw-bold me-2 px-3 py-1">
+              <Button className=" rounded-pill fw-bold me-2 px-3 py-1">Disponibile per</Button>
+              <Button variant="outline-primary" className="  rounded-pill fw-bold me-2 px-3 py-1">
                 Aggiungi sezione del profilo
-              </button>
-              <button className="border-2 rounded-pill fw-bold me-2 px-3 py-1">Altro</button>
+              </Button>
+              <Button variant="outline-dark" className="border-2 rounded-pill fw-bold px-3 py-1">
+                Altro
+              </Button>
             </div>
           </div>
 

@@ -1,4 +1,4 @@
-import { GET_USER, GET_EXPERIENCES, DELETE_EXPERIENCES } from "../actions";
+import { GET_USER, GET_EXPERIENCES, DELETE_EXPERIENCES, UPDATE_USER } from "../actions";
 
 const initialState = {
   user: {},
@@ -21,6 +21,11 @@ const userReducer = function (state = initialState, action) {
       return {
         ...state,
         experiences: state.experiences.filter((esperienza, i) => i !== action.payload),
+      };
+    case UPDATE_USER:
+      return {
+        ...state,
+        user: action.payload,
       };
     default:
       return state;
