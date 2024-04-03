@@ -19,16 +19,7 @@ const SingleProfile = function ({ profile }) {
             <img width="20px" className="ms-2" src="icons/svgexport-41.svg" alt="" />
           </div>
           <div className="text-secondary">{profile.title}</div>
-          <Button
-            onClick={() => {
-              // da cambiare
-              dispatch(getUser(user));
-              // da cambiare
-            }}
-            variant="outline-secondary"
-            size="sm"
-            className="d-flex align-items-center gap-1 mt-1 rounded-4"
-          >
+          <Button variant="outline-secondary" size="sm" className="d-flex align-items-center gap-1 mt-1 rounded-4">
             <img src="icons/svgexport-23.svg" alt="" />
             <span>Collegati</span>
           </Button>

@@ -2,12 +2,23 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
+import { useSelector } from "react-redux";
 
 function EditProfileForm() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const user = useSelector((state) => state.user);
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
+  const [bio, setBio] = useState("");
+  const [area, setArea] = useState("");
+  const [job, setJob] = useState("");
+  const [image, setImage] = useState("");
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
 
   return (
     <>
@@ -21,15 +32,27 @@ function EditProfileForm() {
         </Modal.Header>
 
         <Modal.Body>
-          <Form>
+          <Form onSubmit={console.log("Form inviato!")}>
             <Form.Text className="text-muted">* Indica che è obbligatorio</Form.Text>
             <Form.Group className="mb-3">
               <Form.Label>Nome*</Form.Label>
-              <Form.Control type="text" placeholder="Parametro dinamico" required />
+              <Form.Control
+                type="text"
+                placeholder="Nome"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Cognome*</Form.Label>
-              <Form.Control type="text" placeholder="Parametro dinamico" required />
+              <Form.Control
+                type="text"
+                placeholder="Parametro dinamico"
+                value={surname}
+                onChange={(e) => setSurname(e.target.value)}
+                required
+              />
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Nome Aggiuntivo</Form.Label>
@@ -52,7 +75,13 @@ function EditProfileForm() {
             </p>
             <Form.Group className="mb-3">
               <Form.Label>Sommario*</Form.Label>
-              <Form.Control type="text" placeholder="Parametro dinamico" required />
+              <Form.Control
+                type="text"
+                placeholder="Parametro dinamico"
+                value={bio}
+                onChange={(e) => setBio(e.target.value)}
+                required
+              />
             </Form.Group>
             <Form.Group className="mb-3">
               <h4>Posizione attuale</h4>
@@ -64,15 +93,17 @@ function EditProfileForm() {
             <h4>Località</h4>
             <Form.Group className="mb-3">
               <Form.Label>Paese/Area geografica*</Form.Label>
-              <Form.Control type="text" placeholder="Parametro dinamico" required />
+              <Form.Control
+                type="text"
+                placeholder="Parametro dinamico"
+                value={area}
+                onChange={(e) => setArea(e.target.value)}
+                required
+              />
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>CAP</Form.Label>
               <Form.Control type="text" placeholder="Parametro dinamico" />
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label>Città*</Form.Label>
-              <Form.Control type="text" placeholder="Parametro dinamico" required />
             </Form.Group>
 
             <Modal.Footer>

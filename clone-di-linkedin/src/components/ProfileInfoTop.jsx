@@ -1,9 +1,18 @@
+import { useEffect } from "react";
 import EditProfileForm from "./EditProfileForm";
 import Carousel from "react-bootstrap/Carousel";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-
+import Button from "react-bootstrap/esm/Button";
+import { useDispatch, useSelector } from "react-redux";
+import { getUser } from "../redux/actions";
 const ProfileInfoTop = () => {
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
+
+  useEffect(() => {
+    dispatch(getUser(user));
+  }, []);
   return (
     <div id="profile-container">
       <div id="banner">
@@ -20,18 +29,18 @@ const ProfileInfoTop = () => {
         </div>
         <div className="px-4">
           <div>
-            <h5>Nome Cognome</h5>
-            <p>Titolo</p>
-            <span className="fw-light">Città, Regione, Nazione</span> &#183;
-            <span className="text-primary fw-bold"> Informazioni di contatto</span>
+            <h5>{user.name + " " + user.surname}</h5>
+            <p>{user.title}</p>
+            <span className="fw-light">{user.area}</span> &#183;
+            <span className="text-primary fw-bold"> {user.email}</span>
             <div>
-              <button className="border-0 rounded-pill bg-primary text-white fw-bold me-2 px-3 py-1">
-                Disponibile per
-              </button>
-              <button className="border border-primary border-2 rounded-pill text-primary fw-bold me-2 px-3 py-1">
+              <Button className=" rounded-pill fw-bold me-2 px-3 py-1">Disponibile per</Button>
+              <Button variant="outline-primary" className="  rounded-pill fw-bold me-2 px-3 py-1">
                 Aggiungi sezione del profilo
-              </button>
-              <button className="border-2 rounded-pill fw-bold me-2 px-3 py-1">Altro</button>
+              </Button>
+              <Button variant="outline-dark" className="border-2 rounded-pill fw-bold px-3 py-1">
+                Altro
+              </Button>
             </div>
           </div>
 
