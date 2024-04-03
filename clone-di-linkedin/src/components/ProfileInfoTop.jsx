@@ -25,7 +25,9 @@ const ProfileInfoTop = () => {
     if (windowWidth <= 768) {
       setSlide((prevValue) => prevValue - 104);
     } else if (windowWidth <= 992) {
-      setSlide((prevValue) => prevValue - 73);
+      setSlide((prevValue) => prevValue - 79);
+    } else if (windowWidth >= 1400) {
+      setSlide((prevValue) => prevValue - 29);
     } else {
       setSlide((prevValue) => prevValue - 25);
     }
@@ -35,7 +37,9 @@ const ProfileInfoTop = () => {
     if (windowWidth <= 768) {
       setSlide((prevValue) => prevValue + 104);
     } else if (windowWidth <= 992) {
-      setSlide((prevValue) => prevValue + 73);
+      setSlide((prevValue) => prevValue + 79);
+    } else if (windowWidth >= 1400) {
+      setSlide((prevValue) => prevValue + 29);
     } else {
       setSlide((prevValue) => prevValue + 25);
     }
@@ -176,7 +180,9 @@ const ProfileInfoTop = () => {
                     disabled={slide === 0}
                     className="prev-btn prev-btn-top btn-dark rounded-circle"
                   >
-                    <img src="icons/prev-btn.svg" alt="" />
+                    <div className="btn-small">
+                      <img src="icons/prev-btn.svg" alt="" />
+                    </div>
                   </Button>
                   <Row
                     className=" gap-3 flex-nowrap"
@@ -273,10 +279,12 @@ const ProfileInfoTop = () => {
                   </Row>
                   <Button
                     onClick={next}
-                    disabled={slide === -130 || slide === -365 || slide === -520}
+                    disabled={slide === -150 || slide === -316 || slide === -116 || slide === -416}
                     className="next-btn next-btn-top btn-dark rounded-circle"
                   >
-                    <img src="icons/next-btn.svg" alt="" />
+                    <div className="btn-small">
+                      <img src="icons/next-btn.svg" alt="" />
+                    </div>
                   </Button>
                 </div>
               </div>

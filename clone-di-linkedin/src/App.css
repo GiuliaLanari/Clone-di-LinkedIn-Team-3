@@ -199,6 +199,16 @@ ul {
   font-size: 0.85rem;
 }
 
+.btn-small {
+  position: relative;
+}
+
+.btn-small img {
+  position: absolute;
+  top: -7px;
+  right: -6px;
+}
+
 .x-button {
   position: absolute;
   top: 0;
@@ -228,7 +238,7 @@ ul {
 
 .dec-btn:hover {
   background-color: #dad9d9bd;
-  border: 2px solid black;
+  box-shadow: inset 0 0 0 2px rgb(0 0 0 / 75%);
 }
 
 h3 {
@@ -262,8 +272,8 @@ h5 {
 .prev-btn {
   position: absolute;
   top: 42%;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   left: 0px;
   z-index: 2;
   background-color: transparent;
@@ -273,8 +283,8 @@ h5 {
 .next-btn {
   position: absolute;
   top: 42%;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   right: 0px;
   z-index: 2;
   background-color: transparent;
@@ -282,7 +292,7 @@ h5 {
 }
 .prev-btn-top,
 .next-btn-top {
-  top: 36%;
+  top: 40%;
 }
 
 .btn-border {
@@ -315,6 +325,11 @@ h5 {
 
 .act p {
   color: #0a66c2;
+}
+
+a:hover {
+  color: #0d6efd;
+  font-weight: 600;
 }
 
 .training-col {
