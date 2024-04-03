@@ -9,19 +9,11 @@ import { RiDeleteBin5Fill } from "react-icons/ri";
 
 const Experienze = function () {
   const dispatch = useDispatch();
-  //   const [id, setId] = useState("");
-  //   const deleteFuction = () => {
-  //     dispatch(experiencesListDelete(id));
-  //   };
-  //   const deleteFuction = async (e) => {
-  //     e.preventDefault();
-  //     dispatch(experiencesListDelete(id , i));
-  //   };
+
   useEffect(() => {
     dispatch(experiencesList(experiences));
-    // deleteFuction();
   }, []);
-  //   const experiencesData = useSelector((state)=> )
+
   const experiences = useSelector((state) => state.experiences);
   const userId = useSelector((state) => state.user._id);
   return (
