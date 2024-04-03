@@ -8,7 +8,7 @@ import ProfileInfoTop from "./components/ProfileInfoTop";
 import Footer from "./components/Footer";
 import ProfileInfoBottom from "./components/ProfileInfoBottom";
 import MyNavbar from "./components/MyNavbar";
-
+import Messagistica from "./components/Messagistica";
 function App() {
   return (
     <>
@@ -28,6 +28,7 @@ function App() {
             <Footer />
           </Col>
         </Row>
+        <Messagistica/>
       </Container>
     </>
   );
