@@ -4,11 +4,11 @@ import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
 import Dropdown from "react-bootstrap/Dropdown";
 import NavbarBrand from "react-bootstrap/NavbarBrand";
-import { Button, DropdownToggle, Modal } from "react-bootstrap";
+import { Button,Modal } from "react-bootstrap";
 import { useState } from 'react';
 import {Link} from "react-router-dom"
 import ListGroup from 'react-bootstrap/ListGroup';
-import Badge from 'react-bootstrap/Badge';
+
 
 const MyNavbar = () => {
     const [show, setShow] = useState(false);
@@ -41,15 +41,12 @@ const MyNavbar = () => {
                         </Col>
                     </NavbarBrand>         
                 </div>
-                <div xl={2} className="d-flex justify-content-end align-items-center">
+                <div className="d-flex justify-content-end-lg align-items-center ">
                     <div className="d-flex flex-column align-items-center bord text-decoration-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#666666" className="bi bi-house-door-fill" viewBox="0 0 16 16">
-                        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
-                        </svg>
-                        <div>
-                            <Badge bg="primary" pill>
-                                14
-                            </Badge>
+                        <div className="d-flex flex-column align-items-center bord text-decoration-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#666666" className="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+                            </svg>
                             <p className="navbar-top">Home</p>
                         </div>
                     </div>

@@ -6,8 +6,8 @@ import Messagistica from "./components/Messagistica";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import ProfileInfoTop from "react-bootstrap/ProfileInfoTop";
-import ProfileInfoBottom from "react-bootstrap/ProfileInfoBottom";
+import ProfileInfoTop from "./components/ProfileInfoTop";
+import ProfileInfoBottom from "./components/ProfileInfoBottom"; 
 import SideBar from "./components/SideBar";
 
 
