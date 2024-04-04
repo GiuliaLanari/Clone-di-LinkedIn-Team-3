@@ -13,7 +13,7 @@ const Analisis = function () {
           </div>
         </div>
 
-        <Row className="analisis-desc mt-2">
+        <Row className="analisis-desc my-2">
           <ul className="d-flex">
             <li className="me-4">
               <div className="d-flex gap-2">

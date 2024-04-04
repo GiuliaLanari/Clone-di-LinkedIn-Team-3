@@ -25,9 +25,11 @@ const ProfileInfoTop = () => {
     if (windowWidth <= 768) {
       setSlide((prevValue) => prevValue - 104);
     } else if (windowWidth <= 992) {
-      setSlide((prevValue) => prevValue - 73);
+      setSlide((prevValue) => prevValue - 79);
+    } else if (windowWidth >= 1400) {
+      setSlide((prevValue) => prevValue - 29);
     } else {
-      setSlide((prevValue) => prevValue - 25);
+      setSlide((prevValue) => prevValue - 26);
     }
   };
 
@@ -35,9 +37,11 @@ const ProfileInfoTop = () => {
     if (windowWidth <= 768) {
       setSlide((prevValue) => prevValue + 104);
     } else if (windowWidth <= 992) {
-      setSlide((prevValue) => prevValue + 73);
+      setSlide((prevValue) => prevValue + 79);
+    } else if (windowWidth >= 1400) {
+      setSlide((prevValue) => prevValue + 29);
     } else {
-      setSlide((prevValue) => prevValue + 25);
+      setSlide((prevValue) => prevValue + 26);
     }
   };
 
@@ -173,9 +177,11 @@ const ProfileInfoTop = () => {
                   <Button
                     onClick={prev}
                     disabled={slide === 0}
-                    className="prev-btn prev-btn-top btn-dark rounded-circle"
+                    className={`prev-btn prev-btn-top btn-dark rounded-circle ${slide !== 0 ? "d-block" : "d-none"}`}
                   >
-                    <img src="icons/prev-btn.svg" alt="" />
+                    <div className="btn-small">
+                      <img src="icons/prev-btn.svg" alt="" />
+                    </div>
                   </Button>
                   <Row
                     className=" gap-3 flex-nowrap"
@@ -246,7 +252,7 @@ const ProfileInfoTop = () => {
                         </button>
                       </div>
                       <div>
-                        <p className="mb-0">Quale scuola o università hai frequentato?</p>
+                        <p className="mb-0 fw-medium">Quale scuola o università hai frequentato?</p>
                       </div>
                       <div>
                         <p className="mb-0">
@@ -263,7 +269,7 @@ const ProfileInfoTop = () => {
                         </button>
                       </div>
                       <div>
-                        <p className="mb-0">Disponibile a lavorare</p>
+                        <p className="mb-0 fw-medium">Disponibile a lavorare</p>
                       </div>
                       <div>
                         <p className="mb-0">Ruoli per il tuo settore</p>
@@ -272,10 +278,12 @@ const ProfileInfoTop = () => {
                   </Row>
                   <Button
                     onClick={next}
-                    disabled={slide === -130 || slide === -365 || slide === -520}
-                    className="next-btn next-btn-top btn-dark rounded-circle"
+                    disabled={slide === -156 || slide === -316 || slide === -116 || slide === -416}
+                    className={`next-btn next-btn-top btn-dark rounded-circle ${slide !== -156 ? "d-block" : "d-none"}`}
                   >
-                    <img src="icons/next-btn.svg" alt="" />
+                    <div className="btn-small">
+                      <img src="icons/next-btn.svg" alt="" />
+                    </div>
                   </Button>
                 </div>
               </div>

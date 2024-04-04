@@ -14,7 +14,7 @@ const Risorse = function () {
           </div>
         </div>
 
-        <Row className=" mt-2 analisis-desc ">
+        <Row className=" my-2 analisis-desc ">
           <ul>
             <li className="me-4">
               <div className="d-flex gap-2">

@@ -29,6 +29,8 @@ const ProfileInfoBottom = function () {
       setSlide((prevValue) => prevValue - 104);
     } else if (windowWidth <= 992) {
       setSlide((prevValue) => prevValue - 73);
+    } else if (windowWidth >= 1400) {
+      setSlide((prevValue) => prevValue - 27);
     } else {
       setSlide((prevValue) => prevValue - 25);
     }
@@ -39,6 +41,8 @@ const ProfileInfoBottom = function () {
       setSlide((prevValue) => prevValue + 104);
     } else if (windowWidth <= 992) {
       setSlide((prevValue) => prevValue + 73);
+    } else if (windowWidth >= 1400) {
+      setSlide((prevValue) => prevValue + 27);
     } else {
       setSlide((prevValue) => prevValue + 25);
     }
@@ -76,8 +80,14 @@ const ProfileInfoBottom = function () {
               <div>
                 <div interval={null} className=" my-carousel">
                   <div className="overflow-hidden carousel-overflow">
-                    <Button onClick={prev} disabled={slide === 0} className="prev-btn btn-dark rounded-circle">
-                      <img src="icons/prev-btn.svg" alt="" />
+                    <Button
+                      onClick={prev}
+                      disabled={slide === 0}
+                      className={`prev-btn btn-dark rounded-circle  ${slide !== 0 ? "d-block" : "d-none"}`}
+                    >
+                      <div className="btn-small">
+                        <img src="icons/prev-btn.svg" alt="" />
+                      </div>
                     </Button>
                     <Row
                       className=" gap-3 flex-nowrap"
@@ -143,10 +153,12 @@ const ProfileInfoBottom = function () {
                     </Row>
                     <Button
                       onClick={next}
-                      disabled={slide === -50 || slide === -146 || slide === -208}
-                      className="next-btn btn-dark rounded-circle"
+                      disabled={slide === -50 || slide === -146 || slide === -27 || slide === -208}
+                      className={`next-btn btn-dark rounded-circle ${slide !== -50 ? "d-block" : "d-none"}`}
                     >
-                      <img src="icons/next-btn.svg" alt="" />
+                      <div className="btn-small">
+                        <img src="icons/next-btn.svg" alt="" />
+                      </div>
                     </Button>
                   </div>
                 </div>
