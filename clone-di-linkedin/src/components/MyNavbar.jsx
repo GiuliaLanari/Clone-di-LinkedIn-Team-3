@@ -184,7 +184,7 @@ const MyNavbar = () => {
                           <div className="d-flex flex-column align-items-center">
                             <p className="text-secondary m-1 ms-3">Full Stack Developer</p>
                           </div>
-                          <Link to={"/profile/:id"}>
+                          <Link to={"/profile/660d69e2f94f4a00193791f1"}>
                             <Button className="d-flex align-items-center mt-1 rounded-4 " size="sm">
                               View Profile
                             </Button>

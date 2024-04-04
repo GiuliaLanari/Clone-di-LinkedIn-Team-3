@@ -80,9 +80,8 @@ const ProfileNavbar = () => {
   }, [id, dispatch, userData]);
 
   return (
-    <Link to={`/profile/${id}`}>
-      <ProfilePage />
-    </Link>
+    <ProfilePage />
+    //
     // <Container>
     //     <Row className="justify-content-between g-0">
     //         <Col xs={12} md={8} lg={9} className="px-2">
