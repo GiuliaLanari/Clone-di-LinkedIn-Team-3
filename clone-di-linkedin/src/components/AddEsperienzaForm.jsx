@@ -9,26 +9,23 @@ function ExperienzeForm() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  // const experiences = useSelector((state) => state.experiences);
+
   const userId = useSelector((state) => state.user._id);
-  // const addExperienze = useSelector((state) => state.experiences);
-  // const userId = useSelector((state) => state.user._id);
-  // const [form, setForm] = useState({
-  //   role: "",
-  //   company: "",
-  //   startDate: "",
-  //   image: "",
-  // });
+
+  const [form, setForm] = useState({
+    role: "",
+    company: "",
+    startDate: "",
+    image: "",
+    description: "",
+    area: "",
+  });
+
   const dispatch = useDispatch();
-  ///////COME FACCIO A SETTARE IL VALORE DELLO STATO GLOBALE///
-  ///QUI SOTTO///
-  // const handleChange = (e) => {
-  //   setQuery(e.target.value);
-  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(newExperienze(userId));
+    dispatch(newExperienze(userId, form));
   };
 
   return (
@@ -49,13 +46,43 @@ function ExperienzeForm() {
               <Form.Control
                 type="text"
                 required
-                // value={ userId? : ""}
-                // onChange={(e) =>
-                //   setForm((state) => ({
-                //     ...state,
-                //     companny: e.target.value,
-                //   }))
-                // }
+                value={form.company}
+                onChange={(e) =>
+                  setForm((state) => ({
+                    ...state,
+                    company: e.target.value,
+                  }))
+                }
+              ></Form.Control>
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+              <Form.Label>Area:</Form.Label>
+              <Form.Control
+                type="text"
+                required
+                value={form.area}
+                onChange={(e) =>
+                  setForm((state) => ({
+                    ...state,
+                    area: e.target.value,
+                  }))
+                }
+              ></Form.Control>
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+              <Form.Label>Descrizione:</Form.Label>
+              <Form.Control
+                type="text"
+                required
+                value={form.description}
+                onChange={(e) =>
+                  setForm((state) => ({
+                    ...state,
+                    description: e.target.value,
+                  }))
+                }
               ></Form.Control>
             </Form.Group>
 
@@ -64,13 +91,13 @@ function ExperienzeForm() {
               <Form.Control
                 type="text"
                 required
-                // value={form ? addExperienze.role : ""}
-                // onChange={(e) =>
-                //   setForm((state) => ({
-                //     ...state,
-                //     role: e.target.value,
-                //   }))
-                // }
+                value={form.role}
+                onChange={(e) =>
+                  setForm((state) => ({
+                    ...state,
+                    role: e.target.value,
+                  }))
+                }
               ></Form.Control>
             </Form.Group>
 
@@ -79,41 +106,35 @@ function ExperienzeForm() {
               <Form.Control
                 type="url"
                 required
-                // value={form ? addExperienze.image : ""}
-                // onChange={(e) =>
-                //   setForm((state) => ({
-                //     ...state,
-                //     image: e.target.value,
-                //   }))
-                // }
+                value={form.image}
+                onChange={(e) =>
+                  setForm((state) => ({
+                    ...state,
+                    image: e.target.value,
+                  }))
+                }
               />
             </Form.Group>
 
             <Form.Group className="mb-3">
-              <label for="start" className="me-3">
+              <label htmlFor="start" className="me-3">
                 Start date:
               </label>
               <input
                 type="date"
                 name="trip-start"
-                // value={form ? addExperienze.startDate : ""}
-                // onChange={(e) =>
-                //   setForm((state) => ({
-                //     ...state,
-                //     startDate: e.target.value,
-                //   }))
-                // }
+                value={form.stateDate}
+                onChange={(e) =>
+                  setForm((state) => ({
+                    ...state,
+                    startDate: e.target.value,
+                  }))
+                }
               />
             </Form.Group>
 
             <Modal.Footer className="d-flex">
-              <Button
-                variant="primary"
-                type="submit"
-                onClick={() => {
-                  dispatch(newExperienze(userId));
-                }}
-              >
+              <Button variant="primary" type="submit" onClick={handleClose}>
                 Salva
               </Button>
             </Modal.Footer>

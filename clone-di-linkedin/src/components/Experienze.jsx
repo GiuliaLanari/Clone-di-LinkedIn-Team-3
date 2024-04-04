@@ -4,7 +4,6 @@ import Button from "react-bootstrap/Button";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { experiencesList } from "../redux/actions";
-import { newExperienze } from "../redux/actions";
 import { experiencesListDelete } from "../redux/actions";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import AddEsperienzaForm from "./AddEsperienzaForm";
@@ -15,7 +14,6 @@ const Experienze = function () {
 
   useEffect(() => {
     dispatch(experiencesList(experiences));
-    dispatch(newExperienze(experiences));
   }, []);
 
   const experiences = useSelector((state) => state.experiences);
@@ -28,13 +26,7 @@ const Experienze = function () {
           <div className="act">
             <h3 className="mb-0">Esperienza</h3>
           </div>
-          <div
-            className="d-flex gap-3 align-items-baseline "
-            variant="white"
-            onClick={() => {
-              dispatch(newExperienze(userId));
-            }}
-          >
+          <div className="d-flex gap-3 align-items-baseline " variant="white">
             <AddEsperienzaForm />
           </div>
         </div>
