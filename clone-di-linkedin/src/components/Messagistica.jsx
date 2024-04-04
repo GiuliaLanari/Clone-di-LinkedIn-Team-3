@@ -23,7 +23,7 @@ const Messagistica = () => {
                         <div className="d-flex justify-content-between">
                             <div className="d-flex align-items-center mb-2">
                                 <img
-                                    src="https://ec.europa.eu/info/funding-tenders/opportunities/portal/assets/img/user-icon.png"
+                                    src="icons/user-icon.png"
                                     alt="placeholder"
                                     className="rounded-circle me-1 ms-0 mb-1"
                                     style={{ width: "30px" }}
