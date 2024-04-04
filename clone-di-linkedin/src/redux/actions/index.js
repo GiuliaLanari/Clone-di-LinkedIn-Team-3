@@ -4,6 +4,7 @@ export const DELETE_EXPERIENCES = "DELETE_EXPERIENCES";
 export const UPDATE_USER = "UPDATE_USER";
 export const POST_EXPERIENCES = "POST_EXPERIENCES";
 export const PUT_EXPERIENCES = "PUT_EXPERIENCES";
+export const GET_POST = "GET_POST";
 
 export const getUser = () => {
   return (dispatch, getState) => {
@@ -47,7 +48,6 @@ export const experiencesList = () => {
         }
       })
       .then((experiences) => {
-        console.log(experiences);
         console.log(getState(), "getstate");
         dispatch({
           type: GET_EXPERIENCES,
@@ -133,6 +133,32 @@ export const experiencesModifica = (expId, userId, form) => {
         dispatch(experiencesList());
       })
 
+      .catch((error) => console.log(error));
+  };
+};
+
+export const getPost = () => {
+  return (dispatch, getState) => {
+    fetch(" https://striveschool-api.herokuapp.com/api/posts/ ", {
+      headers: {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjBiYmUzOWEyODFkODAwMTlhM2VjNDkiLCJpYXQiOjE3MTIwNDU2MjUsImV4cCI6MTcxMzI1NTIyNX0.c_0ZpFzaWJeG9_uKPTBJGPyvUgqbD-fgP8aAdinJh1o",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Errore nel reperimento dei dati richiesti");
+        }
+      })
+      .then((posts) => {
+        console.log(posts);
+        dispatch({
+          type: GET_POST,
+          payload: posts,
+        });
+      })
       .catch((error) => console.log(error));
   };
 };
