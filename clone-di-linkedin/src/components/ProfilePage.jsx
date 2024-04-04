@@ -9,11 +9,11 @@ const ProfilePage = function () {
   return (
     <Container>
       <Row className="justify-content-between g-0">
-        <Col xs={9}>
+        <Col xs={12} md={8} lg={9} className="px-2">
           <ProfileInfoTop />
           <ProfileInfoBottom />
         </Col>
-        <Col xs={3} className="p-2">
+        <Col xs={12} md={4} lg={3} className="px-2">
           <SideBar />
         </Col>
       </Row>

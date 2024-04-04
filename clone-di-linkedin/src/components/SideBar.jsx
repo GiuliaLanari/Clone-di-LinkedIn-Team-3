@@ -6,7 +6,7 @@ const SideBar = function () {
   const user = useSelector((state) => state.user);
   return (
     <>
-      <ListGroup className="rounded-3">
+      <ListGroup className="rounded-3 ">
         <ListGroup.Item>
           <div className="d-flex justify-content-between align-items-center">
             <h6 className="mt-2">Lingua del profilo</h6>
@@ -16,14 +16,14 @@ const SideBar = function () {
           </div>
           <span className="text-secondary">Italiano</span>
         </ListGroup.Item>
-        <ListGroup.Item>
+        <ListGroup.Item className="overflow-hidden">
           <div className="d-flex justify-content-between align-items-center">
             <h6 className="mt-2">Profilo pubblico e URL</h6>
             <div>
               <img width="24px" src="icons/svgexport-10.svg" alt="edit" />
             </div>
           </div>
-          <span className="text-secondary">www.linkedin.com/in/{user.username}</span>
+          <span className="text-secondary ">www.linkedin.com/in/{user.username}</span>
         </ListGroup.Item>
       </ListGroup>
       <img

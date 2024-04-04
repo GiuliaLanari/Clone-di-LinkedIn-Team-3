@@ -10,7 +10,7 @@ function EditEsperienzaForm() {
 
   return (
     <>
-      <Button className="m-3 border-0 bg-transparent" onClick={handleShow}>
+      <Button className="m-3 add-pen-btn rounded-circle py-1 px-2" onClick={handleShow}>
         <img src="icons/pen.svg" alt="aggiungi esperienza" />
       </Button>
 
