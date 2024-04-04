@@ -6,7 +6,7 @@ import Collapse from "react-bootstrap/Collapse";
 const PostComponent = function () {
   const [open, setOpen] = useState(false);
   return (
-    <div className="post bg-white rounded-3 border-1">
+    <div className="post bg-white rounded-3 border border-1 mt-3">
       <div className="d-flex justify-content-end border-bottom p-1">
         {/* <button className="add-pen-btn rounded-circle py-1">
           <img src="icons/dots.svg" alt="più azioni" />
@@ -130,7 +130,7 @@ const PostComponent = function () {
                   </button>
                   <button className="border-0 py-1 homepage-btns rounded-circle">
                     {" "}
-                    <img src="icons/image.svg" alt="" />
+                    <img src="icons/image1.svg" alt="" />
                   </button>
                 </div>
               </div>

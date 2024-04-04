@@ -68,7 +68,7 @@ const AddNewPostForm = function () {
             </div>
             <div className="d-flex post-icons gap-2 my-4 ms-1">
               <span className="rounded-circle">
-                <img src="icons/image.svg" alt="" />
+                <img src="icons/image1.svg" alt="" />
               </span>
               <span className="rounded-circle">
                 <img src="icons/calendar.svg" alt="" />

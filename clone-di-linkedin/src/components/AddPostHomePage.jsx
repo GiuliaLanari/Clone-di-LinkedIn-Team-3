@@ -23,7 +23,7 @@ const AddPostHomePage = function () {
         </div>
         <div className="d-flex justify-content-around gap-5">
           <button href="#l" className="d-flex gap-2 add-btn-post rounded-1">
-            <img src="icons/image.svg" alt="" />
+            <img src="icons/image1.svg" alt="" />
             <span>Contenuti multimediali</span>
           </button>
           <button href="#p" className="d-flex gap-2 add-btn-post rounded-1">
