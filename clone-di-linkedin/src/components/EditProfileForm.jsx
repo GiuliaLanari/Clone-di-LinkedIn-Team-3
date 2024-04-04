@@ -13,19 +13,20 @@ function EditProfileForm() {
   const handleShow = () => setShow(true);
 
   const dispatch = useDispatch();
+  const userData = useSelector((state) => state.user);
   useEffect(() => {
     dispatch(getUser(userData));
   }, []);
-  const userData = useSelector((state) => state.user);
   const [user, setUser] = useState({
-    name: "",
-    surname: "",
-    bio: "",
-    area: "",
-    title: "",
-    image: "",
+    name: userData.name,
+    surname: userData.surname,
+    bio: userData.bio,
+    area: userData.area,
+    title: userData.title,
+    image: userData.image,
   });
-  const editForm = function () {
+  const editForm = function (e) {
+    e.preventDefault();
     fetch("https://striveschool-api.herokuapp.com/api/profile/", {
       method: "PUT",
       body: JSON.stringify(user),
@@ -65,7 +66,7 @@ function EditProfileForm() {
               <Form.Label>Nome*</Form.Label>
               <Form.Control
                 type="text"
-                value={user?.name || ""}
+                value={user.name}
                 onChange={(e) =>
                   setUser((state) => ({
                     ...state,
@@ -158,7 +159,7 @@ function EditProfileForm() {
               />
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Immagine del profilo*</Form.Label>
+              <Form.Label>Immagine del profilo (facoltativa)</Form.Label>
               <Form.Control
                 type="text"
                 value={user?.image}
@@ -168,7 +169,6 @@ function EditProfileForm() {
                     image: e.target.value,
                   }))
                 }
-                required
               />
             </Form.Group>
 

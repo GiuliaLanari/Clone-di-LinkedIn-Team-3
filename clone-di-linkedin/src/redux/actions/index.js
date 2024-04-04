@@ -25,6 +25,7 @@ export const getUser = () => {
           type: GET_USER,
           payload: user,
         });
+        console.log(getState());
       })
       .catch((error) => console.log(error));
   };

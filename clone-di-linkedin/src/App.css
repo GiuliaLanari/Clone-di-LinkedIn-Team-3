@@ -42,6 +42,7 @@
 
 .premium {
   color: darkgoldenrod;
+  font-size: 12px;
 }
 
 /* NAVBAR */
@@ -79,6 +80,10 @@ body {
 
 .selectLingua:hover {
   border: 2px solid black;
+}
+
+.dropdown-toggle-remove::after {
+  content: none;
 }
 
 /*////////////// CAROUSEL ARROWS //////////////*/
