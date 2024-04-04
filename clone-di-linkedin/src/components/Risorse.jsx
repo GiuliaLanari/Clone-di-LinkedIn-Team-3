@@ -10,7 +10,7 @@ const Risorse = function () {
         <div>
           <h3 className="mb-0">Risorse</h3>
           <div className="d-flex align-items-center">
-            <img src="icons/eye.svg" alt="" /> <p className="mb-0 ms-2">Solo per te</p>
+            <img src="/icons/eye.svg" alt="" /> <p className="mb-0 ms-2">Solo per te</p>
           </div>
         </div>
 
@@ -19,7 +19,7 @@ const Risorse = function () {
             <li className="me-4">
               <div className="d-flex gap-2">
                 <div>
-                  <img src="icons/satellite-dish.svg" alt="" />
+                  <img src="/icons/satellite-dish.svg" alt="" />
                 </div>
                 <div className="p-0">
                   <h6 className="mb-0">
@@ -35,7 +35,7 @@ const Risorse = function () {
             <li className="me-4">
               <div className="d-flex gap-2">
                 <div>
-                  <img src="icons/people.svg" alt="" />
+                  <img src="/icons/people.svg" alt="" />
                 </div>
                 <div className="p-0">
                   <h6 className="mb-0">La mia rete</h6>
@@ -48,7 +48,7 @@ const Risorse = function () {
       </Col>
 
       <Button className="btn-border rounded-0 text-black">
-        Mostra tutte le Risorse <img src="icons/right-arrow.svg" alt="" />
+        Mostra tutte le Risorse <img src="/icons/right-arrow.svg" alt="" />
       </Button>
     </Row>
   );

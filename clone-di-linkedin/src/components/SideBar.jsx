@@ -11,7 +11,7 @@ const SideBar = function () {
           <div className="d-flex justify-content-between align-items-center">
             <h6 className="mt-2">Lingua del profilo</h6>
             <div>
-              <img width="24px" src="icons/svgexport-10.svg" alt="edit" />
+              <img width="24px" src="/icons/svgexport-10.svg" alt="edit" />
             </div>
           </div>
           <span className="text-secondary">Italiano</span>
@@ -20,7 +20,7 @@ const SideBar = function () {
           <div className="d-flex justify-content-between align-items-center">
             <h6 className="mt-2">Profilo pubblico e URL</h6>
             <div>
-              <img width="24px" src="icons/svgexport-10.svg" alt="edit" />
+              <img width="24px" src="/icons/svgexport-10.svg" alt="edit" />
             </div>
           </div>
           <span className="text-secondary ">www.linkedin.com/in/{user.username}</span>

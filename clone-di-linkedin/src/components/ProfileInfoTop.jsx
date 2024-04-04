@@ -58,7 +58,7 @@ const ProfileInfoTop = () => {
         </button>
         <div className=" d-flex justify-content-end">
           <button className="m-3 add-banner border-0 rounded-circle">
-            <img src="icons/camera.svg" className="mb-1" alt="" />
+            <img src="/icons/camera.svg" className="mb-1" alt="" />
           </button>
         </div>
       </div>
@@ -180,7 +180,7 @@ const ProfileInfoTop = () => {
                     className={`prev-btn prev-btn-top btn-dark rounded-circle ${slide !== 0 ? "d-block" : "d-none"}`}
                   >
                     <div className="btn-small">
-                      <img src="icons/prev-btn.svg" alt="" />
+                      <img src="/icons/prev-btn.svg" alt="" />
                     </div>
                   </Button>
                   <Row
@@ -193,7 +193,7 @@ const ProfileInfoTop = () => {
                     <Col xs={5} className="cons-pad-top rounded-3 border border-1">
                       <div className="x-button">
                         <button className="btn p-2">
-                          <img src={"icons/X.svg"} alt="" />
+                          <img src={"/icons/X.svg"} alt="" />
                         </button>
                       </div>
                       <div>
@@ -213,7 +213,7 @@ const ProfileInfoTop = () => {
                     <Col xs={5} className="cons-pad-top rounded-3  border border-1">
                       <div className="x-button">
                         <button className="btn p-2">
-                          <img src={"icons/X.svg"} alt="" />
+                          <img src={"/icons/X.svg"} alt="" />
                         </button>
                       </div>
                       <div>
@@ -231,7 +231,7 @@ const ProfileInfoTop = () => {
                     <Col xs={5} className="cons-pad-top rounded-3  border border-1">
                       <div className="x-button">
                         <button className="btn p-2">
-                          <img src={"icons/X.svg"} alt="" />
+                          <img src={"/icons/X.svg"} alt="" />
                         </button>
                       </div>
 
@@ -248,7 +248,7 @@ const ProfileInfoTop = () => {
                     <Col xs={5} className="cons-pad-top rounded-3  border border-1">
                       <div className="x-button">
                         <button className="btn p-2">
-                          <img src={"icons/X.svg"} alt="" />
+                          <img src={"/icons/X.svg"} alt="" />
                         </button>
                       </div>
                       <div>
@@ -265,7 +265,7 @@ const ProfileInfoTop = () => {
                     <Col xs={5} className="cons-pad-top rounded-3  border border-1">
                       <div className="x-button">
                         <button className="btn p-2">
-                          <img src={"icons/X.svg"} alt="" />
+                          <img src={"/icons/X.svg"} alt="" />
                         </button>
                       </div>
                       <div>
@@ -282,7 +282,7 @@ const ProfileInfoTop = () => {
                     className={`next-btn next-btn-top btn-dark rounded-circle ${slide !== -156 ? "d-block" : "d-none"}`}
                   >
                     <div className="btn-small">
-                      <img src="icons/next-btn.svg" alt="" />
+                      <img src="/icons/next-btn.svg" alt="" />
                     </div>
                   </Button>
                 </div>

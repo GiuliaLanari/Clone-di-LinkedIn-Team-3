@@ -64,34 +64,34 @@ const AddNewPostForm = function () {
               ></textarea>
             </Form.Group>
             <div className="ms-1">
-              <img src="icons/face.svg" alt="" className="face-img rounded-circle p-2" />
+              <img src="/icons/face.svg" alt="" className="face-img rounded-circle p-2" />
             </div>
-            <div className="d-flex post-icons gap-2 my-4 ms-1">
+            <div className="d-flex post-/icons gap-2 my-4 ms-1">
               <span className="rounded-circle">
-                <img src="icons/image1.svg" alt="" />
+                <img src="/icons/image1.svg" alt="" />
               </span>
               <span className="rounded-circle">
-                <img src="icons/calendar.svg" alt="" />
+                <img src="/icons/calendar.svg" alt="" />
               </span>
               <span className="rounded-circle">
-                <img src="icons/set.svg" alt="" />
+                <img src="/icons/set.svg" alt="" />
               </span>
               <span className="rounded-circle">
-                <img src="icons/bag.svg" alt="" />
+                <img src="/icons/bag.svg" alt="" />
               </span>
               <span className="rounded-circle">
-                <img src="icons/graphic.svg" alt="" />
+                <img src="/icons/graphic.svg" alt="" />
               </span>
               <span className="rounded-circle">
-                <img src="icons/add-file.svg" alt="" />
+                <img src="/icons/add-file.svg" alt="" />
               </span>
               <span className="rounded-circle">
-                <img src="icons/catch.svg" alt="" />
+                <img src="/icons/catch.svg" alt="" />
               </span>
             </div>
             <Modal.Footer className="d-flex">
               <div>
-                <img src="icons/clock.svg" alt="" className="face-img rounded-circle p-2" />
+                <img src="/icons/clock.svg" alt="" className="face-img rounded-circle p-2" />
               </div>
 
               <button type="submit" className="publish-btn rounded-pill py-1 px-3 text-secondary" onClick={handleClose}>

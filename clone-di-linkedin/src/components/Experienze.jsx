@@ -68,7 +68,7 @@ const Experienze = function () {
 
       <Button className="btn-border rounded-0 text-black">
         Mostra tutti i titoli di studio ( {experiences.length} )
-        <img src="icons/right-arrow.svg" alt="freccia" />
+        <img src="/icons/right-arrow.svg" alt="freccia" />
       </Button>
     </Row>
   );
