@@ -418,3 +418,60 @@ h5 {
   color: rgb(75, 75, 75) !important;
   box-shadow: inset 0 0 0 1px black;
 }
+
+/*/////////////// POST ///////////////*/
+.post-content {
+  font-size: 15px;
+}
+
+.user-pfp {
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  border: transparent;
+  cursor: pointer;
+  z-index: 2;
+  background-color: transparent;
+  overflow: hidden;
+  padding: 0;
+}
+
+#user-pfp {
+  object-fit: cover;
+  width: 55px;
+  object-position: 0px;
+}
+
+.homepage-btns {
+  background-color: transparent;
+}
+.homepage-btns:hover {
+  background-color: #ebf4fd;
+}
+#comment-body {
+  background-color: #f2f2f2;
+  width: 85%;
+}
+.text-sm {
+  font-size: 13px;
+}
+.custom-input:focus {
+  outline: none;
+}
+
+.comment-pfp {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  border: transparent;
+  cursor: pointer;
+  z-index: 2;
+  background-color: transparent;
+  overflow: hidden;
+  padding: 0;
+}
+#comment-pfp {
+  object-fit: cover;
+  width: 45px;
+  object-position: 0px;
+}
