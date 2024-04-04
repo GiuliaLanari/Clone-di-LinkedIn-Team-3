@@ -554,3 +554,37 @@ a:hover {
 .add-btn-post:hover {
   background-color: #e0dfe878;
 }
+
+.publish-btn {
+  display: flex;
+  align-items: center;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #f4f2ee;
+}
+.detail {
+  line-height: 1.2rem;
+  text-align: start;
+}
+
+.detail span {
+  font-size: 1rem;
+}
+.detail p {
+  font-size: 0.9rem;
+}
+.face-img:hover {
+  background-color: #f4f2ee;
+}
+
+.post-icons span {
+  padding: 0.7rem 0.8rem;
+  background-color: #f4f2ee;
+}
+.post-icons span:hover {
+  box-shadow: 0px 3px 6px 2px #00000047;
+}

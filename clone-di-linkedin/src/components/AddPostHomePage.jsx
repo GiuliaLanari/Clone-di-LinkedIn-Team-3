@@ -1,9 +1,12 @@
+import AddNewPostForm from "./AddNewPostForm";
+
 const AddPostHomePage = function () {
   return (
     <div className="top-div-post rounded-3 border border-2">
       <div className="d-flex flex-column">
         <div className="d-flex align-items-center">
-          <a href="#i" className="me-2">
+          <AddNewPostForm />
+          {/* <a href="#i" className="me-2">
             <span>
               <img
                 className="rounded-circle shadow-4-strong"
@@ -16,7 +19,7 @@ const AddPostHomePage = function () {
           </a>
           <button className="post-btn border borde-2">
             <span>Avvia un post</span>
-          </button>
+          </button> */}
         </div>
         <div className="d-flex justify-content-around gap-5">
           <button href="#l" className="d-flex gap-2 add-btn-post rounded-1">
