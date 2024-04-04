@@ -475,3 +475,9 @@ h5 {
   width: 45px;
   object-position: 0px;
 }
+.exp-btn {
+  background-color: #e4f1f136;
+}
+.exp-btn:hover {
+  background-color: #4749491e;
+}

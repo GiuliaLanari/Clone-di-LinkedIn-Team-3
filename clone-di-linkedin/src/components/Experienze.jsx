@@ -18,6 +18,7 @@ const Experienze = function () {
 
   const experiences = useSelector((state) => state.experiences);
   const userId = useSelector((state) => state.user._id);
+
   return (
     <Row className="g-0">
       <Col className="analis-col">
@@ -25,7 +26,7 @@ const Experienze = function () {
           <div className="act">
             <h3 className="mb-0">Esperienza</h3>
           </div>
-          <div className="d-flex gap-3 align-items-baseline">
+          <div className="d-flex gap-3 align-items-baseline " variant="white">
             <AddEsperienzaForm />
           </div>
         </div>
@@ -35,7 +36,7 @@ const Experienze = function () {
             {experiences.map((esperienza, i) => (
               <Row key={esperienza._id}>
                 <Col xs={2}>
-                  <img src={esperienza.image} alt="logo-school" className="w-100" />
+                  <img src={esperienza.image} alt="logo-school" className="w-100 h-75 p-1 object-fit-cover " />
                 </Col>
                 <Col xs={7}>
                   <h6 className="mb-0">{esperienza.company}</h6>
@@ -44,7 +45,7 @@ const Experienze = function () {
                 </Col>
                 <Col xs={3}>
                   <Row>
-                    <Col xs={2}>
+                    <Col xs={3}>
                       <Button
                         variant="danger"
                         onClick={() => {
@@ -54,8 +55,8 @@ const Experienze = function () {
                         <RiDeleteBin5Fill />
                       </Button>
                     </Col>
-                    <Col xs={1} className="ms-3">
-                      <EditEsperienzaForm />
+                    <Col xs={2} className="ms-3">
+                      <EditEsperienzaForm expId={esperienza._id} userId={userId} />
                     </Col>
                   </Row>
                 </Col>
