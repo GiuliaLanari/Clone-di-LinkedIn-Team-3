@@ -23,7 +23,7 @@ const Activity = function () {
           </div>
         </div>
 
-        <Row className=" mt-2 analisis-desc ">
+        <Row className=" my-2 analisis-desc ">
           <div className="d-flex gap-2">
             <div className="p-0">
               <h6 className="mb-0">Non hai ancora pubblicato nulla</h6>
