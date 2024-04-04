@@ -3,16 +3,23 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
+import { useDispatch } from "react-redux";
+import { postPost } from "../redux/actions/posts";
 
 const AddNewPostForm = function () {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
 
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState({
+    text: "",
+  });
+
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(postPost(inputValue));
   };
 
   return (
@@ -55,9 +62,14 @@ const AddNewPostForm = function () {
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3">
               <textarea
-                class="form-control border border-0 px-2"
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
+                className="form-control border border-0 px-2"
+                value={inputValue.text}
+                onChange={(e) =>
+                  setInputValue((state) => ({
+                    ...state,
+                    text: e.target.value,
+                  }))
+                }
                 id="exampleFormControlTextarea1"
                 placeholder="Di cosa vuoi parlare?"
                 rows="8"

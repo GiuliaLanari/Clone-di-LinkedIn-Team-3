@@ -294,7 +294,7 @@ const MyNavbar = () => {
             </div>
           </div>
 
-          <div className="d-flex flex-column align-items-center bord netNav">
+          <div className="d-flex flex-column align-items-center netNav">
             <Button variant="trasparent" onClick={handleShow}>
               <div>
                 <svg
