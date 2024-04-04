@@ -30,7 +30,7 @@ function ExperienzeForm() {
 
   return (
     <>
-      <Button className="m-3 border-0 bg-transparent" onClick={handleShow}>
+      <Button className="m-3 border-0 exp-btn" onClick={handleShow}>
         <img src="icons/plus.svg" alt="aggiungi esperienza" />
       </Button>
 

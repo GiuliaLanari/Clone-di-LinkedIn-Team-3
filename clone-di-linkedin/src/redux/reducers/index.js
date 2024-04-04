@@ -1,4 +1,4 @@
-import { GET_USER, GET_EXPERIENCES, DELETE_EXPERIENCES, POST_EXPERIENCES, PUT_EXPERIENCES } from "../actions";
+import { GET_USER, GET_EXPERIENCES, DELETE_EXPERIENCES, POST_EXPERIENCES } from "../actions";
 
 const initialState = {
   user: {},
@@ -29,11 +29,7 @@ const userReducer = function (state = initialState, action) {
         ...state,
         experiences: state.experiences.concat(action.payload),
       };
-    case PUT_EXPERIENCES:
-      return {
-        ...state,
-        experiences: state.experiences.concat(action.payload),
-      };
+
     default:
       return state;
   }

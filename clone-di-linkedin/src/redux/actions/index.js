@@ -129,10 +129,7 @@ export const experiencesModifica = (expId, userId, form) => {
         }
       })
       .then((form) => {
-        dispatch({
-          type: PUT_EXPERIENCES,
-          payload: form,
-        });
+        dispatch(experiencesList());
       })
 
       .catch((error) => console.log(error));

@@ -1,43 +1,58 @@
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import { experiencesList } from "../redux/actions";
 import { experiencesModifica } from "../redux/actions";
 
-function EditEsperienzaForm() {
+function EditEsperienzaForm(props) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(experiencesList(experiences));
-  // }, []);
-
   const experiences = useSelector((state) => state.experiences);
-  const userId = useSelector((state) => state.user._id);
-  const expId = experiences._id;
 
   const [form, setForm] = useState({
-    role: experiences.role,
-    company: experiences.company,
-    startDate: experiences.startDate,
-    image: experiences.image,
-    description: experiences.description,
-    area: experiences.area,
+    role: "",
+    company: "",
+    startDate: "",
+    image: "",
+    description: "",
+    area: "",
   });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(experiencesModifica(expId, userId, form));
+    dispatch(experiencesModifica(props.expId, props.userId, form));
   };
+
+  useEffect(() => {
+    fetch("https://striveschool-api.herokuapp.com/api/profile/" + props.userId + "/experiences/" + props.expId, {
+      method: "GET",
+      headers: {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjBiYmUzOWEyODFkODAwMTlhM2VjNDkiLCJpYXQiOjE3MTIwNDU2MjUsImV4cCI6MTcxMzI1NTIyNX0.c_0ZpFzaWJeG9_uKPTBJGPyvUgqbD-fgP8aAdinJh1o",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Errore nel reperimento dei dati richiesti");
+        }
+      })
+      .then((exp) => {
+        setForm(exp);
+      })
+
+      .catch((error) => console.log(error));
+  }, []);
 
   return (
     <>
-      <Button className="m-3 border-0 bg-transparent" onClick={handleShow}>
+      <Button className=" border-0  exp-btn" onClick={handleShow}>
         <img src="icons/pen.svg" alt="aggiungi esperienza" />
       </Button>
 
@@ -53,7 +68,7 @@ function EditEsperienzaForm() {
               <Form.Control
                 type="text"
                 required
-                value={experiences.company ? experiences.company : form.company}
+                value={form.company}
                 onChange={(e) =>
                   setForm((state) => ({
                     ...state,
@@ -68,7 +83,7 @@ function EditEsperienzaForm() {
               <Form.Control
                 type="text"
                 required
-                value={experiences.area ? experiences.area : form.area}
+                value={form.area}
                 onChange={(e) =>
                   setForm((state) => ({
                     ...state,
@@ -83,7 +98,7 @@ function EditEsperienzaForm() {
               <Form.Control
                 type="text"
                 required
-                value={experiences.description ? experiences.description : form.description}
+                value={form.description}
                 onChange={(e) =>
                   setForm((state) => ({
                     ...state,
@@ -98,7 +113,7 @@ function EditEsperienzaForm() {
               <Form.Control
                 type="text"
                 required
-                value={experiences.role ? experiences.role : form.role}
+                value={form.role}
                 onChange={(e) =>
                   setForm((state) => ({
                     ...state,
@@ -113,7 +128,7 @@ function EditEsperienzaForm() {
               <Form.Control
                 type="url"
                 required
-                value={experiences.image ? experiences.image : form.image}
+                value={form.image}
                 onChange={(e) =>
                   setForm((state) => ({
                     ...state,
@@ -130,7 +145,7 @@ function EditEsperienzaForm() {
               <input
                 type="date"
                 name="trip-start"
-                value={experiences.startDate ? experiences.startDate : form.startDate}
+                value={form.startDate}
                 onChange={(e) =>
                   setForm((state) => ({
                     ...state,
