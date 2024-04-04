@@ -438,3 +438,119 @@ a:hover {
   color: rgb(75, 75, 75) !important;
   box-shadow: inset 0 0 0 1px black;
 }
+
+/* HOMEPAGE RIGHTBAR */
+
+.più-meno-dettagli {
+  cursor: pointer;
+}
+
+.news-container-tot {
+  background-color: white;
+  padding: 1rem;
+}
+
+.news-container {
+  margin-top: 0.6rem;
+}
+
+.news-container ul li:hover {
+  background-color: #3a3a3a1f;
+  cursor: pointer;
+}
+
+.news-container ul li div {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.news-container ul li p {
+  font-size: 0.7rem;
+  padding-left: 2rem;
+}
+
+.drop-open-width {
+  width: max-content;
+  margin-left: 1.75rem;
+}
+
+.drop-nasc-width {
+  margin-left: 1.75rem;
+  width: max-content;
+}
+
+.drop-nasc {
+  padding-inline: 0.3rem;
+  padding-block: 0.1rem;
+}
+
+.drop-nasc:hover {
+  background-color: #e0dfe878;
+}
+
+.span-list-point {
+  border-radius: 50%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 0.7rem 2px 15px;
+  border: #000000bf;
+  background-color: black;
+}
+
+.footer-home-list {
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-home-list li {
+  display: flex;
+  margin: 0.4rem 0.7rem;
+}
+
+.footer-home-list li a {
+  font-size: 0.8rem;
+  color: black;
+}
+.footer-home-list li a:hover {
+  color: #2674c6;
+  font-weight: normal;
+}
+
+.footer-copy {
+  font-size: 0.7rem;
+}
+
+.sticky-footer {
+  position: sticky;
+}
+
+/* MAIN HOME TOP */
+
+.post-btn {
+  width: 100%;
+  margin: 0.4rem 0;
+  display: flex;
+  border-radius: 35px;
+  padding: 0.7rem 1.6rem;
+  background-color: transparent;
+}
+
+.post-btn:hover {
+  background-color: #e0dfe878;
+}
+
+.top-div-post {
+  padding: 0.5rem 0.8rem 0.2rem;
+  background-color: white;
+}
+
+.add-btn-post {
+  padding: 0.8rem 0.5rem;
+  background-color: transparent;
+  border: 0;
+}
+.add-btn-post:hover {
+  background-color: #e0dfe878;
+}
