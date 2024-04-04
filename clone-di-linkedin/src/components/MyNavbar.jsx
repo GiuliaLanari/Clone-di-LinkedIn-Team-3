@@ -143,7 +143,7 @@ const MyNavbar = () => {
                     <ListGroup.Item className="border-bottom-0">
                     <ListGroup.Item className="border-bottom-0">
                         <Link className="" to={"/profile/660d69e2f94f4a00193791f1"}>
-                            Philip Aduteye
+                            <p></p>Philip Aduteye
                         </Link>
                         <Link className="" to={"/profile/660e54b613df0a001949f3df"}>
                             Innocenzo
