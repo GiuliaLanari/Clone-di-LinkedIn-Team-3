@@ -82,6 +82,10 @@ body {
   border: 2px solid black;
 }
 
+.dropdown-toggle-remove::after {
+  content: none;
+}
+
 /*////////////// CAROUSEL ARROWS //////////////*/
 .carousel-indicators {
   background-color: rgba(0, 0, 0, 0.185);
