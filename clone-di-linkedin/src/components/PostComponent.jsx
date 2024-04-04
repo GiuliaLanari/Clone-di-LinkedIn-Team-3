@@ -4,12 +4,8 @@ import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 import { useDispatch, useSelector } from "react-redux";
 import { getPost } from "../redux/actions";
-// import { getPosts } from "../redux/actions/posts";
 
 const PostComponent = function () {
-  // useEffect(() => {
-  //   dispatch(getPosts(posts));
-  // }, []);
   const [open, setOpen] = useState(false);
   const posts = useSelector((state) => state.posts);
 

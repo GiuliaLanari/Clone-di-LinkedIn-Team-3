@@ -34,7 +34,7 @@ const userReducer = function (state = initialState, action) {
         ...state,
         experiences: state.experiences.concat(action.payload),
       };
-    // case GET_POSTS:
+
     case GET_POST:
       return {
         ...state,
