@@ -141,9 +141,23 @@ const MyNavbar = () => {
                 <Dropdown.Menu>
                   <ListGroup className="mb-2">
                     <ListGroup.Item className="border-bottom-0">
-                      <Link className="" to={"/profile"}>
-                        Profile1
-                      </Link>
+                    <ListGroup.Item className="border-bottom-0">
+                        <Link className="" to={"/profile/660d69e2f94f4a00193791f1"}>
+                            Philip Aduteye
+                        </Link>
+                        <Link className="" to={"/profile/660e54b613df0a001949f3df"}>
+                            Innocenzo
+                        </Link>
+                        <Link className="" to={"/profile/660bbe01a281d80019a3ec48"}>
+                            Mia
+                        </Link>
+                        <Link className="" to={"/profile/660bbfaea281d80019a3ec4d"}>
+                            Giulia
+                        </Link>
+                        <Link className="" to={"/profile/660bbe39a281d80019a3ec49"}>
+                            Simone
+                        </Link>
+                    </ListGroup.Item>
                     </ListGroup.Item>
                   </ListGroup>
                 </Dropdown.Menu>
