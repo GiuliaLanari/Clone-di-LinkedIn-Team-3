@@ -2,6 +2,8 @@
 // import { useEffect, useState } from "react";
 // import { useParams } from "react-router-dom";
 // import { useDispatch, useSelector } from "react-redux";
+// import ProfileInfoBottom from "./ProfileInfoBottom";
+// import ProfileInfoTop from "./ProfileInfoTop";
 
 // const profile1 =
 //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjBkNjllMmY5NGY0YTAwMTkzNzkxZjEiLCJpYXQiOjE3MTIxNTUxMDYsImV4cCI6MTcxMzM2NDcwNn0.b85bO6JxHfKWlpOGI9jh2PCcgXUQvSPxpCEMku__nI4";
@@ -74,7 +76,22 @@
 //   }, [id]);
 
 //   return (
-//     
+//     <Container>
+//            <Row className="justify-content-between g-0">
+//                <Col xs={12} md={8} lg={9} className="px-2">
+//                    <ProfileInfoTop />
+//                    <ProfileInfoBottom />
+//                </Col>
+//                <Col xs={12} md={4} lg={3} className="px-2">
+//                    <SideBar />
+//                </Col>
+//            </Row>
+//            <Row>
+//                <Col xs={12}>
+//                    <Footer />
+//                </Col>
+//            </Row>
+//        </Container>
 //   );
 // };
 
