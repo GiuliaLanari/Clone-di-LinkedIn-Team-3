@@ -3,7 +3,6 @@ import "./App.css";
 import Footer from "./components/Footer";
 import MyNavbar from "./components/MyNavbar";
 import Messagistica from "./components/Messagistica";
-
 import ProfilePage from "./components/ProfilePage";
 
 function App() {
