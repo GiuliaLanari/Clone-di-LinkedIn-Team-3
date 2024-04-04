@@ -1,8 +1,13 @@
 import { GET_USER, GET_EXPERIENCES, DELETE_EXPERIENCES, POST_EXPERIENCES } from "../actions";
+import {
+  // GET_POSTS,
+  POST_POST,
+} from "../actions/posts";
 
 const initialState = {
   user: {},
   experiences: [],
+  posts: [],
   // formEsperiences: {},
 };
 
@@ -28,6 +33,16 @@ const userReducer = function (state = initialState, action) {
       return {
         ...state,
         experiences: state.experiences.concat(action.payload),
+      };
+    case GET_POSTS:
+      return {
+        ...state,
+        posts: action.payload,
+      };
+    case POST_POST:
+      return {
+        ...state,
+        posts: state.posts.concat(action.payload),
       };
 
     default:
