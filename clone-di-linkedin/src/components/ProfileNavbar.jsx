@@ -74,15 +74,7 @@
 //   }, [id]);
 
 //   return (
-//     <>
-//       <Col>
-//         <Row>
-//           <Col>
-//             <img src="" alt="" className="" />
-//           </Col>
-//         </Row>
-//       </Col>
-//     </>
+//     
 //   );
 // };
 
