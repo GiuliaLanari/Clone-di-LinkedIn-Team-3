@@ -8,12 +8,14 @@ import { Button, Modal } from "react-bootstrap";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ListGroup from "react-bootstrap/ListGroup";
+import { useDispatch, useSelector } from "react-redux";
 
 const MyNavbar = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const user = useSelector((state) => state.user);
   return (
     <Navbar expand="lg" id="navbar" className="bg-white sticky-lg-top border-bottom py-0 pt-1 mb-3">
       <Container>
@@ -123,13 +125,9 @@ const MyNavbar = () => {
             </svg>
             <p className="navbar-top fs-12">Notifiche</p>
           </div>
-          <div className="text-decoration-none d-flex flex-column  align-items-center  bord">
+          <div className="text-decoration-none d-flex flex-column  align-items-center  bord me-4">
             <span>
-              <img
-                className="rounded-circle shadow-4-strong resized-avatar"
-                alt="avatar2"
-                src={"https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"}
-              />
+              <img className="rounded-circle shadow-4-strong resized-avatar" alt="user" src={user.image} />
             </span>
             {/* Profile */}
 
@@ -164,7 +162,9 @@ const MyNavbar = () => {
                 >
                   <path d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z" />
                 </svg>
-                <p className="navbar-top">Per le Aziende</p>
+                <p className="navbar-top text-nowrap">
+                  Per le Aziende <img src="icons/svgexport-79.svg" alt="dropdown-button" />
+                </p>
               </div>
             </Button>
             <Modal size="md" className="modale" show={show} onHide={handleClose} dialogClassName="modal-dialog-right">
@@ -343,7 +343,7 @@ const MyNavbar = () => {
             </Modal>
           </div>
           <div className="d-flex flex-column align-items-center">
-            <a href="#login" className="premium">
+            <a href="#login" className="premium text-nowrap text-center">
               Prova Premium per <br />0 EUR
             </a>
           </div>
