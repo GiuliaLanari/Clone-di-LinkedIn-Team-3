@@ -79,21 +79,7 @@ const ProfileNavbar = () => {
     }
   }, [id, dispatch, userData]);
 
-  return (
-    <ProfilePage />
-    //
-    // <Container>
-    //     <Row className="justify-content-between g-0">
-    //         <Col xs={12} md={8} lg={9} className="px-2">
-    //             <ProfileInfoTop />
-    //             <ProfileInfoBottom />
-    //         </Col>
-    //         <Col xs={12} md={4} lg={3} className="px-2">
-    //             <SideBar />
-    //         </Col>
-    //     </Row>
-    // </Container>
-  );
+  return <ProfilePage />;
 };
 
 export default ProfileNavbar;
