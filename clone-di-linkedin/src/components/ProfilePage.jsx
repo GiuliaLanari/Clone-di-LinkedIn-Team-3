@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import ProfileInfoBottom from "./ProfileInfoBottom";
 import ProfileInfoTop from "./ProfileInfoTop";
 import SideBar from "./SideBar";
+import Footer from "./Footer";
 
 const ProfilePage = function () {
   return (
@@ -15,6 +16,11 @@ const ProfilePage = function () {
         </Col>
         <Col xs={12} md={4} lg={3} className="px-2">
           <SideBar />
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={12}>
+          <Footer />
         </Col>
       </Row>
     </Container>
