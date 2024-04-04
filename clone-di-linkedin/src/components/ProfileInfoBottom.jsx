@@ -57,7 +57,7 @@ const ProfileInfoBottom = function () {
               <div className="mb-2">
                 <h3 className="mb-0">Consigliato per te</h3>
                 <div className="d-flex align-items-center">
-                  <img src="icons/eye.svg" alt="" /> <p className="mb-0 ms-2">Solo per te</p>
+                  <img src="/icons/eye.svg" alt="" /> <p className="mb-0 ms-2">Solo per te</p>
                 </div>
               </div>
 
@@ -86,7 +86,7 @@ const ProfileInfoBottom = function () {
                       className={`prev-btn btn-dark rounded-circle  ${slide !== 0 ? "d-block" : "d-none"}`}
                     >
                       <div className="btn-small">
-                        <img src="icons/prev-btn.svg" alt="" />
+                        <img src="/icons/prev-btn.svg" alt="" />
                       </div>
                     </Button>
                     <Row
@@ -99,7 +99,7 @@ const ProfileInfoBottom = function () {
                       <Col xs={5} className="cons-pad rounded-3 border border-1">
                         <div className="x-button">
                           <button className="btn p-2">
-                            <img src={"icons/X.svg"} alt="" />
+                            <img src={"/icons/X.svg"} alt="" />
                           </button>
                         </div>
                         <div>
@@ -157,7 +157,7 @@ const ProfileInfoBottom = function () {
                       className={`next-btn btn-dark rounded-circle ${slide !== -50 ? "d-block" : "d-none"}`}
                     >
                       <div className="btn-small">
-                        <img src="icons/next-btn.svg" alt="" />
+                        <img src="/icons/next-btn.svg" alt="" />
                       </div>
                     </Button>
                   </div>

@@ -53,7 +53,7 @@ function EditEsperienzaForm(props) {
   return (
     <>
       <Button className=" border-0  exp-btn" onClick={handleShow}>
-        <img src="icons/pen.svg" alt="aggiungi esperienza" />
+        <img src="/icons/pen.svg" alt="aggiungi esperienza" />
       </Button>
 
       <Modal show={show} onHide={handleClose} className="modal-dialog-scrollable ">

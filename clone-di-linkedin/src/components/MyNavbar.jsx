@@ -167,117 +167,127 @@ const MyNavbar = () => {
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
                   <ListGroup className="mb-2">
-                      <ListGroup.Item className="border-bottom-0">
-                          <div className="d-flex align-items-start gap-2">
-                            <img
-                              src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                              alt="draft_picture"
-                              width="60px"
-                              height={"60px"}
-                              className="image_dropdown_navbar object-fit-cover"
-                            />
+                    <ListGroup.Item className="border-bottom-0">
+                      <div className="d-flex align-items-start gap-2">
+                        <img
+                          src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                          alt="draft_picture"
+                          width="60px"
+                          height={"60px"}
+                          className="image_dropdown_navbar object-fit-cover"
+                        />
 
-                            <div>
-                              <div className="d-flex flex-column align-items-center">
-                                <h5 className="fw-semibold m-0">Philip</h5>
-                              </div>
-                              <div className="d-flex flex-column align-items-center">
-                                <p className="text-secondary m-1 ms-3">Full Stack Developer</p>
-                              </div>
-                              <Link to={"/profile/:id"}>
-                                    <Button className="d-flex align-items-center mt-1 rounded-4 " size="sm" >View Profile</Button>
-                              </Link>
-                            </div>
+                        <div>
+                          <div className="d-flex flex-column align-items-center">
+                            <h5 className="fw-semibold m-0">Philip</h5>
                           </div>
-                          <DropdownDivider />
-                          <div className="d-flex align-items-start gap-2">
-                            <img
-                              src="https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                              alt="draft_picture"
-                              width="60px"
-                              height={"60px"}
-                              className="image_dropdown_navbar object-fit-cover"
-                            />
+                          <div className="d-flex flex-column align-items-center">
+                            <p className="text-secondary m-1 ms-3">Full Stack Developer</p>
+                          </div>
+                          <Link to={"/profile/:id"}>
+                            <Button className="d-flex align-items-center mt-1 rounded-4 " size="sm">
+                              View Profile
+                            </Button>
+                          </Link>
+                        </div>
+                      </div>
+                      <DropdownDivider />
+                      <div className="d-flex align-items-start gap-2">
+                        <img
+                          src="https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                          alt="draft_picture"
+                          width="60px"
+                          height={"60px"}
+                          className="image_dropdown_navbar object-fit-cover"
+                        />
 
-                            <div>
-                              <div className="d-flex flex-column align-items-center">
-                                <h5 className="fw-semibold m-0">Innocenzo</h5>
-                              </div>
-                              <div className="d-flex flex-column align-items-center">
-                                <p className="text-secondary m-1 ms-3">Full Stack Developer</p>
-                              </div>
-                              <Link to={"/profile/660e54b613df0a001949f3df"}>
-                                    <Button className="d-flex align-items-center mt-1 rounded-4 " size="sm" >View Profile</Button>
-                              </Link>
-                            </div>
+                        <div>
+                          <div className="d-flex flex-column align-items-center">
+                            <h5 className="fw-semibold m-0">Innocenzo</h5>
                           </div>
-                          <DropdownDivider />
-                          <div className="d-flex align-items-start gap-2">
-                            <img
-                              src="https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                              alt="draft_picture"
-                              width="60px"
-                              height={"60px"}
-                              className="image_dropdown_navbar object-fit-cover"
-                            />
+                          <div className="d-flex flex-column align-items-center">
+                            <p className="text-secondary m-1 ms-3">Full Stack Developer</p>
+                          </div>
+                          <Link to={"/profile/660e54b613df0a001949f3df"}>
+                            <Button className="d-flex align-items-center mt-1 rounded-4 " size="sm">
+                              View Profile
+                            </Button>
+                          </Link>
+                        </div>
+                      </div>
+                      <DropdownDivider />
+                      <div className="d-flex align-items-start gap-2">
+                        <img
+                          src="https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                          alt="draft_picture"
+                          width="60px"
+                          height={"60px"}
+                          className="image_dropdown_navbar object-fit-cover"
+                        />
 
-                            <div>
-                              <div className="d-flex flex-column align-items-center">
-                                <h5 className="fw-semibold m-0">Mia</h5>
-                              </div>
-                              <div className="d-flex flex-column align-items-center">
-                                <p className="text-secondary m-1 ms-3">Full Stack Developer</p>
-                              </div>
-                              <Link to={"/profile/660bbe01a281d80019a3ec48"}>
-                                    <Button className="d-flex align-items-center mt-1 rounded-4 " size="sm" >View Profile</Button>
-                              </Link>
-                            </div>
+                        <div>
+                          <div className="d-flex flex-column align-items-center">
+                            <h5 className="fw-semibold m-0">Mia</h5>
                           </div>
-                          <DropdownDivider />
-                          <div className="d-flex align-items-start gap-2">
-                            <img
-                              src="https://images.pexels.com/photos/1310474/pexels-photo-1310474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                              alt="draft_picture"
-                              width="60px"
-                              height={"60px"}
-                              className="image_dropdown_navbar object-fit-cover"
-                            />
+                          <div className="d-flex flex-column align-items-center">
+                            <p className="text-secondary m-1 ms-3">Full Stack Developer</p>
+                          </div>
+                          <Link to={"/profile/660bbe01a281d80019a3ec48"}>
+                            <Button className="d-flex align-items-center mt-1 rounded-4 " size="sm">
+                              View Profile
+                            </Button>
+                          </Link>
+                        </div>
+                      </div>
+                      <DropdownDivider />
+                      <div className="d-flex align-items-start gap-2">
+                        <img
+                          src="https://images.pexels.com/photos/1310474/pexels-photo-1310474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                          alt="draft_picture"
+                          width="60px"
+                          height={"60px"}
+                          className="image_dropdown_navbar object-fit-cover"
+                        />
 
-                            <div>
-                              <div className="d-flex flex-column align-items-center">
-                                <h5 className="fw-semibold m-0">Giulia</h5>
-                              </div>
-                              <div className="d-flex flex-column align-items-center">
-                                <p className="text-secondary m-1 ms-3">Full Stack Developer</p>
-                              </div>
-                              <Link to={"/profile/660bbfaea281d80019a3ec4d"}>
-                                    <Button className="d-flex align-items-center mt-1 rounded-4 " size="sm" >View Profile</Button>
-                              </Link>
-                            </div>
+                        <div>
+                          <div className="d-flex flex-column align-items-center">
+                            <h5 className="fw-semibold m-0">Giulia</h5>
                           </div>
-                          <DropdownDivider />
-                          <div className="d-flex align-items-start gap-2">
-                            <img
-                              src="https://images.pexels.com/photos/1559486/pexels-photo-1559486.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                              alt="draft_picture"
-                              width="60px"
-                              height={"60px"}
-                              className="image_dropdown_navbar object-fit-cover"
-                            />
+                          <div className="d-flex flex-column align-items-center">
+                            <p className="text-secondary m-1 ms-3">Full Stack Developer</p>
+                          </div>
+                          <Link to={"/profile/660bbfaea281d80019a3ec4d"}>
+                            <Button className="d-flex align-items-center mt-1 rounded-4 " size="sm">
+                              View Profile
+                            </Button>
+                          </Link>
+                        </div>
+                      </div>
+                      <DropdownDivider />
+                      <div className="d-flex align-items-start gap-2">
+                        <img
+                          src="https://images.pexels.com/photos/1559486/pexels-photo-1559486.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                          alt="draft_picture"
+                          width="60px"
+                          height={"60px"}
+                          className="image_dropdown_navbar object-fit-cover"
+                        />
 
-                            <div>
-                              <div className="d-flex flex-column align-items-center">
-                                <h5 className="fw-semibold m-0">Simone</h5>
-                              </div>
-                              <div className="d-flex flex-column align-items-center">
-                                <p className="text-secondary m-1 ms-3">Full Stack Developer</p>
-                              </div>
-                              <Link to={"/profile/660bbe39a281d80019a3ec49"}>
-                                    <Button className="d-flex align-items-center mt-1 rounded-4 " size="sm" >View Profile</Button>
-                              </Link>
-                            </div>
+                        <div>
+                          <div className="d-flex flex-column align-items-center">
+                            <h5 className="fw-semibold m-0">Simone</h5>
                           </div>
-                      </ListGroup.Item>
+                          <div className="d-flex flex-column align-items-center">
+                            <p className="text-secondary m-1 ms-3">Full Stack Developer</p>
+                          </div>
+                          <Link to={"/profile/660bbe39a281d80019a3ec49"}>
+                            <Button className="d-flex align-items-center mt-1 rounded-4 " size="sm">
+                              View Profile
+                            </Button>
+                          </Link>
+                        </div>
+                      </div>
+                    </ListGroup.Item>
                   </ListGroup>
                 </Dropdown.Menu>
               </Dropdown>
@@ -304,7 +314,7 @@ const MyNavbar = () => {
                   ></path>
                 </svg>
                 <p className="navbar-top text-nowrap">
-                  Per le Aziende <img src="icons/svgexport-79.svg" alt="dropdown-button" />
+                  Per le Aziende <img src="/icons/svgexport-79.svg" alt="dropdown-button" />
                 </p>
               </div>
             </Button>

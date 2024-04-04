@@ -51,7 +51,7 @@ function EditProfileForm() {
   return (
     <>
       <Button className="m-3 add-pen-btn rounded-circle py-1 px-2" onClick={handleShow}>
-        <img src="icons/pen.svg" alt="" />
+        <img src="/icons/pen.svg" alt="" />
       </Button>
 
       <Modal show={show} onHide={handleClose} className="modal-dialog-scrollable ">
@@ -107,7 +107,7 @@ function EditProfileForm() {
             </Form.Group>
             <Form.Text className="text-muted">Pronuncia del nome</Form.Text>
             <p>
-              <img src="icons/i.svg" alt="" />
+              <img src="/icons/i.svg" alt="" />
               Può essere aggiunta solo usando la nostra app per dispositivi mobili
             </p>
             <Form.Group className="mb-3">
@@ -138,7 +138,7 @@ function EditProfileForm() {
             <Form.Group className="mb-3">
               <h4>Posizione attuale</h4>
               <button className="border-0">
-                <img src="icons/plus.svg" alt="" />
+                <img src="/icons/plus.svg" alt="" />
                 Aggiungi una nuova posizione lavorativa
               </button>
             </Form.Group>

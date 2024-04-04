@@ -13,11 +13,11 @@ const Training = function () {
           <div className="d-flex gap-3 align-items-baseline">
             <div>
               <Button className="add-pen-btn rounded-circle ">
-                <img src="icons/plus.svg" alt="" />
+                <img src="/icons/plus.svg" alt="" />
               </Button>
             </div>
             <Button className="add-pen-btn rounded-circle">
-              <img src="icons/pen.svg" alt="" />
+              <img src="/icons/pen.svg" alt="" />
             </Button>
           </div>
         </div>

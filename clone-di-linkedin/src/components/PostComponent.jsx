@@ -9,39 +9,39 @@ const PostComponent = function () {
     <div className="post bg-white rounded-3 border border-1 mt-3">
       <div className="d-flex justify-content-end border-bottom p-1">
         {/* <button className="add-pen-btn rounded-circle py-1">
-          <img src="icons/dots.svg" alt="più azioni" />
+          <img src="/icons/dots.svg" alt="più azioni" />
         </button> */}
         <Dropdown>
           <Dropdown.Toggle className="border-0" variant="transparent">
-            <img className="me-2" src="icons/dots.svg" alt="più azioni" />
+            <img className="me-2" src="/icons/dots.svg" alt="più azioni" />
           </Dropdown.Toggle>
 
           <Dropdown.Menu align="end" className="mt-1">
             <Dropdown.Item href="#/action-1" className="py-3 pe-5">
-              <img className="me-2" src="icons/save2.svg" alt="" />
+              <img className="me-2" src="/icons/save2.svg" alt="" />
               Salva
             </Dropdown.Item>
             <Dropdown.Item href="#/action-2" className="py-3 pe-5">
-              <img className="me-2" src="icons/link.svg" alt="" />
+              <img className="me-2" src="/icons/link.svg" alt="" />
               Copia link al post
             </Dropdown.Item>
             <Dropdown.Item href="#/action-3" className="py-3 pe-5">
-              <img className="me-2" src="icons/dontshow.svg" alt="" />
+              <img className="me-2" src="/icons/dontshow.svg" alt="" />
               Non voglio vederlo
             </Dropdown.Item>
             {/* DINAMICO!!!!!!!!!!!!!! */}
             <Dropdown.Item href="#/action-3" className="py-3 pe-5">
-              <img className="me-2" src="icons/stopfollowing.svg" alt="" />
+              <img className="me-2" src="/icons/stopfollowing.svg" alt="" />
               Smetti di guardare USER
             </Dropdown.Item>
             <Dropdown.Item href="#/action-3" className="py-3 pe-5">
-              <img className="me-2" src="icons/report.svg" alt="" />
+              <img className="me-2" src="/icons/report.svg" alt="" />
               Segnala post
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
         <button className="add-pen-btn rounded-circle py-1">
-          <img src="icons/X.svg" alt="rimuovi dal feed" />
+          <img src="/icons/X.svg" alt="rimuovi dal feed" />
         </button>
       </div>
       <div className="post-content">
@@ -56,13 +56,13 @@ const PostComponent = function () {
               <span className="fw-bold mb-0 ">Nome Cognome</span> &#903; <span>3° e oltre</span>
               <p className="mb-1 lh-1 text-sm">Titolo</p>
               <p className="lh-1">
-                data di creazione <span>&#903;</span> <img src="icons/public.svg" alt="" />
+                data di creazione <span>&#903;</span> <img src="/icons/public.svg" alt="" />
               </p>
             </div>
           </div>
           <button className="border-0 text-primary  homepage-btns px-2 py-2 rounded h6">
             {" "}
-            <img src="icons/plus.svg" className="mb-1" alt="" /> Segui
+            <img src="/icons/plus.svg" className="mb-1" alt="" /> Segui
           </button>
         </div>
         {/* DINAMICO!!!!!!!!! */}
@@ -84,7 +84,7 @@ const PostComponent = function () {
         </div>
         <div className="d-flex justify-content-center">
           <button className="homepage-btns border-0 p-3 m-1 rounded">
-            <img style={{ marginInlineEnd: "3px" }} src="icons/thumb-up.svg" alt="" />
+            <img style={{ marginInlineEnd: "3px" }} src="/icons/thumb-up.svg" alt="" />
             Consiglia
           </button>
           <Button
@@ -93,15 +93,15 @@ const PostComponent = function () {
             aria-expanded={open}
             className="homepage-btns border-0 p-3 m-1 rounded text-dark"
           >
-            <img style={{ marginInlineEnd: "3px" }} src="icons/comment.svg" alt="" />
+            <img style={{ marginInlineEnd: "3px" }} src="/icons/comment.svg" alt="" />
             Commenta
           </Button>
           <button className="homepage-btns border-0 p-3 m-1 rounded">
-            <img style={{ marginInlineEnd: "3px" }} src="icons/repost.svg" alt="" />
+            <img style={{ marginInlineEnd: "3px" }} src="/icons/repost.svg" alt="" />
             Diffondi il post
           </button>
           <button className="homepage-btns border-0 p-3 m-1 rounded">
-            <img style={{ marginInlineEnd: "3px" }} src="icons/send.svg" alt="" />
+            <img style={{ marginInlineEnd: "3px" }} src="/icons/send.svg" alt="" />
             Invia
           </button>
         </div>
@@ -126,11 +126,11 @@ const PostComponent = function () {
                 />
                 <div>
                   <button className="border-0 py-1  homepage-btns rounded-circle">
-                    <img src="icons/smiley.svg" alt="" />
+                    <img src="/icons/smiley.svg" alt="" />
                   </button>
                   <button className="border-0 py-1 homepage-btns rounded-circle">
                     {" "}
-                    <img src="icons/image1.svg" alt="" />
+                    <img src="/icons/image1.svg" alt="" />
                   </button>
                 </div>
               </div>

@@ -18,7 +18,7 @@ const Activity = function () {
               <Button className="rounded-pill btn-crea fw-bold">Crea un post</Button>
             </div>
             <Button className="add-pen-btn rounded-circle py-1 px-2">
-              <img src="icons/pen.svg" alt="" />
+              <img src="/icons/pen.svg" alt="" />
             </Button>
           </div>
         </div>
@@ -34,7 +34,7 @@ const Activity = function () {
       </Col>
 
       <Button className="btn-border rounded-0 text-black">
-        Mostra tutte le attività <img src="icons/right-arrow.svg" alt="" />
+        Mostra tutte le attività <img src="/icons/right-arrow.svg" alt="" />
       </Button>
     </Row>
   );

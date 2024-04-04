@@ -15,7 +15,7 @@ const RightBar = function () {
         <Col xs={12} className="news-container-tot px-0 rounded-3 border border-2">
           <div className="d-flex align-items-center justify-content-between px-3">
             <h6 className="mb-0">LinkedIn Notizie</h6>
-            <img src="icons/i.svg" alt="" />
+            <img src="/icons/i.svg" alt="" />
           </div>
           <div className="news-container">
             <ul>
@@ -61,7 +61,7 @@ const RightBar = function () {
                   <span onClick={handleClick}>
                     {!clicked && (
                       <div className="più-meno-dettagli">
-                        Vedi altro <img src="icons/bottom-arrow.svg" alt="" />
+                        Vedi altro <img src="/icons/bottom-arrow.svg" alt="" />
                       </div>
                     )}
                   </span>
@@ -109,7 +109,7 @@ const RightBar = function () {
                     <div className="rounded-1 drop-nasc">
                       <span onClick={handleClick} className="più-meno-dettagli">
                         <div className="più-meno-dettagli">
-                          Meno dettagli <img src="icons/top-arrow.svg" alt="" />
+                          Meno dettagli <img src="/icons/top-arrow.svg" alt="" />
                         </div>
                       </span>
                     </div>
@@ -162,7 +162,7 @@ const RightBar = function () {
               </ul>
             </div>
             <div className="footer-copy d-flex justify-content-center mt-2">
-              <img className="me-1" src="icons/linkedin-logo.svg" alt="" />
+              <img className="me-1" src="/icons/linkedin-logo.svg" alt="" />
               LinkedIn Corporation &copy; 2024
             </div>
           </Col>

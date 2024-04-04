@@ -59,7 +59,7 @@ const Interests = function () {
                 <p className="mb-2">14.341 follower</p>
 
                 <Button className="rounded-pill dec-btn text-secondary btn-dark" onClick={handleClick}>
-                  <img src="icons/check.svg" alt="" className="me-1" />
+                  <img src="/icons/check.svg" alt="" className="me-1" />
                   Già segui
                 </Button>
               </div>
