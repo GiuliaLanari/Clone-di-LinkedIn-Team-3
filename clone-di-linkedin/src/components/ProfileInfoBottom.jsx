@@ -26,11 +26,13 @@ const ProfileInfoBottom = function () {
 
   const next = () => {
     if (windowWidth <= 768) {
-      setSlide((prevValue) => prevValue - 104);
+      setSlide((prevValue) => prevValue - 79);
     } else if (windowWidth <= 992) {
-      setSlide((prevValue) => prevValue - 73);
+      setSlide((prevValue) => prevValue - 95);
+    } else if (windowWidth <= 1200) {
+      setSlide((prevValue) => prevValue - 43);
     } else if (windowWidth >= 1400) {
-      setSlide((prevValue) => prevValue - 27);
+      setSlide((prevValue) => prevValue - 29);
     } else {
       setSlide((prevValue) => prevValue - 25);
     }
@@ -38,11 +40,13 @@ const ProfileInfoBottom = function () {
 
   const prev = () => {
     if (windowWidth <= 768) {
-      setSlide((prevValue) => prevValue + 104);
+      setSlide((prevValue) => prevValue + 79);
     } else if (windowWidth <= 992) {
-      setSlide((prevValue) => prevValue + 73);
+      setSlide((prevValue) => prevValue + 95);
+    } else if (windowWidth <= 1200) {
+      setSlide((prevValue) => prevValue + 43);
     } else if (windowWidth >= 1400) {
-      setSlide((prevValue) => prevValue + 27);
+      setSlide((prevValue) => prevValue + 29);
     } else {
       setSlide((prevValue) => prevValue + 25);
     }
@@ -153,7 +157,7 @@ const ProfileInfoBottom = function () {
                     </Row>
                     <Button
                       onClick={next}
-                      disabled={slide === -50 || slide === -146 || slide === -27 || slide === -208}
+                      disabled={slide === -50 || slide === -190 || slide === -29 || slide === -158 || slide === -86}
                       className={`next-btn btn-dark rounded-circle ${slide !== -50 ? "d-block" : "d-none"}`}
                     >
                       <div className="btn-small">
