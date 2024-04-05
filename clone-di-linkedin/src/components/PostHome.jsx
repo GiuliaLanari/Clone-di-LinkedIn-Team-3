@@ -5,11 +5,35 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { postModifica } from "../redux/actions";
 import { postDelete } from "../redux/actions/posts";
+import { addComment } from "../redux/actions/posts";
 
 const PostHome = function ({ post }) {
   const [open, setOpen] = useState(false);
   const username = useSelector((state) => state.user.username);
   const dispatch = useDispatch();
+
+  const [commentInputValue, setCommentInputValue] = useState({
+    comment: "",
+    rate: 1,
+    elementId: "",
+  });
+
+  const handleSubmit = (e, post) => {
+    e.preventDefault();
+    dispatch(
+      addComment({
+        ...commentInputValue,
+        elementId: post._id,
+      })
+    );
+    setCommentInputValue({
+      comment: "",
+      rate: "",
+      elementId: "",
+    });
+    setOpen(false);
+    console.log(commentInputValue);
+  };
 
   return (
     <div className="post bg-white rounded-3 border border-1 mt-3" key={post._id}>
@@ -149,13 +173,25 @@ const PostHome = function ({ post }) {
                 />
               </div>
               <div className="w-100 border border-1 rounded-pill px-2 border border-dark d-flex justify-content-between align-items-center">
-                <input
-                  type="text"
-                  className="border-0 bg-transparent custom-input"
-                  style={{ height: "50px" }}
-                  // size={40}
-                  placeholder="Aggiungi un commento..."
-                />
+                <form onSubmit={(e) => handleSubmit(e, post)}>
+                  <input
+                    type="text"
+                    className="border-0 bg-transparent custom-input"
+                    style={{ height: "50px" }}
+                    // size={40}
+                    placeholder="Aggiungi un commento..."
+                    value={commentInputValue.comment}
+                    onChange={(e) =>
+                      setCommentInputValue((state) => ({
+                        ...state,
+                        comment: e.target.value,
+                        rate: "3",
+                        elementId: post._id,
+                      }))
+                    }
+                  />
+                </form>
+
                 <div>
                   <button className="border-0 py-1  homepage-btns rounded-circle">
                     <img src="/icons/smiley.svg" alt="" />

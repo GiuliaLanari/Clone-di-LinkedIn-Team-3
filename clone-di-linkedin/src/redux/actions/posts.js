@@ -1,5 +1,6 @@
 export const POST_POST = "POST_POST";
 export const DELETE_POST = "DELETE_POST";
+export const ADD_COMMENT = "ADD_COMMENT";
 // export const GET_POST_ID = "GET_POST_ID";
 
 export const postPost = function (inputValue) {
@@ -77,6 +78,34 @@ export const postDelete = (postId) => {
       })
 
       .catch((error) => console.log(error));
+  };
+};
+
+export const addComment = function (commentInputValue) {
+  return (dispatch, getState) => {
+    fetch("https://striveschool-api.herokuapp.com/api/comments/", {
+      method: "POST",
+      body: JSON.stringify(commentInputValue),
+      headers: {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWUxOTc1MTRjNTllYzAwMTk5MGQ2ZTUiLCJpYXQiOjE3MTIzMDI1NDEsImV4cCI6MTcxMzUxMjE0MX0.vZuFAueLK3JQq-rExdaJpRzgQH4jCViHJvJuURoRRR8",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Errore nella chiamata API");
+        }
+      })
+      .then((comment) => {
+        dispatch({
+          type: ADD_COMMENT,
+          payload: comment,
+        });
+      })
+      .catch((error) => console.log("ERRORE", error));
   };
 };
 
