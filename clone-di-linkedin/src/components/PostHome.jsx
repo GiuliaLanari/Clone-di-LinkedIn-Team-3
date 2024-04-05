@@ -117,7 +117,8 @@ const PostHome = function ({ post }) {
               <span className="fw-bold mb-0 ">{post.user.name + " " + post.user.surname}</span>
               <p className="mb-1 lh-1 text-sm">{post.user.title}</p>
               <p className="lh-1">
-                {date.toLocaleDateString()} <span>&#903;</span> <img src="/icons/public.svg" alt="" />
+                {date.toLocaleDateString() + " alle " + date.toLocaleTimeString()} <span>&#903;</span>{" "}
+                <img src="/icons/public.svg" alt="" />
               </p>
             </div>
           </div>
