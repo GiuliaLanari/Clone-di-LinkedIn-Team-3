@@ -1,11 +1,12 @@
 import { GET_USER, GET_EXPERIENCES, DELETE_EXPERIENCES, POST_EXPERIENCES, GET_POST } from "../actions";
 
-import { POST_POST } from "../actions/posts";
+import { POST_POST,ADD_COMMENTS_POSTS } from "../actions/posts";
 
 const initialState = {
   user: {},
   experiences: [],
   posts: [],
+
 };
 
 const userReducer = function (state = initialState, action) {
@@ -42,6 +43,11 @@ const userReducer = function (state = initialState, action) {
         ...state,
         posts: state.posts.concat(action.payload),
       };
+    case ADD_COMMENTS_POSTS:
+        return {
+            ...state,
+            comments: action.payload,
+    };  
 
     default:
       return state;

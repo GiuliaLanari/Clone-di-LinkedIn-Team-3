@@ -4,15 +4,29 @@ import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 import { useDispatch, useSelector } from "react-redux";
 import { getPost } from "../redux/actions";
+import {fetchCommentPosts,addComment} from "../redux/actions/posts";
 
-const PostComponent = function () {
+const PostComponent = function (postId) {
   const [open, setOpen] = useState(false);
+  const token = useSelector((state) => state.token.token);
   const posts = useSelector((state) => state.posts);
+  const [newComment, setNewComment] = useState({
+    comment: "",
+    rate:"1",
+    elementId: "postId",
+  });
 
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getPost(posts));
   }, []);
+
+  const handleComment = (e,postId) => {
+    e.preventDefault();
+    dispatch(addComment(newComment, postId));
+    dispatch(fetchCommentPosts(postId));
+    setNewComment({ ...newComment, comment: "" });
+  };
 
   return (
     <>
@@ -120,6 +134,8 @@ const PostComponent = function () {
                 Invia
               </button>
             </div>
+
+            {/* COMMENTI */}
             <Collapse in={open}>
               <div className="commentArea px-3" id="example-collapse-text">
                 <div className="d-flex align-items-center">
@@ -132,13 +148,24 @@ const PostComponent = function () {
                     />
                   </div>
                   <div className="w-100 border border-1 rounded-pill px-2 border border-dark d-flex justify-content-between align-items-center">
-                    <input
-                      type="text"
-                      className="border-0 bg-transparent custom-input"
-                      style={{ height: "50px" }}
-                      // size={40}
-                      placeholder="Aggiungi un commento..."
-                    />
+                      <form onSubmit={ handleComment}>
+                        <input
+                          type="text"
+                          className="border-0 bg-transparent custom-input"
+                          style={{ height: "50px" }}
+                          // size={40}
+                          placeholder="Aggiungi un commento..."
+                          value={newComment.comment}
+                          onChange={(e) => {
+                            setNewComment({
+                              ...newComment,
+                              comment: e.target.value,
+                            /*   postId: postId, */
+                            });
+                          }}
+                           /*  setNewComment(state => ({...state, comment: e.target.value}))} */
+                        />
+                      </form>
                     <div>
                       <button className="border-0 py-1  homepage-btns rounded-circle">
                         <img src="/icons/smiley.svg" alt="" />
