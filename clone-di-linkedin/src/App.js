@@ -11,11 +11,11 @@ function App() {
   return (
     <BrowserRouter>
       <MyNavbar />
-        
+
       <Routes>
         <Route path="/profile" element={<ProfilePage />} />
-        <Route  path="/profile/:id" element={<ProfileNavbar />} />
-        <Route path="/" element={<HomePage />} />
+        <Route path="/profile/:id" element={<ProfileNavbar />} />
+        <Route path="/home/:id" element={<HomePage />} />
       </Routes>
       <Messagistica />
     </BrowserRouter>
