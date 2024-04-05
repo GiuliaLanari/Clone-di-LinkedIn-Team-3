@@ -1,15 +1,14 @@
 /*------------NAVBAR-----------------*/
 .navbar-top {
-  margin-inline: 25px;
-  color: #666666;
+  color: #a8a7a7;
   font-size: small;
   margin-bottom: 0;
 }
 
 .navbar-top:hover {
-  color: black;
-  fill: rgb(31, 17, 17);
+  color: rgb(0, 0, 0);
   cursor: pointer;
+  text-decoration: none;
 }
 
 .linkedin logo {
@@ -43,6 +42,36 @@
 .premium {
   color: darkgoldenrod;
   font-size: 12px;
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-top {
+    display: none;
+  }
+  #search {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar-top {
+    display: none;
+  }
+  #search {
+    max-width: 100px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .navbar-top {
+    display: none;
+  }
+  #icons-wrap {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #icons-wrap {
+    width: 60%;
+  }
 }
 
 /* NAVBAR */
