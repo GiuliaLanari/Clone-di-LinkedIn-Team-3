@@ -50,7 +50,7 @@ const MyNavbar = () => {
           </NavbarBrand>
         </div>
         <div className="d-flex justify-content-end-lg align-items-center ">
-          <Link to={"/"}>
+          <Link to={"/home/:id"}>
             <div className="d-flex flex-column align-items-center bord text-decoration-none">
               <div className="d-flex flex-column align-items-center bord text-decoration-none">
                 <svg
