@@ -71,7 +71,7 @@ const MyNavbar = () => {
               <img className="rounded-circle shadow-4-strong resized-avatar" alt="user" src={user.image} />
 
               <Dropdown.Toggle className="bg-white text-dark border-0 p-0 d-flex align-items-center d-flex text-sm">
-                Tu
+                <p className="navbar-top">Tu </p>
               </Dropdown.Toggle>
               <Dropdown.Menu
                 className="mt-2"
