@@ -2,7 +2,7 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { experiencesModifica } from "../redux/actions";
 
 function EditEsperienzaForm(props) {
@@ -11,8 +11,6 @@ function EditEsperienzaForm(props) {
   const handleShow = () => setShow(true);
 
   const dispatch = useDispatch();
-
-  const experiences = useSelector((state) => state.experiences);
 
   const [form, setForm] = useState({
     role: "",

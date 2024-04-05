@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../redux/actions/index";
+
 import ProfilePage from "./ProfilePage";
 
 const ProfileNavbar = () => {
@@ -68,5 +69,3 @@ const ProfileNavbar = () => {
 };
 
 export default ProfileNavbar;
-
-
