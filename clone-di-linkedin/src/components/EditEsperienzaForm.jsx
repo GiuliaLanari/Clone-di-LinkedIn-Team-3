@@ -50,7 +50,7 @@ function EditEsperienzaForm(props) {
 
   return (
     <>
-      <Button className=" border-0  exp-btn" onClick={handleShow}>
+      <Button id="experiences-btns" onClick={handleShow}>
         <img src="/icons/pen.svg" alt="aggiungi esperienza" />
       </Button>
 

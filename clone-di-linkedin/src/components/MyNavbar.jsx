@@ -65,7 +65,7 @@ const MyNavbar = () => {
             <img src="/icons/notifiche.svg" alt="" />
             <p className="navbar-top fs-12">Notifiche</p>
           </Nav.Link>
-          <Nav.Link className="navbar-top align-items-center me-4">
+          <Nav.Link className="text-decoration-none align-items-center me-4">
             {/* Profile */}
             <Dropdown className="d-flex flex-column  align-items-center">
               <img className="rounded-circle shadow-4-strong resized-avatar" alt="user" src={user.image} />
@@ -80,7 +80,7 @@ const MyNavbar = () => {
               >
                 <ListGroup className="mb-2">
                   {/*/////////////// PROFILO SIMONE ///////////////*/}
-                  <ListGroup.Item className="border-top-0">
+                  <ListGroup.Item className="border-0">
                     <div className="d-flex align-items-start gap-2">
                       <img
                         src="https://images.pexels.com/photos/1559486/pexels-photo-1559486.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -98,13 +98,13 @@ const MyNavbar = () => {
                       </div>
                     </div>
                     <Link to={"/profile/660bbe39a281d80019a3ec49"}>
-                      <Button className="w-100 p-0  rounded-pill bg-transparent text-primary" size="sm">
+                      <Button className="w-100 p-0 rounded-pill bg-transparent text-primary" size="sm">
                         Visualizza Profilo
                       </Button>
                     </Link>
                   </ListGroup.Item>
 
-                  <ListGroup.Item>
+                  <ListGroup.Item className="border-0">
                     <h5>Account</h5>
                     <p className="m-1 text-secondary" style={{ fontSize: "14px" }}>
                       Prova Premium per 0 EUR
@@ -119,7 +119,7 @@ const MyNavbar = () => {
                       Lingua
                     </p>
                   </ListGroup.Item>
-                  <ListGroup.Item>
+                  <ListGroup.Item className="border-0">
                     <h5>Gestisci</h5>
                     <p className="m-1 text-secondary" style={{ fontSize: "14px" }}>
                       Post e Attività
@@ -128,14 +128,14 @@ const MyNavbar = () => {
                       Account per la pubblicazione di of
                     </p>
                   </ListGroup.Item>
-                  <ListGroup.Item>
+                  <ListGroup.Item className="border-0">
                     <p className="m-1 text-secondary" style={{ fontSize: "14px" }}>
                       Esci
                     </p>
                   </ListGroup.Item>
 
                   {/*/////////////// PROFILO INNOCENZO ///////////////*/}
-                  <ListGroup.Item>
+                  <ListGroup.Item className="border-0">
                     <div className="d-flex align-items-start gap-2">
                       <img
                         src="https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -160,7 +160,7 @@ const MyNavbar = () => {
                   </ListGroup.Item>
 
                   {/*/////////////// PROFILO MIA ///////////////*/}
-                  <ListGroup.Item>
+                  <ListGroup.Item className="border-0">
                     <div className="d-flex align-items-start gap-2">
                       <img
                         src="https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -185,7 +185,7 @@ const MyNavbar = () => {
                   </ListGroup.Item>
 
                   {/*/////////////// PROFILO GIULIA ///////////////*/}
-                  <ListGroup.Item>
+                  <ListGroup.Item className="border-0">
                     <div className="d-flex align-items-start gap-2">
                       <img
                         src="https://images.pexels.com/photos/1310474/pexels-photo-1310474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -210,7 +210,7 @@ const MyNavbar = () => {
                   </ListGroup.Item>
 
                   {/*/////////////// PROFILO PHILIP ///////////////*/}
-                  <ListGroup.Item>
+                  <ListGroup.Item className="border-0">
                     <div className=" d-flex align-items-start gap-2">
                       <img
                         src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"

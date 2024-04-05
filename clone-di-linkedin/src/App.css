@@ -10,6 +10,9 @@
   cursor: pointer;
   text-decoration: none;
 }
+.navbar-top:focus {
+  border-bottom: 2px solid black;
+}
 
 .linkedin logo {
   cursor: pointer;
@@ -42,6 +45,11 @@
 .premium {
   color: darkgoldenrod;
   font-size: 12px;
+}
+
+.image_dropdown_navbar {
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 576px) {
@@ -418,6 +426,17 @@ a:hover {
   padding-top: 0px;
 }
 
+#experiences-btns {
+  color: red;
+  border-radius: 50%;
+  border: transparent;
+  width: 41px;
+  background-color: white;
+}
+#experiences-btns:hover {
+  background-color: #f1f1f1;
+}
+
 /* MESSAGISTICA */
 #messaggistica {
   cursor: pointer !important;
@@ -529,12 +548,7 @@ a:hover {
   width: 45px;
   object-position: 0px;
 }
-.exp-btn {
-  background-color: #e4f1f136;
-}
-.exp-btn:hover {
-  background-color: #4749491e;
-}
+
 /* HOMEPAGE RIGHTBAR */
 
 .più-meno-dettagli {
