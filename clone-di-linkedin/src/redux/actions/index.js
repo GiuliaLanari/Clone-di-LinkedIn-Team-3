@@ -162,3 +162,29 @@ export const getPost = () => {
       .catch((error) => console.log(error));
   };
 };
+
+export const postModifica = (postId, post) => {
+  return (dispatch, getState) => {
+    fetch("https://striveschool-api.herokuapp.com/api/posts/" + postId, {
+      method: "PUT",
+      body: JSON.stringify(post),
+      headers: {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjBiYmUzOWEyODFkODAwMTlhM2VjNDkiLCJpYXQiOjE3MTIwNDU2MjUsImV4cCI6MTcxMzI1NTIyNX0.c_0ZpFzaWJeG9_uKPTBJGPyvUgqbD-fgP8aAdinJh1o",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Errore nel reperimento dei dati richiesti");
+        }
+      })
+      .then((post) => {
+        dispatch(getPost());
+      })
+
+      .catch((error) => console.log(error));
+  };
+};
