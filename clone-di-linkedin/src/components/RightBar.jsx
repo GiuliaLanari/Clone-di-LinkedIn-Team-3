@@ -12,7 +12,7 @@ const RightBar = function () {
   return (
     <Row className="mb-5">
       <Col>
-        <Col xs={12} className="news-container-tot px-0 rounded-3 border border-2">
+        <Col xs={12} className="news-container-tot px-0 rounded-3 border border-1">
           <div className="d-flex align-items-center justify-content-between px-3">
             <h6 className="mb-0">LinkedIn Notizie</h6>
             <img src="/icons/i.svg" alt="" />

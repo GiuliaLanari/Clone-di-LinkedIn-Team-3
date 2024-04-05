@@ -159,7 +159,7 @@ const PostComponent = function () {
                       alt=""
                     />
                   </div>
-                  <div id="comment-body" className="rounded-3 p-2">
+                  <div id="comment-body" className="rounded-3 p-2 mb-2">
                     <div className="d-flex justify-content-between">
                       <div>
                         {/* DINAMICO!!!!!!!!! */}

@@ -75,7 +75,7 @@ const ProfileInfoTop = () => {
             <h5 className="m-0" style={{ fontSize: "24px" }}>
               {userData.name} {userData.surname}
             </h5>
-            <p className="h6 fw-normal m-0 ">{userData.title}</p>
+            <p className="h6 fw-normal m-0">{userData.title}</p>
             <span className="fw-light">{userData.area}</span> &#183;{" "}
             <span className="text-primary">
               <a href="/">Informazioni di contatto</a>{" "}
