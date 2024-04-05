@@ -1,14 +1,12 @@
 import { GET_USER, GET_EXPERIENCES, DELETE_EXPERIENCES, POST_EXPERIENCES, GET_POST } from "../actions";
 
-import {
-  // GET_POSTS,
-  POST_POST,
-} from "../actions/posts";
+import { POST_POST, DELETE_POST, ADD_COMMENT } from "../actions/posts";
 
 const initialState = {
   user: {},
   experiences: [],
   posts: [],
+  comments: [],
 };
 
 const userReducer = function (state = initialState, action) {
@@ -45,6 +43,32 @@ const userReducer = function (state = initialState, action) {
         ...state,
         posts: state.posts.concat(action.payload),
       };
+    case DELETE_POST:
+      return {
+        ...state,
+        posts: state.posts.filter((post) => post._id !== action.payload),
+      };
+    case ADD_COMMENT:
+      return {
+        ...state,
+        posts: state.posts.map((post) => {
+          if (post._id === action.payload.postId) {
+            return {
+              ...post,
+              comments: post.comments.concat(action.payload),
+            };
+          } else {
+            return {
+              ...post,
+            };
+          }
+        }),
+      };
+    // case GET_POST_ID:
+    //   return {
+    //     ...state,
+    //     posts: action.payload,
+    //   };
 
     default:
       return state;
