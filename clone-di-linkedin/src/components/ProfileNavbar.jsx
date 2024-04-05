@@ -1,22 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-// import ProfileInfoBottom from "./ProfileInfoBottom";
-// import ProfileInfoTop from "./ProfileInfoTop";
-// import Footer from "./Footer";
-// import Container from "react-bootstrap/Container";
-// import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
-// import SideBar from "./SideBar";
 import { getUser } from "../redux/actions/index";
-// import Analisis from "./Analisis";
-// import Risorse from "./Risorse";
-// import Activity from "./Activity";
-// import Training from "./Training";
-// import Interests from "./Interests";
-// import Experienze from "./Experienze";
-// import About from "./About";
-
 import ProfilePage from "./ProfilePage";
 
 const ProfileNavbar = () => {
@@ -84,7 +69,6 @@ const ProfileNavbar = () => {
 
 export default ProfileNavbar;
 
-// // import { useState } from "react";
 // import { useEffect, useState } from "react";
 // import { useParams } from "react-router-dom";
 // import { useDispatch, useSelector } from "react-redux";
