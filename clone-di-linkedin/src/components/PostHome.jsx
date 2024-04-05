@@ -11,6 +11,7 @@ const PostHome = function ({ post }) {
   const [open, setOpen] = useState(false);
   const username = useSelector((state) => state.user.username);
   const dispatch = useDispatch();
+  const date = new Date(post.createdAt);
 
   const [commentInputValue, setCommentInputValue] = useState({
     comment: "",
@@ -113,13 +114,10 @@ const PostHome = function ({ post }) {
             </div>
             <div className="ms-2">
               {/* DINAMICO!!!!!!!!! */}
-              <span className="fw-bold mb-0 ">
-                {post.user.name ? post.user.name && post.user.surname : post.username}
-              </span>{" "}
-              &#903; <span>3° e oltre</span>
+              <span className="fw-bold mb-0 ">{post.user.name + " " + post.user.surname}</span>
               <p className="mb-1 lh-1 text-sm">{post.user.title}</p>
               <p className="lh-1">
-                {post.createdAt} <span>&#903;</span> <img src="/icons/public.svg" alt="" />
+                {date.toLocaleDateString()} <span>&#903;</span> <img src="/icons/public.svg" alt="" />
               </p>
             </div>
           </div>
@@ -131,14 +129,14 @@ const PostHome = function ({ post }) {
         {/* DINAMICO!!!!!!!!! */}
         <div className="post-description mt-0 px-3 ">{post.text}</div>
         {/* DINAMICO!!!!!!!!!  */}
-        <img src={post.user.image ? post.user.image : ""} alt="" className="img-fluid py-2" />
-        <div className="d-flex justify-content-between px-2 pb-2 border-bottom">
+        {/* <img src={post.user.image ? post.user.image : ""} alt="" className="img-fluid py-2" /> */}
+        <div className="d-flex justify-content-between px-3 pb-2 border-bottom">
           {/* AGGIUNGERE ICONA!!!!!!!!! */}
           <span>2 likes</span>
           {/* DINAMICO!!!!!!!!! da fare */}
           <span>2 commenti</span>
         </div>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-between mx-2">
           <button className="homepage-btns border-0 p-3 m-1 rounded">
             <img style={{ marginInlineEnd: "3px" }} src="/icons/thumb-up.svg" alt="" />
             Consiglia

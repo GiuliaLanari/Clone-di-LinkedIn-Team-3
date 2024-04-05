@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { postPost } from "../redux/actions/posts";
 
 const AddNewPostForm = function () {
@@ -9,6 +9,7 @@ const AddNewPostForm = function () {
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
 
+  const user = useSelector((state) => state.user);
   const [inputValue, setInputValue] = useState({
     text: "",
   });
@@ -24,13 +25,7 @@ const AddNewPostForm = function () {
     <>
       <a href="#i" className="me-2">
         <span>
-          <img
-            className="rounded-circle shadow-4-strong"
-            alt="avatar2"
-            width={50}
-            height={50}
-            src={"https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"}
-          />
+          <img className="rounded-circle shadow-4-strong" alt="avatar2" width={50} height={50} src={user.image} />
         </span>
       </a>
       <button className="post-btn border borde-2" onClick={handleShow}>
@@ -50,7 +45,7 @@ const AddNewPostForm = function () {
                 src={"https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"}
               />
               <div className=" detail">
-                <span>"Il tuo nome DINAMICO"</span>
+                <span>{user.name + " " + user.surname}</span>
                 <p className="mb-0">Pubblica: Chiunque</p>
               </div>
             </button>
