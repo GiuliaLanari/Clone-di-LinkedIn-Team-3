@@ -6,7 +6,7 @@ const Training = function () {
   return (
     <Row className="g-0">
       <Col className="training-col">
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-between align-items-center mb-3">
           <div className="act">
             <h3 className="mb-0">Formazione</h3>
           </div>
