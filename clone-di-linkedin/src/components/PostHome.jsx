@@ -3,9 +3,10 @@ import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { postModifica } from "../redux/actions";
+// import { postModifica } from "../redux/actions";
 import { postDelete } from "../redux/actions/posts";
 import { addComment } from "../redux/actions/posts";
+import ModificaPost from "./ModificaPost";
 
 const PostHome = function ({ post }) {
   const [open, setOpen] = useState(false);
@@ -72,14 +73,14 @@ const PostHome = function ({ post }) {
         </Dropdown>
 
         {username === post.username ? (
-          <Button
-            variant="white"
-            onClick={() => {
-              dispatch(postModifica(post._id, post));
-            }}
+          <div
+          // variant="white"
+          // onClick={() => {
+          //   dispatch(postModifica(post._id, post));
+          // }}
           >
-            <img src="/icons/pen.svg" alt="modifica"></img>
-          </Button>
+            <ModificaPost postId={post._id} post={post} />
+          </div>
         ) : (
           ""
         )}
