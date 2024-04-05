@@ -200,7 +200,11 @@ const ProfileInfoTop = () => {
                   <Button
                     onClick={next}
                     disabled={slide === -156 || slide === -392 || slide === -120 || slide === -336 || slide === -212}
-                    className={`next-btn next-btn-top btn-dark rounded-circle ${slide !== -156 ? "d-block" : "d-none"}`}
+                    className={`next-btn next-btn-top btn-dark rounded-circle ${
+                      slide !== -156 && slide !== -392 && slide !== -120 && slide !== -336 && slide !== -212
+                        ? "d-block"
+                        : "d-none"
+                    }`}
                   >
                     <div className="btn-small">
                       <img src="/icons/next-btn.svg" alt="" />

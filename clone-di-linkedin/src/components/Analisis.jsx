@@ -30,7 +30,7 @@ const Analisis = function () {
             <li className="me-4">
               <div className="d-flex gap-2">
                 <div>
-                  <img src="/icons/people.svg" alt="" />
+                  <img src="/icons/graphic.svg" alt="" />
                 </div>
                 <div className="p-0">
                   <h6 className="mb-0">0 impressioni del post</h6>
