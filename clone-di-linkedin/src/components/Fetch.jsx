@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import SingleProfile from "./SingleProfile";
 
 const Fetch = function () {
-  const randomNum = Math.floor(Math.random() * 250);
-  const [profiles, setProfiles] = useState(null);
+  const [profiles, setProfiles] = useState("");
+  const randomNum = Math.floor(Math.random() * profiles.length);
 
   const profilesFetch = function () {
     fetch("https://striveschool-api.herokuapp.com/api/profile/", {

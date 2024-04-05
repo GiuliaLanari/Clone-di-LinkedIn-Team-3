@@ -22,7 +22,7 @@ const Experienze = function () {
   return (
     <Row className="g-0">
       <Col className="analis-col">
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-between align-items-center mb-3">
           <div className="act">
             <h3 className="mb-0">Esperienza</h3>
           </div>
@@ -33,19 +33,22 @@ const Experienze = function () {
 
         <Row className=" mt-2 analisis-desc ">
           <Col xs={12}>
-            {experiences.map((esperienza, i) => (
-              <Row key={esperienza._id}>
-                <Col xs={2}>
-                  <img src={esperienza.image} alt="logo-school" className="w-100 h-75 p-1 object-fit-cover " />
-                </Col>
-                <Col xs={7}>
-                  <h6 className="mb-0">{esperienza.company}</h6>
-                  <p className="mb-0">{esperienza.role}</p>
-                  <p className="mb-0">{esperienza.startDate}</p>
-                </Col>
-                <Col xs={3}>
-                  <Row>
-                    <Col xs={3}>
+            {experiences.map((esperienza, i) => {
+              const date = new Date(esperienza.startDate);
+              return (
+                <div key={esperienza._id} className="d-flex justify-content-between mb-3">
+                  <div className="d-flex">
+                    <div className="me-2">
+                      <img src={esperienza.image} alt="logo-school" width="60px" className="p-1 object-fit-cover " />
+                    </div>
+                    <div>
+                      <h6 className="mb-0">{esperienza.company}</h6>
+                      <p className="mb-0">{esperienza.role}</p>
+                      <p className="mb-0">Data di inizio: {date.toLocaleDateString()}</p>
+                    </div>
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <div>
                       <Button
                         variant="danger"
                         onClick={() => {
@@ -54,14 +57,14 @@ const Experienze = function () {
                       >
                         <RiDeleteBin5Fill />
                       </Button>
-                    </Col>
-                    <Col xs={2} className="ms-3">
+                    </div>
+                    <div className="ms-3">
                       <EditEsperienzaForm expId={esperienza._id} userId={userId} />
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-            ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </Col>
         </Row>
       </Col>
