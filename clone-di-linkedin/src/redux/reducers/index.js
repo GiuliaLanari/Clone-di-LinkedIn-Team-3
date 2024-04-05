@@ -1,9 +1,6 @@
 import { GET_USER, GET_EXPERIENCES, DELETE_EXPERIENCES, POST_EXPERIENCES, GET_POST } from "../actions";
 
-import {
-  // GET_POSTS,
-  POST_POST,
-} from "../actions/posts";
+import { POST_POST } from "../actions/posts";
 
 const initialState = {
   user: {},
