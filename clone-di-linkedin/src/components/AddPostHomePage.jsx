@@ -2,7 +2,7 @@ import AddNewPostForm from "./AddNewPostForm";
 
 const AddPostHomePage = function () {
   return (
-    <div className="top-div-post rounded-3 border border-2">
+    <div className="top-div-post rounded-3 border border-1">
       <div className="d-flex flex-column">
         <div className="d-flex align-items-center">
           <AddNewPostForm />

@@ -31,7 +31,7 @@ const Experienze = function () {
           </div>
         </div>
 
-        <Row className=" mt-2 analisis-desc ">
+        <Row className="my-3 analisis-desc">
           <Col xs={12}>
             {experiences.map((esperienza, i) => {
               const date = new Date(esperienza.startDate);

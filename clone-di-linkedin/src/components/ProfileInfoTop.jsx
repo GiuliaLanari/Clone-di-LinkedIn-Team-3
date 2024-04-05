@@ -72,17 +72,17 @@ const ProfileInfoTop = () => {
         </div>
         <div>
           <div className="analis-col pt-2">
-            <h5>
+            <h5 className="m-0" style={{ fontSize: "24px" }}>
               {userData.name} {userData.surname}
             </h5>
-            <p className="h6 fw-normal mb-1">{userData.title}</p>
+            <p className="h6 fw-normal m-0">{userData.title}</p>
             <span className="fw-light">{userData.area}</span> &#183;{" "}
             <span className="text-primary">
               <a href="/">Informazioni di contatto</a>{" "}
             </span>
             <div>
-              <Button className=" rounded-pill fw-bold me-2 px-3 py-1">Disponibile per</Button>
-              <Button variant="outline-primary" className="  rounded-pill fw-bold me-2 px-3 py-1">
+              <Button className="rounded-pill fw-bold me-2 my-2 px-3 py-1">Disponibile per</Button>
+              <Button variant="outline-primary" className="my-2 rounded-pill fw-bold me-2 px-3 py-1">
                 Aggiungi sezione del profilo
               </Button>
               <Button variant="outline-dark" className="border-2 rounded-pill fw-bold px-3 py-1">
