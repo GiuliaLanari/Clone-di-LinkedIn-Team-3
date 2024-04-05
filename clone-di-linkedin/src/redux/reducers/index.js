@@ -6,6 +6,7 @@ const initialState = {
   user: {},
   experiences: [],
   posts: [],
+  comments: [],
 };
 
 const userReducer = function (state = initialState, action) {
