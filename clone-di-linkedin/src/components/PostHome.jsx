@@ -1,10 +1,9 @@
 import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-// import { postModifica } from "../redux/actions";
-import { postDelete } from "../redux/actions/posts";
+import { fetchCommentPosts, postDelete } from "../redux/actions/posts";
 import { addComment } from "../redux/actions/posts";
 import ModificaPost from "./ModificaPost";
 
@@ -13,19 +12,24 @@ const PostHome = function ({ post }) {
   const username = useSelector((state) => state.user.username);
   const dispatch = useDispatch();
 
+  const comments = useSelector((state) => state.comments);
+  console.log("Commenti da verificare", comments);
+
   const [commentInputValue, setCommentInputValue] = useState({
     comment: "",
-    rate: 1,
+    rate: "",
     elementId: "",
   });
 
   const handleSubmit = (e, post) => {
     e.preventDefault();
     dispatch(
-      addComment({
-        ...commentInputValue,
-        elementId: post._id,
-      })
+      addComment(
+        commentInputValue
+
+        // ...commentInputValue,
+        // elementId: post._id,
+      )
     );
     setCommentInputValue({
       comment: "",
@@ -35,6 +39,10 @@ const PostHome = function ({ post }) {
     setOpen(false);
     console.log(commentInputValue);
   };
+
+  useEffect(() => {
+    dispatch(fetchCommentPosts(post._id));
+  }, []);
 
   return (
     <div className="post bg-white rounded-3 border border-1 mt-3" key={post._id}>
@@ -73,12 +81,7 @@ const PostHome = function ({ post }) {
         </Dropdown>
 
         {username === post.username ? (
-          <div
-          // variant="white"
-          // onClick={() => {
-          //   dispatch(postModifica(post._id, post));
-          // }}
-          >
+          <div>
             <ModificaPost postId={post._id} post={post} />
           </div>
         ) : (
@@ -204,29 +207,37 @@ const PostHome = function ({ post }) {
                 </div>
               </div>
             </div>
-            <div className="d-flex mt-2">
-              <div className="comment-pfp me-2">
-                {/* DINAMICO!!!!!!!!! */}
-                <img
-                  id="comment-pfp"
-                  src="https://tr.rbxcdn.com/38c6edcb50633730ff4cf39ac8859840/420/420/Hat/Png"
-                  alt=""
-                />
-              </div>
-              <div id="comment-body" className="rounded-3 p-2">
-                <div className="d-flex justify-content-between">
-                  <div>
-                    {/* DINAMICO!!!!!!!!! */}
-                    <p className="m-0">USER</p>
-                    <p className="mb-2 text-sm"> 1034 follower</p>
+            {comments &&
+              comments.map((comment) => {
+                const data = new Date(comment.createdAt);
+                return (
+                  <div key={comment._id}>
+                    <div className="d-flex mt-2">
+                      <div className="comment-pfp me-2">
+                        {/* DINAMICO!!!!!!!!! */}
+                        <img
+                          id="comment-pfp"
+                          src="https://tr.rbxcdn.com/38c6edcb50633730ff4cf39ac8859840/420/420/Hat/Png"
+                          alt=""
+                        />
+                      </div>
+                      <div id="comment-body" className="rounded-3 p-2">
+                        <div className="d-flex justify-content-between">
+                          <div>
+                            {/* DINAMICO!!!!!!!!! */}
+                            <p className="m-0">{comment.author}</p>
+                            <p className="mb-2 text-sm"> 1034 follower</p>
+                          </div>
+                          <div className="m-0">{data.toLocaleDateString()}</div>
+                        </div>
+                        {/* DINAMICO!!!!!!!!! */}
+                        <p className="m-0">{comment.comment}</p>
+                        <span>Consiglia</span> | <span>Rispondi</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="m-0">5 giorni fa</div>
-                </div>
-                {/* DINAMICO!!!!!!!!! */}
-                <p className="m-0">Testo del commento</p>
-                <span>Consiglia</span> | <span>Rispondi</span>
-              </div>
-            </div>
+                );
+              })}
           </div>
         </Collapse>
       </div>
