@@ -7,6 +7,7 @@ import { getPost } from "../redux/actions";
 
 const PostComponent = function () {
   const [open, setOpen] = useState(false);
+  const user = useSelector((state) => state.user);
   const posts = useSelector((state) => state.posts);
 
   const dispatch = useDispatch();
@@ -14,9 +15,11 @@ const PostComponent = function () {
     dispatch(getPost(posts));
   }, []);
 
+  const myPosts = posts.filter((id) => id.user._id === user._id);
+  console.log(myPosts);
   return (
     <>
-      {posts.slice(0, 10).map((post) => (
+      {myPosts.map((post) => (
         <div className="post bg-white rounded-3 border border-1 mt-3" key={post._id}>
           <div className="d-flex justify-content-end border-bottom p-1">
             {/* <button className="add-pen-btn rounded-circle py-1">
@@ -73,7 +76,7 @@ const PostComponent = function () {
                 <div className="ms-2">
                   {/* DINAMICO!!!!!!!!! */}
                   <span className="fw-bold mb-0 ">
-                    {post.user.name ? post.user.name && post.user.surname : post.username}
+                    {post.user.name ? post.user.name + " " + post.user.surname : post.username}
                   </span>{" "}
                   &#903; <span>3° e oltre</span>
                   <p className="mb-1 lh-1 text-sm">{post.user.title}</p>
@@ -90,7 +93,7 @@ const PostComponent = function () {
             {/* DINAMICO!!!!!!!!! */}
             <div className="post-description mt-0 px-3 ">{post.text}</div>
             {/* DINAMICO!!!!!!!!!  */}
-            <img src={post.user.image ? post.user.image : ""} alt="" className="img-fluid py-2" />
+            <img src="" alt="" className="img-fluid py-2" />
             <div className="d-flex justify-content-between px-2 pb-2 border-bottom">
               {/* AGGIUNGERE ICONA!!!!!!!!! */}
               <span>2 likes</span>
