@@ -11,7 +11,6 @@ function App() {
   return (
     <BrowserRouter>
       <MyNavbar />
-
       <Routes>
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/profile/:id" element={<ProfileNavbar />} />
