@@ -23,7 +23,7 @@ const PostComponent = function () {
           <img src="/icons/dots.svg" alt="più azioni" />
         </button> */}
             <Dropdown>
-              <Dropdown.Toggle className="border-0" variant="transparent">
+              <Dropdown.Toggle className="border-0 dropdown-toggle-remove" variant="transparent">
                 <img className="me-2" src="/icons/dots.svg" alt="più azioni" />
               </Dropdown.Toggle>
 
