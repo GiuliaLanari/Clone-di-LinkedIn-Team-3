@@ -51,18 +51,18 @@ const userReducer = function (state = initialState, action) {
     case ADD_COMMENT:
       return {
         ...state,
-        posts: state.posts.map((post) => {
-          if (post._id === action.payload.postId) {
-            return {
-              ...post,
-              comments: post.comments.concat(action.payload),
-            };
-          } else {
-            return {
-              ...post,
-            };
-          }
-        }),
+        // posts: state.posts.map((post) => {
+        //   if (post._id === action.payload.postId) {
+        //     return {
+        //       ...post,
+        comments: state.comments.concat(action.payload),
+        //     };
+        //   } else {
+        //     return {
+        //       ...post,
+        //     };
+        //   }
+        // }),
       };
 
     // case GET_POST_ID:
