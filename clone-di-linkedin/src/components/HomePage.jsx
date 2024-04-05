@@ -6,6 +6,7 @@ import RightBar from "./RightBar";
 import AddPostHomePage from "./AddPostHomePage";
 
 import LeftSideHome from "./LeftSideHome";
+
 const HomePage = function () {
   return (
     <Container>

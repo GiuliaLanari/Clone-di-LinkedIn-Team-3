@@ -1,6 +1,6 @@
 import { GET_USER, GET_EXPERIENCES, DELETE_EXPERIENCES, POST_EXPERIENCES, GET_POST } from "../actions";
 
-import { POST_POST } from "../actions/posts";
+import { POST_POST, DELETE_POST } from "../actions/posts";
 
 const initialState = {
   user: {},
@@ -42,6 +42,16 @@ const userReducer = function (state = initialState, action) {
         ...state,
         posts: state.posts.concat(action.payload),
       };
+    case DELETE_POST:
+      return {
+        ...state,
+        posts: state.posts.filter((post) => post._id !== action.payload),
+      };
+    // case GET_POST_ID:
+    //   return {
+    //     ...state,
+    //     posts: action.payload,
+    //   };
 
     default:
       return state;
