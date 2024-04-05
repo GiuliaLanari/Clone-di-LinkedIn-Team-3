@@ -64,6 +64,7 @@ const userReducer = function (state = initialState, action) {
           }
         }),
       };
+
     // case GET_POST_ID:
     //   return {
     //     ...state,
