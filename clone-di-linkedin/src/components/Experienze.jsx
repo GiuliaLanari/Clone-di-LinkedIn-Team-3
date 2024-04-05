@@ -50,7 +50,8 @@ const Experienze = function () {
                   <div className="d-flex align-items-center">
                     <div>
                       <Button
-                        variant="danger"
+                        className="add-pen-btn"
+                        variant="white"
                         onClick={() => {
                           dispatch(experiencesListDelete(esperienza._id, userId));
                         }}
